@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Persona — Riley Parage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #1e2a34;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .persona-card {
+      width: 900px;
+      background: #253340;
+      border-radius: 12px;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(217, 225, 232, 0.06);
+      padding: 40px 44px 36px;
+      position: relative;
+    }
+
+    /* ── Top Section ── */
+    .persona-top {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 28px;
+    }
+
+    .persona-photo {
+      flex-shrink: 0;
+      width: 180px;
+      height: 180px;
+      border-radius: 4px;
+      background: #1e2a34;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .persona-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .persona-photo svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .persona-right-top {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .persona-quote {
+      font-family: 'Lato', sans-serif;
+      font-style: italic;
+      font-size: 15.5px;
+      line-height: 1.55;
+      color: rgba(217, 225, 232, 0.8);
+      margin-bottom: 20px;
+      padding-right: 10px;
+    }
+
+    .persona-quote::before { content: '\201C'; }
+    .persona-quote::after { content: '\201D'; }
+
+    /* ── Goals & Frustrations Row ── */
+    .persona-goals-row {
+      display: flex;
+      gap: 40px;
+      flex: 1;
+    }
+
+    .persona-goals-col {
+      flex: 1;
+    }
+
+    .persona-goals-col h3 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    .persona-goals-col h3.goals-title { color: #34a853; }
+    .persona-goals-col h3.frust-title { color: #ea4335; }
+
+    .persona-goals-col ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .persona-goals-col li {
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: rgba(217, 225, 232, 0.6);
+    }
+
+    /* ── Divider ── */
+    .persona-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(217, 225, 232, 0.08);
+      margin: 24px 0;
+    }
+
+    /* ── Bottom Section ── */
+    .persona-bottom {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .persona-bio-left {
+      flex-shrink: 0;
+      width: 180px;
+    }
+
+    .persona-name {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: #e91e8c;
+      margin-bottom: 14px;
+    }
+
+    .persona-details {
+      list-style: none;
+    }
+
+    .persona-details li {
+      font-size: 13px;
+      line-height: 1.7;
+      color: rgba(217, 225, 232, 0.65);
+      display: flex;
+    }
+
+    .persona-details li strong {
+      font-weight: 700;
+      color: rgba(217, 225, 232, 0.9);
+      flex-shrink: 0;
+      width: 88px;
+    }
+
+    /* ── Scenario Box ── */
+    .persona-scenario {
+      flex: 1;
+      border: 2px solid rgba(245, 197, 66, 0.3);
+      border-radius: 8px;
+      padding: 18px 22px;
+      background: rgba(245, 197, 66, 0.04);
+    }
+
+    .persona-scenario p {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: rgba(217, 225, 232, 0.65);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="persona-card">
+
+    <!-- Top Section -->
+    <div class="persona-top">
+
+      <!-- Photo -->
+      <div class="persona-photo">
+        <!-- Female young girl avatar illustration -->
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="photoClip"><rect width="200" height="200"/></clipPath>
+          </defs>
+          <g clip-path="url(#photoClip)">
+            <!-- Background -->
+            <rect width="200" height="200" fill="#e4d8cf"/>
+            <!-- Shoulders / body -->
+            <ellipse cx="100" cy="212" rx="70" ry="48" fill="#6b8e7b"/>
+            <!-- Neck -->
+            <rect x="86" y="130" width="28" height="24" rx="4" fill="#deb896"/>
+            <!-- Shirt neckline -->
+            <path d="M74 148 Q100 162 126 148 L126 156 Q100 170 74 156Z" fill="#5a7d6a"/>
+            <!-- Head -->
+            <ellipse cx="100" cy="92" rx="38" ry="46" fill="#e8c4a0"/>
+            <!-- Hair - full cap covering top and sides of head, connecting to ponytail -->
+            <path d="M62 88 Q58 72 60 55 Q62 42 100 38 Q138 42 140 55 Q142 68 148 65 Q156 58 160 72 Q164 90 155 115 Q150 128 146 135 L140 130 Q148 110 150 90 Q152 72 145 68 Q142 72 140 82 Q138 60 120 50 Q100 42 80 50 Q64 60 62 88Z" fill="#4a3222"/>
+            <!-- Hair fill - covers ear area and connects smoothly -->
+            <path d="M62 88 Q58 78 60 65" stroke="#4a3222" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <path d="M138 82 Q140 75 142 68" stroke="#4a3222" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <!-- Ponytail body - thicker, connected -->
+            <path d="M146 66 Q158 60 161 74 Q164 92 156 118 Q151 130 147 138" stroke="#4a3222" stroke-width="18" fill="none" stroke-linecap="round"/>
+            <!-- Ponytail highlight -->
+            <path d="M148 70 Q158 66 160 80 Q162 96 156 116" stroke="#5e4230" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.4"/>
+            <!-- Ponytail band -->
+            <ellipse cx="146" cy="67" rx="6" ry="5" fill="#7a5a3a"/>
+            <!-- Eyebrows - softer, thinner -->
+            <path d="M80 80 Q86 77 92 80" stroke="#5a3a20" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <path d="M108 80 Q114 77 120 80" stroke="#5a3a20" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <!-- Eyes - larger, rounder -->
+            <ellipse cx="86" cy="88" rx="7.5" ry="6" fill="white"/>
+            <ellipse cx="114" cy="88" rx="7.5" ry="6" fill="white"/>
+            <circle cx="87" cy="88" r="4" fill="#5a8060"/>
+            <circle cx="115" cy="88" r="4" fill="#5a8060"/>
+            <circle cx="88.5" cy="87" r="1.5" fill="white"/>
+            <circle cx="116.5" cy="87" r="1.5" fill="white"/>
+            <!-- Eyelashes -->
+            <path d="M79 85 Q78 83 77 82" stroke="#4a3222" stroke-width="1" fill="none" stroke-linecap="round"/>
+            <path d="M93 85 Q94 83 95 82" stroke="#4a3222" stroke-width="1" fill="none" stroke-linecap="round"/>
+            <path d="M107 85 Q106 83 105 82" stroke="#4a3222" stroke-width="1" fill="none" stroke-linecap="round"/>
+            <path d="M121 85 Q122 83 123 82" stroke="#4a3222" stroke-width="1" fill="none" stroke-linecap="round"/>
+            <!-- Nose - small, subtle -->
+            <path d="M98 92 Q100 101 102 92" stroke="#d0a07a" stroke-width="1.2" fill="none"/>
+            <!-- Mouth - gentle smile -->
+            <path d="M90 108 Q100 115 110 108" stroke="#c47a68" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <!-- Light blush on cheeks -->
+            <ellipse cx="74" cy="100" rx="8" ry="5" fill="#e8a090" opacity="0.2"/>
+            <ellipse cx="126" cy="100" rx="8" ry="5" fill="#e8a090" opacity="0.2"/>
+            <!-- Ears -->
+            <ellipse cx="62" cy="90" rx="5" ry="9" fill="#e8c4a0"/>
+            <ellipse cx="138" cy="90" rx="5" ry="9" fill="#e8c4a0"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Right side: Quote + Goals/Frustrations -->
+      <div class="persona-right-top">
+        <p class="persona-quote">I love archery, but sometimes it's hard to tell if I'm actually getting better.</p>
+
+        <div class="persona-goals-row">
+          <div class="persona-goals-col">
+            <h3 class="goals-title">Goals</h3>
+            <ul>
+              <li>Stay motivated between practices and events</li>
+            </ul>
+          </div>
+          <div class="persona-goals-col">
+            <h3 class="frust-title">Frustrations</h3>
+            <ul>
+              <li>Gets discouraged when scores fluctuate</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="persona-divider"></div>
+
+    <!-- Bottom Section -->
+    <div class="persona-bottom">
+
+      <!-- Name + Details -->
+      <div class="persona-bio-left">
+        <h2 class="persona-name">Riley Parage</h2>
+        <ul class="persona-details">
+          <li><strong>Age:</strong> 15</li>
+          <li><strong>Education:</strong> Starting high school</li>
+          <li><strong>Hometown:</strong> Avon, MA</li>
+          <li><strong>Family:</strong> Supportive Single-Parent Household</li>
+        </ul>
+      </div>
+
+      <!-- Scenario -->
+      <div class="persona-scenario">
+        <p>Riley is a young archer who practices regularly and enjoys the sport, but often struggles to understand their own progress. Paper scorecards get lost, and fluctuating results make it difficult to stay motivated. During competitions, Riley feels pressure and sometimes loses focus, wishing for tools that could help with mental preparation and confidence. A clear, supportive way to track improvement would help Riley stay engaged and excited about archery long&#8209;term.</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

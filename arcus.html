@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcus — Case Study | Kristina Ryaboy</title>
+  <meta name="description" content="Arcus case study — Creating a User-Centered Archery Experience. UX Design by Kristina Ryaboy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="case-study">
+
+  <!-- Navigation -->
+  <nav class="case-study-nav">
+    <div class="case-study-nav__inner">
+      <a href="index.html#work" class="case-study-nav__back">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Portfolio
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="case-study-hero">
+    <div class="case-study-hero__tags">
+      <span class="tag">UX Design</span>
+      <span class="tag">Mobile App</span>
+    </div>
+    <h1 class="case-study-hero__title">Arcus</h1>
+    <p class="case-study-hero__subtitle">Creating a User&#8209;Centered Archery Experience</p>
+    <div class="case-study-hero__image">
+      <svg class="case-study-hero__svg" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="heroBg" x1="0" y1="0" x2="1200" y2="500" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#16222B"/>
+            <stop offset="1" stop-color="#1F2E3A"/>
+          </linearGradient>
+          <linearGradient id="phoneGrad" x1="0" y1="0" x2="0" y2="1" >
+            <stop offset="0" stop-color="#253545"/>
+            <stop offset="1" stop-color="#1a2a36"/>
+          </linearGradient>
+          <linearGradient id="screenGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0f1724"/>
+            <stop offset="1" stop-color="#1a1f2e"/>
+          </linearGradient>
+          <linearGradient id="accentPink" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#E91E8C"/>
+            <stop offset="1" stop-color="#FF6EB4"/>
+          </linearGradient>
+          <linearGradient id="accentBlue" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#29D3EF"/>
+            <stop offset="1" stop-color="#1A82C0"/>
+          </linearGradient>
+          <filter id="glow1" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="20" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="40" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <clipPath id="screenClip">
+            <rect x="542" y="108" width="116" height="210" rx="4"/>
+          </clipPath>
+          <clipPath id="logoClip">
+            <rect x="576" y="132" width="48" height="48" rx="10"/>
+          </clipPath>
+        </defs>
+
+        <!-- Background -->
+        <rect width="1200" height="500" fill="url(#heroBg)"/>
+
+        <!-- Ambient glows -->
+        <circle cx="600" cy="250" r="220" fill="rgba(233,30,121,0.04)" filter="url(#glow2)"/>
+        <circle cx="480" cy="200" r="120" fill="rgba(41,211,239,0.03)" filter="url(#glow2)"/>
+        <circle cx="720" cy="300" r="100" fill="rgba(233,30,121,0.03)" filter="url(#glow2)"/>
+
+        <!-- Orbit rings -->
+        <ellipse cx="600" cy="250" rx="180" ry="150" fill="none" stroke="rgba(233,30,121,0.06)" stroke-width="1"/>
+        <ellipse cx="600" cy="250" rx="120" ry="100" fill="none" stroke="rgba(217,225,232,0.04)" stroke-width="1"/>
+        <ellipse cx="600" cy="250" rx="240" ry="200" fill="none" stroke="rgba(217,225,232,0.03)" stroke-width="1"/>
+
+        <!-- Orbit dots -->
+        <circle cx="420" cy="250" r="3" fill="rgba(41,211,239,0.3)">
+          <animateTransform attributeName="transform" type="rotate" from="0 600 250" to="360 600 250" dur="60s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="780" cy="250" r="2.5" fill="rgba(233,30,121,0.35)">
+          <animateTransform attributeName="transform" type="rotate" from="0 600 250" to="-360 600 250" dur="45s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="600" cy="50" r="2" fill="rgba(217,225,232,0.25)">
+          <animateTransform attributeName="transform" type="rotate" from="0 600 250" to="360 600 250" dur="80s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="360" cy="250" r="2" fill="rgba(233,30,121,0.2)">
+          <animateTransform attributeName="transform" type="rotate" from="0 600 250" to="-360 600 250" dur="90s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Left floating card -->
+        <g transform="translate(280, 140)" opacity="0.7">
+          <rect width="140" height="190" rx="10" fill="#1a2a36" stroke="rgba(217,225,232,0.06)" stroke-width="1"/>
+          <rect x="14" y="14" width="112" height="60" rx="4" fill="rgba(41,211,239,0.08)"/>
+          <rect x="14" y="84" width="80" height="6" rx="3" fill="rgba(217,225,232,0.08)"/>
+          <rect x="14" y="98" width="60" height="6" rx="3" fill="rgba(217,225,232,0.05)"/>
+          <rect x="14" y="118" width="112" height="24" rx="4" fill="rgba(233,30,121,0.1)" stroke="rgba(233,30,121,0.15)" stroke-width="0.5"/>
+          <rect x="14" y="152" width="50" height="6" rx="3" fill="rgba(217,225,232,0.06)"/>
+          <rect x="70" y="152" width="56" height="6" rx="3" fill="rgba(217,225,232,0.04)"/>
+          <rect x="14" y="166" width="80" height="6" rx="3" fill="rgba(217,225,232,0.04)"/>
+        </g>
+
+        <!-- Center phone mockup -->
+        <g>
+          <!-- Phone body -->
+          <rect x="530" y="82" width="140" height="260" rx="14" fill="url(#phoneGrad)" stroke="rgba(217,225,232,0.1)" stroke-width="1.5"/>
+          <!-- Screen -->
+          <rect x="542" y="108" width="116" height="210" rx="4" fill="url(#screenGrad)"/>
+          <!-- Screen content -->
+          <g clip-path="url(#screenClip)">
+            <!-- Status bar -->
+            <rect x="542" y="108" width="116" height="16" fill="rgba(0,0,0,0.3)"/>
+            <!-- Arcus logo -->
+            <g clip-path="url(#logoClip)" opacity="0.85">
+              <image href="images/arcus-logo.svg" x="576" y="132" width="48" height="48"/>
+            </g>
+            <!-- App title -->
+            <rect x="578" y="186" width="44" height="5" rx="2.5" fill="rgba(217,225,232,0.15)"/>
+            <!-- Tagline -->
+            <rect x="564" y="196" width="72" height="3" rx="1.5" fill="rgba(217,225,232,0.07)"/>
+            <!-- Form card -->
+            <rect x="554" y="212" width="92" height="80" rx="6" fill="rgba(31,46,58,0.8)" stroke="rgba(217,225,232,0.06)" stroke-width="0.5"/>
+            <!-- Email field -->
+            <rect x="562" y="224" width="76" height="14" rx="3" fill="rgba(217,225,232,0.04)" stroke="rgba(217,225,232,0.08)" stroke-width="0.5"/>
+            <rect x="568" y="229" width="30" height="4" rx="2" fill="rgba(217,225,232,0.06)"/>
+            <!-- Password field -->
+            <rect x="562" y="246" width="76" height="14" rx="3" fill="rgba(217,225,232,0.04)" stroke="rgba(217,225,232,0.08)" stroke-width="0.5"/>
+            <rect x="568" y="251" width="36" height="4" rx="2" fill="rgba(217,225,232,0.06)"/>
+            <!-- Sign in button -->
+            <rect x="562" y="270" width="76" height="16" rx="4" fill="rgba(106,130,217,0.5)"/>
+            <rect x="584" y="276" width="32" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+          </g>
+          <!-- Notch -->
+          <rect x="580" y="88" width="40" height="6" rx="3" fill="#16222B"/>
+          <!-- Home indicator -->
+          <rect x="582" y="330" width="36" height="3" rx="1.5" fill="rgba(217,225,232,0.1)"/>
+        </g>
+
+        <!-- Right floating card -->
+        <g transform="translate(780, 120)" opacity="0.7">
+          <rect width="140" height="210" rx="10" fill="#1a2a36" stroke="rgba(217,225,232,0.06)" stroke-width="1"/>
+          <!-- Chart area -->
+          <rect x="14" y="14" width="112" height="80" rx="4" fill="rgba(233,30,121,0.05)"/>
+          <!-- Bar chart -->
+          <rect x="24" y="62" width="12" height="28" rx="2" fill="rgba(41,211,239,0.2)"/>
+          <rect x="42" y="48" width="12" height="42" rx="2" fill="rgba(41,211,239,0.25)"/>
+          <rect x="60" y="54" width="12" height="36" rx="2" fill="rgba(233,30,121,0.2)"/>
+          <rect x="78" y="38" width="12" height="52" rx="2" fill="rgba(233,30,121,0.3)"/>
+          <rect x="96" y="30" width="12" height="60" rx="2" fill="rgba(41,211,239,0.3)"/>
+          <!-- Text lines -->
+          <rect x="14" y="106" width="80" height="6" rx="3" fill="rgba(217,225,232,0.08)"/>
+          <rect x="14" y="120" width="60" height="6" rx="3" fill="rgba(217,225,232,0.05)"/>
+          <rect x="14" y="140" width="112" height="20" rx="4" fill="rgba(233,30,121,0.08)"/>
+          <rect x="14" y="170" width="90" height="6" rx="3" fill="rgba(217,225,232,0.06)"/>
+          <rect x="14" y="184" width="70" height="6" rx="3" fill="rgba(217,225,232,0.04)"/>
+        </g>
+
+        <!-- Scattered small dots / particles -->
+        <circle cx="200" cy="100" r="1.5" fill="rgba(217,225,232,0.12)"/>
+        <circle cx="150" cy="350" r="1" fill="rgba(233,30,121,0.15)"/>
+        <circle cx="1000" cy="80" r="1.5" fill="rgba(41,211,239,0.12)"/>
+        <circle cx="1050" cy="400" r="1" fill="rgba(217,225,232,0.1)"/>
+        <circle cx="100" cy="250" r="1" fill="rgba(233,30,121,0.1)"/>
+        <circle cx="1100" cy="200" r="1.5" fill="rgba(233,30,121,0.08)"/>
+        <circle cx="500" cy="450" r="1" fill="rgba(41,211,239,0.1)"/>
+        <circle cx="700" cy="50" r="1" fill="rgba(217,225,232,0.08)"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Project Meta -->
+  <div class="case-study-meta">
+    <div class="case-study-meta__item">
+      <h4>Role</h4>
+      <p>Lead UX Designer, UX Researcher, Usability Tester, Interaction Designer</p>
+    </div>
+    <div class="case-study-meta__item">
+      <h4>Duration</h4>
+      <p>2–3 Months</p>
+    </div>
+    <div class="case-study-meta__item">
+      <h4>Tools</h4>
+      <p>Figma, Google Forms, Miro</p>
+    </div>
+    <div class="case-study-meta__item">
+      <h4>Responsibilities</h4>
+      <p>End&#8209;to&#8209;end design from research and concept development to wireframing, prototyping, and visual design</p>
+    </div>
+  </div>
+
+  <!-- 01 · Overview -->
+  <section class="case-study-section">
+    <span class="case-study-section__label">01</span>
+    <h2 class="case-study-section__title">Overview</h2>
+    <div class="case-study-section__body">
+      <p>A mobile app designed to help young archers stay engaged by making their progress visible, meaningful, and encouraging. When archers can see how they're growing, they're more likely to stay curious, confident, and connected to the sport. This app supports that journey through intuitive tracking, gentle guidance, and a focus on long&#8209;term motivation.</p>
+    </div>
+  </section>
+
+  <!-- 02 · Problem Statement -->
+  <section class="case-study-section">
+    <span class="case-study-section__label">02</span>
+    <h2 class="case-study-section__title">Problem Statement</h2>
+    <div class="case-study-section__body">
+      <p>Many archers struggle to stay engaged over time due to limited progress visibility, manual and inconsistent tournament tracking, and a lack of tools that support the mental side of the sport. These challenges are especially noticeable among younger or newer archers, who often lose motivation when improvement feels unclear or overwhelming.</p>
+      <p>The goal of this project is to design a user&#8209;centered archery app that supports archers of all experience levels by making progress easy to understand, simplifying tournament tracking, and providing mental&#8209;training tools that strengthen focus, confidence, and long&#8209;term engagement.</p>
+    </div>
+  </section>
+
+  <!-- 03 · Research -->
+  <section class="case-study-section">
+    <span class="case-study-section__label">03</span>
+    <h2 class="case-study-section__title">Research</h2>
+    <div class="case-study-section__body">
+      <p>I conducted surveys and informal interviews with local archers to understand their motivations, challenges, and reasons for disengaging from the sport. I also reviewed existing archery apps to identify usability gaps and opportunities for a more engaging experience.</p>
+
+      <h3 class="case-study-section__subtitle">Pain Points</h3>
+
+      <div class="case-study-pain-points">
+        <div class="case-study-pain-point">
+          <span class="case-study-pain-point__number">1</span>
+          <div>
+            <h4>Lack of Progress Visibility</h4>
+            <p>This pain point highlighted the need for clear, visual feedback that helps archers understand how they're improving over time. Moving forward, I focused on designing progress charts and alternate training views that make growth easy to see and celebrate.</p>
+          </div>
+        </div>
+        <div class="case-study-pain-point">
+          <span class="case-study-pain-point__number">2</span>
+          <div>
+            <h4>Low Motivation Over Time</h4>
+            <p>Seeing how quickly motivation fades, especially for young archers, led me to incorporate achievement systems and engaging milestones. These features are designed to keep users connected to the sport and excited to continue training.</p>
+          </div>
+        </div>
+        <div class="case-study-pain-point">
+          <span class="case-study-pain-point__number">3</span>
+          <div>
+            <h4>Difficulty Tracking Competitive Results</h4>
+            <p>Archers currently rely on manual methods to track tournament, league, and competitive scores, making it difficult to maintain accurate records or see long&#8209;term progress. This insight guided the decision to include simple score importing and organized competitive history within the app.</p>
+          </div>
+        </div>
+        <div class="case-study-pain-point">
+          <span class="case-study-pain-point__number">4</span>
+          <div>
+            <h4>Limited Support for Mental Focus</h4>
+            <p>The absence of mental&#8209;training tools within apps revealed a major gap in the archery experience, shaping the app's focus on mindset, confidence, and mental clarity. This led to features like mental drills and shot&#8209;reflection tools that help archers understand how their mental state affects performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · Personas -->
+  <section class="case-study-section">
+    <span class="case-study-section__label">04</span>
+    <h2 class="case-study-section__title">Personas</h2>
+    <div class="case-study-personas-grid">
+      <div class="case-study-persona-col">
+        <div class="case-study-section__body">
+          <h3 class="case-study-section__subtitle">Holden Recurve</h3>
+          <p>As a league manager, Holden needs a simple way to track competitive results so he can quickly determine winners and monitor archer progress without relying on manual methods.</p>
+        </div>
+        <div class="case-study-persona-embed">
+          <iframe src="persona-holden.html" title="Persona — Holden Recurve"></iframe>
+        </div>
+      </div>
+      <div class="case-study-persona-col">
+        <div class="case-study-section__body">
+          <h3 class="case-study-section__subtitle">Riley Parage</h3>
+          <p>As a young archer, Riley needs a clear, supportive way to track improvement so she can stay motivated and understand her progress even when scores fluctuate.</p>
+        </div>
+        <div class="case-study-persona-embed">
+          <iframe src="persona-riley.html" title="Persona — Riley Parage"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 · User Journey Map -->
+  <section class="case-study-section">
+    <span class="case-study-section__label">05</span>
+    <h2 class="case-study-section__title">User Journey Map</h2>
+    <div class="case-study-section__body">
+      <p>League participation plays a meaningful role in keeping archers engaged, regardless of age or experience level. Structured competitive environments offer clear progress tracking, consistent milestones, and a sense of accomplishment that can be hard to maintain through casual practice alone. By supporting league management within the app, I aimed to strengthen this ecosystem: making results easier to track, reducing administrative friction, and helping archers stay connected to their community.</p>
+      <p>For Holden, simplifying league setup and score tracking not only improves his workflow but also directly benefits the athletes he supports. Clear standings, organized results, and accessible progress data contribute to a more motivating and rewarding experience for archers, reinforcing long&#8209;term involvement in the sport.</p>
+    </div>
+    <!-- Journey Map -->
+    <div class="journey-map">
+      <div class="journey-map__persona-bar">
+        <span class="journey-map__persona-label">Persona</span>
+        <span class="journey-map__persona-name">Holden Recurve</span>
+        <span class="journey-map__persona-goal">Goal: Create account to manage &amp; track league results for athletes</span>
+      </div>
+      <table class="journey-map__table">
+        <thead>
+          <tr class="journey-map__header-row">
+            <th></th>
+            <th>Create Account</th>
+            <th>Set Up League</th>
+            <th>Import / Enter Results</th>
+            <th>Review Progress</th>
+            <th>Determine Winners</th>
+            <th>Share Results</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Tasks Row -->
+          <tr class="journey-map__phase-row">
+            <td class="journey-map__phase-header">Tasks</td>
+            <td class="journey-map__phase-cell">
+              <ul class="journey-map__task-list">
+                <li>Signs up for the app</li>
+                <li>Creates personal profile</li>
+                <li>Sets role as league admin</li>
+              </ul>
+            </td>
+            <td class="journey-map__phase-cell">
+              <ul class="journey-map__task-list">
+                <li>Enters league details</li>
+                <li>Creates league schedule</li>
+                <li>Assigns or randomizes lane assignment</li>
+              </ul>
+            </td>
+            <td class="journey-map__phase-cell">
+              <ul class="journey-map__task-list">
+                <li>Creates or approves individual athlete accounts</li>
+                <li>Saves and reviews imported results</li>
+              </ul>
+            </td>
+            <td class="journey-map__phase-cell">
+              <ul class="journey-map__task-list">
+                <li>Accesses score list</li>
+                <li>Reviews updated match details and lane assignments</li>
+                <li>Posts current standings for athletes</li>
+              </ul>
+            </td>
+            <td class="journey-map__phase-cell">
+              <ul class="journey-map__task-list">
+                <li>Identifies top performers</li>
+                <li>Reviews improvement metrics</li>
+              </ul>
+            </td>
+            <td class="journey-map__phase-cell">
+              <ul class="journey-map__task-list">
+                <li>Shares results and standings with athletes</li>
+                <li>Sets up schedule for the next session or season</li>
+              </ul>
+            </td>
+          </tr>
+          <!-- Feelings Row -->
+          <tr class="journey-map__phase-row">
+            <td class="journey-map__phase-header">Feelings</td>
+            <td class="journey-map__phase-cell">
+              <div class="journey-map__feelings">
+                <span class="journey-map__feeling-tag">Curious</span>
+                <span class="journey-map__feeling-tag">Hopeful</span>
+                <span class="journey-map__feeling-tag">Slightly intimidated</span>
+              </div>
+            </td>
+            <td class="journey-map__phase-cell">
+              <div class="journey-map__feelings">
+                <span class="journey-map__feeling-tag">Focused</span>
+                <span class="journey-map__feeling-tag">Mildly overwhelmed</span>
+                <span class="journey-map__feeling-tag">Eager</span>
+              </div>
+            </td>
+            <td class="journey-map__phase-cell">
+              <div class="journey-map__feelings">
+                <span class="journey-map__feeling-tag">Relieved</span>
+                <span class="journey-map__feeling-tag">Frustrated by manual entry</span>
+              </div>
+            </td>
+            <td class="journey-map__phase-cell">
+              <div class="journey-map__feelings">
+                <span class="journey-map__feeling-tag">Motivated</span>
+                <span class="journey-map__feeling-tag">Confident</span>
+                <span class="journey-map__feeling-tag">Organized</span>
+              </div>
+            </td>
+            <td class="journey-map__phase-cell">
+              <div class="journey-map__feelings">
+                <span class="journey-map__feeling-tag">Excited</span>
+                <span class="journey-map__feeling-tag">Empowered</span>
+                <span class="journey-map__feeling-tag">Satisfied</span>
+              </div>
+            </td>
+            <td class="journey-map__phase-cell">
+              <div class="journey-map__feelings">
+                <span class="journey-map__feeling-tag">Accomplished</span>
+                <span class="journey-map__feeling-tag">Proud</span>
+                <span class="journey-map__feeling-tag">Content</span>
+              </div>
+            </td>
+          </tr>
+          <!-- Opportunities Row -->
+          <tr class="journey-map__phase-row">
+            <td class="journey-map__phase-header">Opportunities</td>
+            <td class="journey-map__phase-cell">
+              <ul class="journey-map__opportunity-list">
+                <li>Simple onboarding flow for admin</li>
+                <li>Clear role&#8209;selection guidance</li>
+              </ul>
+            </td>
+            <td class="journey-map__phase-cell">
+              <ul class="journey-map__opportunity-list">
+                <li>Pre&#8209;built templates for league setup</li>
+                <li>Auto&#8209;generated schedules and lane assignments</li>
+                <li>Clear confirmation screens</li>
+              </ul>
+            </td>
+            <td class="journey-map__phase-cell">
+              <ul class="journey-map__opportunity-list">
+                <li>Reliable score&#8209;scanning feature</li>
+                <li>Bulk import options</li>
+                <li>Error&#8209;checking for scanned data</li>
+              </ul>
+            </td>
+            <td class="journey-map__phase-cell">
+              <ul class="journey-map__opportunity-list">
+                <li>Clean, visual dashboards</li>
+                <li>Filters for divisions, age groups, bow types</li>
+                <li>Automatic standings updates</li>
+              </ul>
+            </td>
+            <td class="journey-map__phase-cell">
+              <ul class="journey-map__opportunity-list">
+                <li>Automated winner calculation</li>
+                <li>Highlighted improvement trends</li>
+                <li>Exportable data</li>
+              </ul>
+            </td>
+            <td class="journey-map__phase-cell">
+              <ul class="journey-map__opportunity-list">
+                <li>Auto&#8209;generated recap reports</li>
+                <li>Auto&#8209;generated certificates</li>
+                <li>Suggested schedules for upcoming sessions</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 06 · Wireframes -->
+  <section class="case-study-section">
+    <span class="case-study-section__label">06</span>
+    <h2 class="case-study-section__title">Wireframes</h2>
+    <div class="case-study-coming-soon">
+      <div class="case-study-coming-soon__icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="6" y1="18" x2="42" y2="18" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="10" y="22" width="12" height="8" rx="1" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+          <line x1="26" y1="23" x2="38" y2="23" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+          <line x1="26" y1="27" x2="34" y2="27" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+        </svg>
+      </div>
+      <span class="case-study-coming-soon__label">Coming Soon</span>
+      <p class="case-study-coming-soon__note">Paper &amp; digital wireframes are being prepared for this section.</p>
+    </div>
+  </section>
+
+  <!-- 07 · Low-Fidelity Prototype -->
+  <section class="case-study-section">
+    <span class="case-study-section__label">07</span>
+    <h2 class="case-study-section__title">Low&#8209;Fidelity Prototype</h2>
+    <div class="case-study-coming-soon">
+      <div class="case-study-coming-soon__icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="14" y="6" width="20" height="36" rx="3" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="14" y1="12" x2="34" y2="12" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="14" y1="36" x2="34" y2="36" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="24" cy="39" r="1.5" fill="currentColor" opacity="0.5"/>
+        </svg>
+      </div>
+      <span class="case-study-coming-soon__label">Coming Soon</span>
+      <p class="case-study-coming-soon__note">Low&#8209;fidelity prototype screens and flow are being finalized.</p>
+    </div>
+  </section>
+
+  <!-- 08 · Usability Studies -->
+  <section class="case-study-section">
+    <span class="case-study-section__label">08</span>
+    <h2 class="case-study-section__title">Usability Studies</h2>
+    <div class="case-study-coming-soon">
+      <div class="case-study-coming-soon__icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="29" y1="29" x2="40" y2="40" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M16 20h8M20 16v8" stroke="currentColor" stroke-width="1" opacity="0.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="case-study-coming-soon__label">Coming Soon</span>
+      <p class="case-study-coming-soon__note">Usability study findings and insights are being documented.</p>
+    </div>
+  </section>
+
+  <!-- 09 · Visual Design -->
+  <section class="case-study-section">
+    <span class="case-study-section__label">09</span>
+    <h2 class="case-study-section__title">Visual Design</h2>
+    <div class="case-study-coming-soon">
+      <div class="case-study-coming-soon__icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 40l10-26 8 14 6-8 8 20H8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <circle cx="32" cy="14" r="4" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <span class="case-study-coming-soon__label">Coming Soon</span>
+      <p class="case-study-coming-soon__note">High&#8209;fidelity mockups and visual design details are in progress.</p>
+    </div>
+  </section>
+
+  <!-- 10 · Results & Takeaways -->
+  <section class="case-study-section">
+    <span class="case-study-section__label">10</span>
+    <h2 class="case-study-section__title">Results &amp; Takeaways</h2>
+    <div class="case-study-coming-soon">
+      <div class="case-study-coming-soon__icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 6l6 12 13 2-9 9 2 13-12-6-12 6 2-13-9-9 13-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span class="case-study-coming-soon__label">Coming Soon</span>
+      <p class="case-study-coming-soon__note">Final results, metrics, and key takeaways are being compiled.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="case-study-footer">
+    <a href="index.html#work" class="case-study-footer__back">Back to Portfolio</a>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Persona — Holden Recurve</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #1e2a34;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .persona-card {
+      width: 900px;
+      background: #253340;
+      border-radius: 12px;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(217, 225, 232, 0.06);
+      padding: 40px 44px 36px;
+      position: relative;
+    }
+
+    /* ── Top Section ── */
+    .persona-top {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 28px;
+    }
+
+    .persona-photo {
+      flex-shrink: 0;
+      width: 180px;
+      height: 180px;
+      border-radius: 4px;
+      background: #1e2a34;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .persona-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .persona-photo svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .persona-right-top {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .persona-quote {
+      font-family: 'Lato', sans-serif;
+      font-style: italic;
+      font-size: 15.5px;
+      line-height: 1.55;
+      color: rgba(217, 225, 232, 0.8);
+      margin-bottom: 20px;
+      padding-right: 10px;
+    }
+
+    .persona-quote::before { content: '\201C'; }
+    .persona-quote::after { content: '\201D'; }
+
+    /* ── Goals & Frustrations Row ── */
+    .persona-goals-row {
+      display: flex;
+      gap: 40px;
+      flex: 1;
+    }
+
+    .persona-goals-col {
+      flex: 1;
+    }
+
+    .persona-goals-col h3 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    .persona-goals-col h3.goals-title { color: #34a853; }
+    .persona-goals-col h3.frust-title { color: #ea4335; }
+
+    .persona-goals-col ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .persona-goals-col li {
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: rgba(217, 225, 232, 0.6);
+    }
+
+    /* ── Divider ── */
+    .persona-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(217, 225, 232, 0.08);
+      margin: 24px 0;
+    }
+
+    /* ── Bottom Section ── */
+    .persona-bottom {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .persona-bio-left {
+      flex-shrink: 0;
+      width: 180px;
+    }
+
+    .persona-name {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: #e91e8c;
+      margin-bottom: 14px;
+    }
+
+    .persona-details {
+      list-style: none;
+    }
+
+    .persona-details li {
+      font-size: 13px;
+      line-height: 1.7;
+      color: rgba(217, 225, 232, 0.65);
+      display: flex;
+    }
+
+    .persona-details li strong {
+      font-weight: 700;
+      color: rgba(217, 225, 232, 0.9);
+      flex-shrink: 0;
+      width: 88px;
+    }
+
+    /* ── Scenario Box ── */
+    .persona-scenario {
+      flex: 1;
+      border: 2px solid rgba(245, 197, 66, 0.3);
+      border-radius: 8px;
+      padding: 18px 22px;
+      background: rgba(245, 197, 66, 0.04);
+    }
+
+    .persona-scenario p {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: rgba(217, 225, 232, 0.65);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="persona-card">
+
+    <!-- Top Section -->
+    <div class="persona-top">
+
+      <!-- Photo -->
+      <div class="persona-photo">
+        <!-- Male avatar illustration -->
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="photoClip"><rect width="200" height="200"/></clipPath>
+          </defs>
+          <g clip-path="url(#photoClip)">
+            <!-- Background -->
+            <rect width="200" height="200" fill="#d6dce4"/>
+            <!-- Shoulders / body -->
+            <ellipse cx="100" cy="210" rx="72" ry="50" fill="#4a6a85"/>
+            <!-- Neck -->
+            <rect x="84" y="128" width="32" height="28" rx="4" fill="#c8a98a"/>
+            <!-- Shirt collar -->
+            <path d="M70 150 Q100 165 130 150 L130 155 Q100 172 70 155Z" fill="#3d5a73"/>
+            <!-- Head -->
+            <ellipse cx="100" cy="95" rx="40" ry="48" fill="#d4b08c"/>
+            <!-- Hair -->
+            <path d="M60 85 Q60 48 100 45 Q140 48 140 85 Q138 62 120 55 Q100 50 80 55 Q62 62 60 85Z" fill="#5c3a1e"/>
+            <!-- Hair sides -->
+            <path d="M60 85 Q58 70 62 60" stroke="#5c3a1e" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <path d="M140 85 Q142 70 138 60" stroke="#5c3a1e" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <!-- Eyebrows -->
+            <path d="M78 82 Q85 78 94 81" stroke="#4a2e14" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M106 81 Q115 78 122 82" stroke="#4a2e14" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <!-- Eyes -->
+            <ellipse cx="86" cy="90" rx="7" ry="5" fill="white"/>
+            <ellipse cx="114" cy="90" rx="7" ry="5" fill="white"/>
+            <circle cx="87" cy="90" r="3.5" fill="#3d6b5e"/>
+            <circle cx="115" cy="90" r="3.5" fill="#3d6b5e"/>
+            <circle cx="88" cy="89" r="1.2" fill="white"/>
+            <circle cx="116" cy="89" r="1.2" fill="white"/>
+            <!-- Nose -->
+            <path d="M97 93 Q100 105 103 93" stroke="#c09a78" stroke-width="1.5" fill="none"/>
+            <!-- Mouth / smile -->
+            <path d="M88 110 Q100 118 112 110" stroke="#b07860" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Ears -->
+            <ellipse cx="60" cy="92" rx="6" ry="10" fill="#d4b08c"/>
+            <ellipse cx="140" cy="92" rx="6" ry="10" fill="#d4b08c"/>
+            <!-- Beard stubble (subtle) -->
+            <path d="M72 108 Q100 130 128 108" stroke="#8a6b4a" stroke-width="0.5" fill="none" opacity="0.3"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Right side: Quote + Goals/Frustrations -->
+      <div class="persona-right-top">
+        <p class="persona-quote">A good league keeps archers motivated. I just need a simple, clear way to track results so everyone stays engaged.</p>
+
+        <div class="persona-goals-row">
+          <div class="persona-goals-col">
+            <h3 class="goals-title">Goals</h3>
+            <ul>
+              <li>Track competitive results quickly and accurately</li>
+            </ul>
+          </div>
+          <div class="persona-goals-col">
+            <h3 class="frust-title">Frustrations</h3>
+            <ul>
+              <li>Managing schedules, lane assignments, and results feels scattered</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="persona-divider"></div>
+
+    <!-- Bottom Section -->
+    <div class="persona-bottom">
+
+      <!-- Name + Details -->
+      <div class="persona-bio-left">
+        <h2 class="persona-name">Holden Recurve</h2>
+        <ul class="persona-details">
+          <li><strong>Age:</strong> 43</li>
+          <li><strong>Education:</strong> Some College</li>
+          <li><strong>Hometown:</strong> Boston, MA</li>
+          <li><strong>Family:</strong> Husband and father of three</li>
+          <li><strong>Occupation:</strong> Archery Shop Manager</li>
+        </ul>
+      </div>
+
+      <!-- Scenario -->
+      <div class="persona-scenario">
+        <p>Holden manages a small archery shop that hosts weekly leagues and seasonal tournaments. He loves seeing archers improve and values the sense of community these events create, but keeping everything organized is a constant challenge. Between juggling schedules, tracking scores, and answering questions from athletes and parents, he often feels stretched thin. A tool that simplifies competitive tracking and presents clear progress data would help him run smoother events and better support the archers who rely on him.</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

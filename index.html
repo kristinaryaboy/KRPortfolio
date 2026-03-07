@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kristina Ryaboy | UX Research &amp; Visual Systems Design</title>
+  <meta name="description" content="Portfolio of Kristina Ryaboy — UX Research & Visual Systems Design. Aspire. Iterate. Actualize.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Home">
+        <img src="images/Logo.png" alt="KR" class="nav-logo__img">
+      </a>
+      <div class="nav-links">
+        <a href="#" class="nav-link nav-link--active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#work" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" class="mobile-menu__link">Home</a>
+    <a href="#about" class="mobile-menu__link">About</a>
+    <a href="#work" class="mobile-menu__link">Projects</a>
+    <a href="#contact" class="mobile-menu__link">Contact</a>
+  </div>
+
+  <div class="section-divider section-divider--subtle"></div>
+
+  <!-- Hero Banner -->
+  <header class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-inner">
+      <div class="hero-logo">
+        <canvas id="logoOrbitCanvas" class="hero-logo__orbit"></canvas>
+        <img src="images/Logo.png" alt="KR Monogram" class="hero-logo__img">
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-name">
+          <span class="hero-name__first">Kristina</span>
+          <span class="hero-name__last">Ryaboy</span>
+        </h1>
+        <div class="hero-rule"></div>
+        <p class="hero-subtitle">UX Research &amp; Visual Systems Design</p>
+        <p class="hero-tagline">
+          <span>Aspire.</span>
+          <span class="hero-tagline--accent">Iterate.</span>
+          <span>Actualize.</span>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <div class="section-divider section-divider--subtle"></div>
+
+  <!-- Welcome Section -->
+  <section class="welcome">
+    <div class="container">
+      <h1 class="welcome-heading">Welcome, Friends!</h1>
+      <div class="welcome-philosophy">
+        <p class="welcome-text">I design with empathy, research, and intention creating accessible, usable experiences that genuinely support people.</p>
+        <p class="welcome-quote">While creativity and perfection can complement each other beautifully, they are not codependent. Creativity, to me, is permission. It is permission to wander, to iterate, and to discover the possibilities that only reveal themselves when you let curiosity lead instead of perfection.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Cards -->
+  <section class="cards-section">
+    <div class="container">
+      <div class="cards-grid">
+        <a href="#about" class="section-card">
+          <div class="section-card__visual section-card__visual--about">
+            <canvas class="card-canvas" data-type="landscape"></canvas>
+          </div>
+          <span class="section-card__label">About</span>
+        </a>
+        <a href="#process" class="section-card">
+          <div class="section-card__visual section-card__visual--process">
+            <canvas class="card-canvas" data-type="orbits"></canvas>
+          </div>
+          <span class="section-card__label">Process</span>
+        </a>
+        <a href="#work" class="section-card">
+          <div class="section-card__visual section-card__visual--work">
+            <canvas class="card-canvas" data-type="screens"></canvas>
+          </div>
+          <span class="section-card__label">Portfolio</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section-heading">
+        <span class="section-heading__label">Who am I?</span>
+        <span class="section-heading__title">About</span>
+      </h2>
+
+      <div class="about-layout">
+        <div class="about-visual">
+          <div class="about-photos">
+            <div class="about-photo-card about-photo-card--featured">
+              <img src="images/about me/IMG_5877.jpeg" alt="" loading="lazy">
+            </div>
+            <div class="about-photos-row">
+              <div class="about-photo-card">
+                <img src="images/about me/IMG_8221.jpeg" alt="" loading="lazy">
+              </div>
+              <div class="about-photo-card">
+                <img src="images/about me/IMG_1223.jpeg" alt="" loading="lazy">
+              </div>
+              <div class="about-photo-card">
+                <img src="images/about me/IMG_5178.jpeg" alt="" loading="lazy">
+              </div>
+              <div class="about-photo-card">
+                <img src="images/about me/5FA5CA7D-4282-4DA0-BE2F-8C166BB4E287.JPG" alt="" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <p class="about-lead">I'm Kristina, a UX designer with a foundation in Information Technology and a passion for creating thoughtful, accessible digital experiences. I'm driven by research, guided by empathy, and energized by the challenge of turning complex problems into clear, human&#8209;centered solutions.</p>
+          <p>My design philosophy is rooted in the belief that creativity grows through exploration, not perfection. I value the process of trying, iterating, and learning. As I see it, that's exactly where meaningful design emerges.</p>
+          <p>Outside of design, I'm deeply connected to the archery community. I compete, coach, and mentor archers of all ages, and the personal growth I've experienced through that community inspired the archery app featured in my portfolio. Coaching has taught me patience, clarity, and the importance of creating environments where people feel supported enough to try, learn, and grow. Each of these valuable lessons have helped to shape how I design.</p>
+          <p>I'm also someone who loves creative expression and a bit of friendly competition. During the pandemic, I dove into elaborate makeup character creations, exploring identity and storytelling through color and transformation. These days, you can also find me in a recreational bowling league, enjoying the rhythm, focus, and camaraderie it brings.</p>
+          <p>At home, life is full and joyful with my husband. His dedication to his work inspires me to stay committed to my own growth. We have a dog and two cats&#8202;&#8212;&#8202;a Shiba Inu named Kali and our two cats, Eevee and Onix. I'm also a massively proud aunt to two nephews and a niece, and I adore being part of their world. They remind me why curiosity, play, and connection matter so much in both life and design.</p>
+          <p>I bring all of these experiences&#8202;&#8212;&#8202;the technical, the creative, the competitive, the personal&#8202;&#8212;&#8202;into my work, shaping digital experiences that feel intuitive, supportive, and genuinely human.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Process Section -->
+  <section class="section process" id="process">
+    <div class="container">
+      <h2 class="section-heading">
+        <span class="section-heading__label">My</span>
+        <span class="section-heading__title">Process</span>
+      </h2>
+
+      <div class="process-timeline">
+        <div class="process-step" data-step="01">
+          <div class="process-step__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="24" cy="24" r="20"/>
+              <circle cx="24" cy="24" r="8"/>
+              <line x1="24" y1="4" x2="24" y2="12"/>
+              <line x1="24" y1="36" x2="24" y2="44"/>
+              <line x1="4" y1="24" x2="12" y2="24"/>
+              <line x1="36" y1="24" x2="44" y2="24"/>
+            </svg>
+          </div>
+          <div class="process-step__content">
+            <h3 class="process-step__title">Explore</h3>
+            <p class="process-step__desc">I explore user needs through stakeholder conversations, competitive research, and listening closely to the people at the center of the experience. This is where the relationship truly begins. I gather stories, patterns, and signals that help me understand what people value and what's happening beneath the surface so I can design in a way that enhances their journey.</p>
+          </div>
+        </div>
+
+        <div class="process-step" data-step="02">
+          <div class="process-step__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="6" y="6" width="36" height="36" rx="4"/>
+              <line x1="6" y1="18" x2="42" y2="18"/>
+              <line x1="6" y1="30" x2="42" y2="30"/>
+              <line x1="18" y1="6" x2="18" y2="42"/>
+              <line x1="30" y1="6" x2="30" y2="42"/>
+            </svg>
+          </div>
+          <div class="process-step__content">
+            <h3 class="process-step__title">Shape</h3>
+            <p class="process-step__desc">I shape my findings into intent through personas, journey maps, and structured information flow to understand the opportunity from a human perspective. This step helps me bring direction into focus and create a shared foundation for the experience we're building.</p>
+          </div>
+        </div>
+
+        <div class="process-step" data-step="03">
+          <div class="process-step__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M8 40 L20 8 L32 28 L44 12"/>
+              <circle cx="20" cy="8" r="3"/>
+              <circle cx="32" cy="28" r="3"/>
+              <circle cx="44" cy="12" r="3"/>
+            </svg>
+          </div>
+          <div class="process-step__content">
+            <h3 class="process-step__title">Design</h3>
+            <p class="process-step__desc">I bring ideas into form through sketches, wireframes, and prototypes. This is where your vision starts to take shape by moving from loose concepts to thoughtful, high‑fidelity experiences. My technical background helps me think in systems and translate complexity into clarity, allowing me to design interactions that feel intuitive, accessible, and grounded in how things actually work. This is where exploration becomes tangible, guided by iteration and the needs of the people I'm designing for.</p>
+          </div>
+        </div>
+
+        <div class="process-step" data-step="04">
+          <div class="process-step__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 36 L20 28 L28 34 L40 16"/>
+              <polyline points="32,16 40,16 40,24"/>
+              <rect x="4" y="4" width="40" height="40" rx="4"/>
+            </svg>
+          </div>
+          <div class="process-step__content">
+            <h3 class="process-step__title">Realize</h3>
+            <p class="process-step__desc">I refine and validate the experience through usability feedback, thoughtful iteration, and careful attention to detail. This stage is about bringing the work to life in a way that feels intuitive, accessible, and connected to the people it's meant to support. It's where intention becomes something real, guided by the relationship formed through listening, understanding, and designing with care.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Work Section -->
+  <section class="section work" id="work">
+    <div class="container">
+      <h2 class="section-heading">
+        <span class="section-heading__label">Selected</span>
+        <span class="section-heading__title">Portfolio</span>
+      </h2>
+
+      <div class="work-grid">
+        <a href="arcus.html" class="project-card-link">
+          <article class="project-card project-card--featured">
+            <div class="project-card__image project-card__image--flip">
+              <div class="project-card__flip-inner">
+                <div class="project-card__flip-front">
+                  <canvas id="arcusOrbitCanvas" class="project-card__orbit-canvas"></canvas>
+                  <img src="images/arcus-logo.svg" alt="Arcus logo" class="project-card__logo">
+                </div>
+                <div class="project-card__flip-back">
+                  <img src="images/arcus-login.png" alt="Arcus app login screen" class="project-card__mockup">
+                </div>
+              </div>
+              <div class="project-card__overlay">
+                <span class="project-card__cta">View Case Study</span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <div class="project-card__tags">
+                <span class="tag">UX Design</span>
+                <span class="tag">Mobile App</span>
+              </div>
+              <h3 class="project-card__title">Arcus</h3>
+              <p class="project-card__desc">Creating a User‑Centered Archery Experience</p>
+            </div>
+          </article>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-text">
+          <h2 class="section-heading">
+            <span class="section-heading__label">Let's</span>
+            <span class="section-heading__title">Connect</span>
+          </h2>
+          <p class="contact-lead">Have a project in mind or want to discuss design? I'd love to hear from you.</p>
+        </div>
+
+        <form class="contact-form" id="contactForm" action="#" method="post">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" class="form-input form-textarea" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-layout">
+      <div class="footer-brand">
+        <img src="images/Logo.png" alt="KR" class="footer-logo__img">
+        <p class="footer-tagline">Aspire. Iterate. Actualize.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://linkedin.com" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://dribbble.com" class="footer-link" target="_blank" rel="noopener">Dribbble</a>
+        <a href="https://behance.net" class="footer-link" target="_blank" rel="noopener">Behance</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Kristina Ryaboy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

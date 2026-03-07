@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KR Logo Variations — Round 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0F1920; color: #D9E1E8; font-family: 'Josefin Sans', sans-serif; padding: 48px 24px; }
+    h1 { text-align: center; font-weight: 300; letter-spacing: 4px; margin-bottom: 6px; font-size: 22px; color: #F4F7FA; }
+    .subtitle { text-align: center; font-size: 12px; color: rgba(217,225,232,0.4); letter-spacing: 3px; margin-bottom: 56px; text-transform: uppercase; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; max-width: 1000px; margin: 0 auto; }
+    .card {
+      background: linear-gradient(145deg, #16222B, #1F2E3A);
+      border-radius: 20px;
+      border: 1px solid rgba(217,225,232,0.05);
+      padding: 56px 32px 36px;
+      text-align: center;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      border-color: rgba(233,30,121,0.2);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3), 0 0 32px rgba(233,30,121,0.05);
+    }
+    .card svg { display: block; margin: 0 auto 28px; }
+    .card h3 { font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #E91E79; margin-bottom: 10px; }
+    .card p { font-size: 12px; color: rgba(217,225,232,0.4); line-height: 1.7; max-width: 280px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <h1>KR MONOGRAM — ROUND 2</h1>
+  <p class="subtitle">Abstract . overlapping . contrast . magenta flourishes</p>
+
+  <div class="grid">
+
+    <!-- VARIATION A: Interwoven — shared axis, strokes weave -->
+    <div class="card">
+      <svg viewBox="0 0 260 240" width="240" height="222" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="silverA" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#E8EDF2"/>
+            <stop offset="45%" stop-color="#9AAAB8"/>
+            <stop offset="100%" stop-color="#C8D2DC"/>
+          </linearGradient>
+          <linearGradient id="magA" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#E91E79"/>
+            <stop offset="100%" stop-color="#C4186A"/>
+          </linearGradient>
+        </defs>
+        <!-- K vertical (thick) -->
+        <rect x="52" y="28" width="22" height="184" rx="2" fill="url(#silverA)"/>
+        <!-- K upper diagonal (thick→thin taper) -->
+        <polygon points="74,108 74,88 148,28 148,52" fill="url(#silverA)"/>
+        <!-- K lower diagonal (thick→thin taper) -->
+        <polygon points="74,112 74,132 152,212 152,188" fill="url(#silverA)"/>
+        <!-- R vertical (thick, overlapping K) -->
+        <rect x="108" y="28" width="20" height="184" rx="2" fill="url(#silverA)" opacity="0.85"/>
+        <!-- R bowl (contrast: thick top, thinner curve) -->
+        <path d="M128,28 L180,28 Q216,28 216,68 Q216,108 180,108 L128,108 Z M128,48 L172,48 Q192,48 192,68 Q192,88 172,88 L128,88 Z" fill="url(#silverA)" fill-rule="evenodd"/>
+        <!-- R leg (thick→thin) -->
+        <polygon points="168,108 175,108 218,212 202,212" fill="url(#silverA)"/>
+
+        <!-- Magenta flourishes -->
+        <!-- Intersection glow where K diagonal crosses R vertical -->
+        <rect x="108" y="58" width="20" height="8" rx="1" fill="url(#magA)" opacity="0.7"/>
+        <rect x="108" y="136" width="20" height="6" rx="1" fill="url(#magA)" opacity="0.5"/>
+        <!-- Thin magenta line extending from K's lower diagonal -->
+        <line x1="152" y1="212" x2="202" y2="212" stroke="#E91E79" stroke-width="2" opacity="0.6"/>
+        <!-- Swooping flourish from R bowl -->
+        <path d="M216,68 Q228,68 228,48 Q228,24 212,18" fill="none" stroke="#E91E79" stroke-width="1.5" opacity="0.6"/>
+        <!-- Thin accent at top -->
+        <line x1="52" y1="22" x2="148" y2="22" stroke="#E91E79" stroke-width="1" opacity="0.35"/>
+      </svg>
+      <h3>Variation A</h3>
+      <p>Interwoven — K and R share vertical space, strokes layered with magenta at intersections and flourish from the bowl</p>
+    </div>
+
+    <!-- VARIATION B: Abstract ligature — letters merge into a mark -->
+    <div class="card">
+      <svg viewBox="0 0 260 240" width="240" height="222" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="silverB" x1="0.2" y1="0" x2="0.8" y2="1">
+            <stop offset="0%" stop-color="#F0F3F7"/>
+            <stop offset="40%" stop-color="#A8B8C6"/>
+            <stop offset="70%" stop-color="#7A8E9E"/>
+            <stop offset="100%" stop-color="#BCC8D4"/>
+          </linearGradient>
+          <linearGradient id="magB" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#E91E79"/>
+            <stop offset="100%" stop-color="#B81560"/>
+          </linearGradient>
+        </defs>
+        <!-- Unified mark: K's vertical is also R's vertical -->
+        <!-- Shared thick vertical -->
+        <rect x="86" y="24" width="24" height="192" rx="2" fill="url(#silverB)"/>
+
+        <!-- K upper arm — sweeps wide left, thick to thin -->
+        <path d="M86,110 L86,92 L28,28 L28,56 Z" fill="url(#silverB)"/>
+        <!-- K lower arm — sweeps left -->
+        <path d="M86,118 L86,136 L32,216 L32,192 Z" fill="url(#silverB)"/>
+
+        <!-- R bowl — elegant curve, thicker at top -->
+        <path d="M110,24 L168,24 C208,24 216,52 216,72 C216,100 196,116 164,116 L110,116 Z
+                 M110,46 L160,46 C186,46 192,58 192,72 C192,86 184,94 160,94 L110,94 Z" fill="url(#silverB)" fill-rule="evenodd"/>
+
+        <!-- R leg — diagonal kick, thick to thin -->
+        <path d="M156,116 L164,116 L224,216 L208,216 Z" fill="url(#silverB)"/>
+
+        <!-- MAGENTA ELEMENTS -->
+        <!-- Abstract magenta echo/shadow of the K diagonals, offset -->
+        <path d="M82,104 L26,38" stroke="url(#magB)" stroke-width="2.5" stroke-linecap="round" opacity="0.55"/>
+        <path d="M82,124 L30,206" stroke="url(#magB)" stroke-width="2.5" stroke-linecap="round" opacity="0.55"/>
+
+        <!-- Flourish arc sweeping from R bowl outward -->
+        <path d="M216,72 C232,72 238,52 238,36 C238,24 232,18 224,16" fill="none" stroke="#E91E79" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
+
+        <!-- Thin magenta connecting line at base -->
+        <line x1="32" y1="222" x2="224" y2="222" stroke="#E91E79" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+
+        <!-- Magenta dot accents -->
+        <circle cx="28" cy="28" r="3.5" fill="#E91E79" opacity="0.7"/>
+        <circle cx="224" cy="216" r="3.5" fill="#E91E79" opacity="0.7"/>
+      </svg>
+      <h3>Variation B</h3>
+      <p>Abstract ligature — single shared axis, magenta echo lines shadow the K, flourish arc from the bowl, dot accents at extremes</p>
+    </div>
+
+    <!-- VARIATION C: Offset overlap with depth -->
+    <div class="card">
+      <svg viewBox="0 0 280 240" width="260" height="222" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="silverC1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#D8E0E8"/>
+            <stop offset="50%" stop-color="#8898A8"/>
+            <stop offset="100%" stop-color="#A8B6C4"/>
+          </linearGradient>
+          <linearGradient id="silverC2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F0F4F8"/>
+            <stop offset="50%" stop-color="#B0BCC8"/>
+            <stop offset="100%" stop-color="#D0D8E0"/>
+          </linearGradient>
+        </defs>
+
+        <!-- R (behind, slightly left) — darker silver -->
+        <g opacity="0.75">
+          <rect x="72" y="30" width="20" height="180" rx="2" fill="url(#silverC1)"/>
+          <path d="M92,30 L150,30 C186,30 192,56 192,72 C192,96 176,110 148,110 L92,110 Z
+                   M92,50 L142,50 C164,50 170,60 170,72 C170,84 162,90 142,90 L92,90 Z" fill="url(#silverC1)" fill-rule="evenodd"/>
+          <polygon points="140,110 150,110 200,210 184,210" fill="url(#silverC1)"/>
+        </g>
+
+        <!-- K (in front, slightly right) — brighter silver -->
+        <g>
+          <rect x="96" y="30" width="22" height="180" rx="2" fill="url(#silverC2)"/>
+          <polygon points="118,104 118,84 186,30 186,56" fill="url(#silverC2)"/>
+          <polygon points="118,116 118,136 190,210 190,186" fill="url(#silverC2)"/>
+        </g>
+
+        <!-- Magenta intersection highlights -->
+        <!-- Where K vertical overlaps R bowl -->
+        <rect x="96" y="54" width="22" height="4" rx="1" fill="#E91E79" opacity="0.5"/>
+        <rect x="96" y="82" width="22" height="4" rx="1" fill="#E91E79" opacity="0.4"/>
+
+        <!-- Magenta flourish — thin calligraphic swash from top -->
+        <path d="M186,30 C196,24 210,22 220,28 C228,34 224,46 214,46" fill="none" stroke="#E91E79" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+        <!-- Magenta flourish — thin sweep from R leg -->
+        <path d="M200,210 C210,214 222,210 228,200" fill="none" stroke="#E91E79" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+
+        <!-- Thin vertical magenta accent line -->
+        <line x1="60" y1="42" x2="60" y2="198" stroke="#E91E79" stroke-width="1" opacity="0.2"/>
+
+        <!-- Magenta accent dots at K tips -->
+        <circle cx="186" cy="30" r="3" fill="#E91E79" opacity="0.65"/>
+        <circle cx="190" cy="210" r="3" fill="#E91E79" opacity="0.65"/>
+      </svg>
+      <h3>Variation C</h3>
+      <p>Offset layers — R sits behind K creating depth, thick/thin contrast, calligraphic magenta flourishes at the tips</p>
+    </div>
+
+    <!-- VARIATION D: Abstract interlock with crossing strokes -->
+    <div class="card">
+      <svg viewBox="0 0 260 240" width="240" height="222" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="silverD" x1="0.3" y1="0" x2="0.7" y2="1">
+            <stop offset="0%" stop-color="#ECF0F4"/>
+            <stop offset="35%" stop-color="#B4C0CC"/>
+            <stop offset="65%" stop-color="#8494A4"/>
+            <stop offset="100%" stop-color="#C4CED8"/>
+          </linearGradient>
+          <linearGradient id="magD" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#E91E79" stop-opacity="0"/>
+            <stop offset="30%" stop-color="#E91E79" stop-opacity="0.8"/>
+            <stop offset="70%" stop-color="#E91E79" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#E91E79" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Central thick vertical (shared axis) -->
+        <rect x="96" y="20" width="26" height="200" rx="3" fill="url(#silverD)"/>
+
+        <!-- K upper diagonal — thick, bold -->
+        <polygon points="96,106 96,82 32,20 48,20" fill="url(#silverD)"/>
+        <!-- K lower diagonal — thick, bold -->
+        <polygon points="96,120 96,144 36,220 52,220" fill="url(#silverD)"/>
+
+        <!-- R bowl — lush curve -->
+        <path d="M122,20 L176,20 C218,20 226,50 226,72 C226,102 204,118 172,118 L122,118 Z
+                 M122,44 L168,44 C196,44 200,58 200,72 C200,86 194,94 168,94 L122,94 Z" fill="url(#silverD)" fill-rule="evenodd"/>
+
+        <!-- R leg crossing over K's lower diagonal -->
+        <polygon points="162,118 172,118 232,220 216,220" fill="url(#silverD)"/>
+
+        <!-- MAGENTA ABSTRACT ELEMENTS -->
+
+        <!-- Crossing magenta stroke — goes OVER the vertical, connecting K arm to R bowl -->
+        <path d="M56,56 C72,56 88,60 96,68 C108,78 118,70 140,58 C156,50 172,52 188,60" fill="none" stroke="#E91E79" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+
+        <!-- Lower magenta crossing stroke -->
+        <path d="M62,182 C80,174 96,168 110,170 C128,174 148,180 172,174 C192,168 208,178 222,188" fill="none" stroke="#E91E79" stroke-width="2" stroke-linecap="round" opacity="0.45"/>
+
+        <!-- Magenta thin vertical accent beside the main vertical -->
+        <line x1="88" y1="30" x2="88" y2="210" stroke="#E91E79" stroke-width="1" opacity="0.25"/>
+
+        <!-- Flourish from top of R bowl -->
+        <path d="M226,72 C240,60 244,40 236,26" fill="none" stroke="#E91E79" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+
+        <!-- Glow dots where magenta strokes cross the vertical -->
+        <circle cx="96" cy="68" r="4" fill="#E91E79" opacity="0.5"/>
+        <circle cx="110" cy="170" r="3.5" fill="#E91E79" opacity="0.4"/>
+
+        <!-- Base flourish line -->
+        <rect x="32" y="226" width="200" height="2" rx="1" fill="url(#magD)"/>
+      </svg>
+      <h3>Variation D</h3>
+      <p>Abstract interlock — crossing magenta strokes weave through the shared-axis mark, organic flourishes, glow at intersections</p>
+    </div>
+
+  </div>
+</body>
+</html>

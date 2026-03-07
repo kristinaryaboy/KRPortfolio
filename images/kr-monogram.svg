@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" fill="none">
+  <defs>
+    <!-- Metallic surface gradient (lighter, top-lit) -->
+    <linearGradient id="surface" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0%" stop-color="#E4ECF2"/>
+      <stop offset="25%" stop-color="#B8C6D2"/>
+      <stop offset="50%" stop-color="#8696A8"/>
+      <stop offset="75%" stop-color="#A4B4C4"/>
+      <stop offset="100%" stop-color="#CCD6E0"/>
+    </linearGradient>
+
+    <!-- Depth/bevel gradient (darker recessed layer) -->
+    <linearGradient id="depth" x1="0.1" y1="0" x2="0.7" y2="1">
+      <stop offset="0%" stop-color="#4A5868"/>
+      <stop offset="40%" stop-color="#1F2E3A"/>
+      <stop offset="100%" stop-color="#2A3E4E"/>
+    </linearGradient>
+
+    <!-- Inner channel gradient (darkest, for bevel grooves) -->
+    <linearGradient id="channel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16222B"/>
+      <stop offset="100%" stop-color="#1A2C3A"/>
+    </linearGradient>
+
+    <!-- Magenta accent gradient -->
+    <linearGradient id="mag" x1="0" y1="0" x2="1" y2="0.5">
+      <stop offset="0%" stop-color="#E91E79"/>
+      <stop offset="100%" stop-color="#B81560"/>
+    </linearGradient>
+
+    <!-- Magenta edge fade -->
+    <linearGradient id="magFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E91E79" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#E91E79" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ==================== -->
+  <!-- K LETTER             -->
+  <!-- ==================== -->
+
+  <!-- K: depth/shadow layer (offset for dimension) -->
+  <g transform="translate(3,3)" opacity="0.8">
+    <!-- K vertical stem -->
+    <path d="M 24,14 L 54,14 L 54,226 L 24,226 Z" fill="url(#depth)"/>
+    <!-- K upper arm -->
+    <polygon points="54,116 54,86 154,14 154,50" fill="url(#depth)"/>
+    <!-- K lower arm -->
+    <polygon points="54,128 54,158 158,226 158,196" fill="url(#depth)"/>
+  </g>
+
+  <!-- K: surface layer -->
+  <path d="M 24,14 L 54,14 L 54,226 L 24,226 Z" fill="url(#surface)"/>
+  <polygon points="54,116 54,86 154,14 154,50" fill="url(#surface)"/>
+  <polygon points="54,128 54,158 158,226 158,196" fill="url(#surface)"/>
+
+  <!-- K: inner bevel channels (dark grooves for dimension) -->
+  <!-- Vertical stem inner lines -->
+  <line x1="31" y1="20" x2="31" y2="220" stroke="url(#channel)" stroke-width="2" opacity="0.6"/>
+  <line x1="47" y1="20" x2="47" y2="220" stroke="url(#channel)" stroke-width="1.5" opacity="0.5"/>
+  <!-- Upper arm inner line -->
+  <line x1="58" y1="104" x2="148" y2="28" stroke="url(#channel)" stroke-width="1.5" opacity="0.45"/>
+  <!-- Lower arm inner line -->
+  <line x1="58" y1="140" x2="152" y2="216" stroke="url(#channel)" stroke-width="1.5" opacity="0.45"/>
+
+  <!-- ==================== -->
+  <!-- R LETTER (in front)  -->
+  <!-- ==================== -->
+
+  <!-- R: depth/shadow layer -->
+  <g transform="translate(3,3)" opacity="0.8">
+    <!-- R vertical stem -->
+    <path d="M 108,14 L 136,14 L 136,226 L 108,226 Z" fill="url(#depth)"/>
+    <!-- R bowl -->
+    <path d="M 136,14 L 196,14 C 238,14 246,44 246,66 C 246,98 226,114 194,114 L 136,114 Z
+             M 136,36 L 188,36 C 214,36 220,50 220,66 C 220,82 212,94 188,94 L 136,94 Z"
+          fill="url(#depth)" fill-rule="evenodd"/>
+    <!-- R leg -->
+    <polygon points="178,114 194,114 254,226 234,226" fill="url(#depth)"/>
+  </g>
+
+  <!-- R: surface layer -->
+  <path d="M 108,14 L 136,14 L 136,226 L 108,226 Z" fill="url(#surface)"/>
+  <path d="M 136,14 L 196,14 C 238,14 246,44 246,66 C 246,98 226,114 194,114 L 136,114 Z
+           M 136,36 L 188,36 C 214,36 220,50 220,66 C 220,82 212,94 188,94 L 136,94 Z"
+        fill="url(#surface)" fill-rule="evenodd"/>
+  <polygon points="178,114 194,114 254,226 234,226" fill="url(#surface)"/>
+
+  <!-- R: inner bevel channels -->
+  <!-- Vertical stem inner lines -->
+  <line x1="115" y1="20" x2="115" y2="220" stroke="url(#channel)" stroke-width="2" opacity="0.55"/>
+  <line x1="129" y1="20" x2="129" y2="220" stroke="url(#channel)" stroke-width="1.5" opacity="0.45"/>
+  <!-- Bowl outer channel -->
+  <path d="M 136,22 L 190,22 C 232,22 238,48 238,66 C 238,92 222,106 190,106 L 136,106"
+        fill="none" stroke="url(#channel)" stroke-width="1.5" opacity="0.4"/>
+  <!-- Bowl inner channel -->
+  <path d="M 136,44 L 184,44 C 208,44 214,56 214,66 C 214,78 208,86 184,86 L 136,86"
+        fill="none" stroke="url(#channel)" stroke-width="1.5" opacity="0.4"/>
+  <!-- Leg inner line -->
+  <line x1="184" y1="122" x2="243" y2="226" stroke="url(#channel)" stroke-width="1.5" opacity="0.45"/>
+
+  <!-- ==================== -->
+  <!-- MAGENTA ACCENTS      -->
+  <!-- ==================== -->
+
+  <!-- Accent line connecting K lower arm to R leg at base -->
+  <line x1="158" y1="228" x2="234" y2="228" stroke="url(#mag)" stroke-width="2.5" opacity="0.65"/>
+
+  <!-- R leg outer edge magenta highlight -->
+  <line x1="194" y1="114" x2="254" y2="226" stroke="#E91E79" stroke-width="1.5" opacity="0.35"/>
+
+  <!-- Intersection highlight where K arm crosses R vertical -->
+  <rect x="108" y="58" width="28" height="3" rx="1" fill="#E91E79" opacity="0.3"/>
+  <rect x="108" y="140" width="28" height="2.5" rx="1" fill="#E91E79" opacity="0.2"/>
+
+  <!-- Subtle magenta edge on R bowl curve -->
+  <path d="M 246,66 C 246,44 238,24 210,16" fill="none" stroke="#E91E79" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+
+  <!-- Very subtle underline flourish -->
+  <line x1="24" y1="236" x2="254" y2="236" stroke="url(#magFade)" stroke-width="1" opacity="0.5"/>
+</svg>
