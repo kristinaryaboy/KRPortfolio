@@ -1574,6 +1574,69 @@ img { max-width: 100%; display: block; }
   color: rgba(217, 225, 232, 0.4);
 }
 
+/* ── Wireframe pairs ── */
+.wireframe-page-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(217, 225, 232, 0.6);
+  letter-spacing: 0.03em;
+  margin: 48px 0 20px;
+}
+
+.wireframe-page-title:first-of-type {
+  margin-top: 32px;
+}
+
+.wireframe-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+.wireframe-card {
+  text-align: center;
+}
+
+.wireframe-card__label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(233, 30, 121, 0.5);
+  margin-bottom: 12px;
+}
+
+.wireframe-card__image {
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid rgba(217, 225, 232, 0.08);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wireframe-card__image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.wireframe-card__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .wireframe-pair {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
 /* ── Persona embed ── */
 .case-study-persona-embed {
   margin: 40px 0;
