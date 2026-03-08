@@ -1027,13 +1027,7 @@ img { max-width: 100%; display: block; }
 
 /* Crop Arcus1 from top so subjects are visible */
 .project-card__hero-photo--crop-top img {
-  object-position: center bottom;
-}
-
-/* Make Arcus2 slightly larger */
-.project-card__hero-photo--larger {
-  flex: 0 1 270px;
-  height: 80%;
+  object-position: center 65%;
 }
 
 @media (max-width: 768px) {
