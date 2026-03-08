@@ -1597,6 +1597,7 @@ img { max-width: 100%; display: block; }
 }
 
 .wireframe-card {
+  position: relative;
   text-align: center;
 }
 
@@ -1620,13 +1621,50 @@ img { max-width: 100%; display: block; }
   margin-bottom: 12px;
 }
 
+/* Final design — shrink slightly */
+.wireframe-card:last-child .wireframe-card__image {
+  transform: scale(0.85);
+}
+
+.wireframe-card:last-child .wireframe-card__image:hover {
+  transform: scale(0.85) translateY(-4px);
+}
+
 .wireframe-card__image {
   position: relative;
   border-radius: 10px;
   border: 1px solid rgba(217, 225, 232, 0.08);
-  overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wireframe-card__image img {
+  border-radius: 10px;
+}
+
+/* Tape strips on wireframe cards */
+.wireframe-card::before,
+.wireframe-card::after {
+  content: '';
+  position: absolute;
+  width: 52px;
+  height: 20px;
+  background: rgba(217, 225, 232, 0.22);
+  border-radius: 2px;
+  z-index: 3;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.wireframe-card::before {
+  top: 22px;
+  left: -2px;
+  transform: rotate(-28deg);
+}
+
+.wireframe-card::after {
+  top: 22px;
+  right: -2px;
+  transform: rotate(25deg);
 }
 
 .wireframe-card__image:hover {
