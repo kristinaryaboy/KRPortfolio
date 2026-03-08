@@ -1031,8 +1031,8 @@ img { max-width: 100%; display: block; }
 .project-card__hero-photo::after {
   content: '';
   position: absolute;
-  width: 45px;
-  height: 16px;
+  width: 72px;
+  height: 26px;
   background: rgba(217, 225, 232, 0.25);
   border-radius: 2px;
   z-index: 3;
@@ -1041,15 +1041,15 @@ img { max-width: 100%; display: block; }
 
 /* Top-left tape */
 .project-card__hero-photo::before {
-  top: -4px;
-  left: 8px;
+  top: -8px;
+  left: -6px;
   transform: rotate(-18deg);
 }
 
 /* Top-right tape */
 .project-card__hero-photo::after {
-  top: -4px;
-  right: 8px;
+  top: -8px;
+  right: -6px;
   transform: rotate(15deg);
 }
 
