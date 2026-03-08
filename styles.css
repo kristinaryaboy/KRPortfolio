@@ -1062,6 +1062,11 @@ img { max-width: 100%; display: block; }
   border-radius: 12px;
 }
 
+/* Shift Arcus2 crop to show the hat */
+.project-card__hero-photo:last-child img {
+  object-position: left center;
+}
+
 /* Tape strips on photo corners */
 .project-card__hero-photo::before,
 .project-card__hero-photo::after {
