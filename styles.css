@@ -2028,6 +2028,37 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* Conclusion accent card */
+.takeaway-conclusion {
+  display: flex;
+  gap: 0;
+  margin: 24px 0 16px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(217, 225, 232, 0.06);
+  background: rgba(233, 30, 121, 0.03);
+}
+
+.takeaway-conclusion__accent {
+  width: 4px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #e91e8c, rgba(233, 30, 121, 0.2));
+}
+
+.takeaway-conclusion__content {
+  padding: 28px 32px;
+}
+
+.takeaway-conclusion__content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(217, 225, 232, 0.55);
+}
+
+.takeaway-conclusion__content p:first-child {
+  margin-bottom: 12px;
+}
+
 /* ── Lo-Fi Prototype ── */
 .lofi-hint {
   text-align: center;
