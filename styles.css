@@ -1581,29 +1581,13 @@ img { max-width: 100%; display: block; }
   color: rgba(217, 225, 232, 0.4);
 }
 
-/* ── Wireframe pairs ── */
-.wireframe-page-title {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: rgba(217, 225, 232, 0.6);
-  letter-spacing: 0.03em;
-  margin: 48px 0 20px;
-}
-
-.wireframe-page-title:first-of-type {
-  margin-top: 32px;
-}
-
-.wireframe-pair {
+/* ── Wireframe row (all 4 in one line) ── */
+.wireframe-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  margin-bottom: 36px;
+  margin: 32px 0;
   align-items: center;
-  max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .wireframe-card {
@@ -1611,33 +1595,15 @@ img { max-width: 100%; display: block; }
   text-align: center;
 }
 
-/* Crazy 8's — shrink and rotate for visual contrast */
-.wireframe-card:first-child .wireframe-card__image {
-  transform: rotate(-90deg) scale(0.7);
-}
-
-.wireframe-card:first-child .wireframe-card__image:hover {
-  transform: rotate(-90deg) scale(0.7) translateY(-4px);
-}
-
 .wireframe-card__label {
   display: block;
   font-family: var(--font-heading);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: rgba(233, 30, 121, 0.5);
-  margin-bottom: 12px;
-}
-
-/* Final design — shrink slightly */
-.wireframe-card:last-child .wireframe-card__image {
-  transform: scale(0.85);
-}
-
-.wireframe-card:last-child .wireframe-card__image:hover {
-  transform: scale(0.85) translateY(-4px);
+  margin-top: 10px;
 }
 
 .wireframe-card__image {
@@ -1645,24 +1611,13 @@ img { max-width: 100%; display: block; }
   border-radius: 10px;
   border: 1px solid rgba(217, 225, 232, 0.08);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  transition: transform 0.35s ease, box-shadow 0.35s ease, z-index 0s;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
   cursor: zoom-in;
 }
 
 .wireframe-card__image:hover {
-  transform: scale(1.8);
+  transform: scale(2);
   box-shadow: 0 16px 50px rgba(0, 0, 0, 0.5);
-  z-index: 10;
-}
-
-/* Override the existing crazy 8's and final design hover transforms */
-.wireframe-card:first-child .wireframe-card__image:hover {
-  transform: rotate(-90deg) scale(1.3);
-  z-index: 10;
-}
-
-.wireframe-card:last-child .wireframe-card__image:hover {
-  transform: scale(1.8);
   z-index: 10;
 }
 
@@ -1670,13 +1625,23 @@ img { max-width: 100%; display: block; }
   border-radius: 10px;
 }
 
+/* Crazy 8's — rotate to correct orientation */
+.wireframe-card__image--crazy8 {
+  transform: rotate(-90deg) scale(0.75);
+}
+
+.wireframe-card__image--crazy8:hover {
+  transform: rotate(-90deg) scale(1.5);
+  z-index: 10;
+}
+
 /* Tape strips on wireframe images */
 .wireframe-card__image::before,
 .wireframe-card__image::after {
   content: '';
   position: absolute;
-  width: 52px;
-  height: 20px;
+  width: 40px;
+  height: 16px;
   background: rgba(217, 225, 232, 0.22);
   border-radius: 2px;
   z-index: 3;
@@ -1684,35 +1649,30 @@ img { max-width: 100%; display: block; }
 }
 
 .wireframe-card__image::before {
-  top: -6px;
-  left: -12px;
+  top: -5px;
+  left: -8px;
   transform: rotate(-28deg);
 }
 
 .wireframe-card__image::after {
-  top: -6px;
-  right: -12px;
+  top: -5px;
+  right: -8px;
   transform: rotate(25deg);
 }
 
 /* Counter-rotate tape on crazy 8's so it stays on the visual top */
-.wireframe-card:first-child .wireframe-card__image::before {
-  top: -12px;
+.wireframe-card__image--crazy8::before {
+  top: -8px;
   left: auto;
-  right: -6px;
+  right: -5px;
   transform: rotate(62deg);
 }
 
-.wireframe-card:first-child .wireframe-card__image::after {
+.wireframe-card__image--crazy8::after {
   top: auto;
-  right: -6px;
-  bottom: -12px;
+  right: -5px;
+  bottom: -8px;
   transform: rotate(115deg);
-}
-
-.wireframe-card__image:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
 }
 
 .wireframe-card__image img {
@@ -1722,9 +1682,9 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 768px) {
-  .wireframe-pair {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .wireframe-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 }
 
