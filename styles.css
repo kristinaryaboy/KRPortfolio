@@ -1593,10 +1593,20 @@ img { max-width: 100%; display: block; }
   grid-template-columns: 1fr 1fr;
   gap: 28px;
   margin-bottom: 48px;
+  align-items: center;
 }
 
 .wireframe-card {
   text-align: center;
+}
+
+/* Crazy 8's — shrink and rotate for visual contrast */
+.wireframe-card:first-child .wireframe-card__image {
+  transform: rotate(-3deg) scale(0.82);
+}
+
+.wireframe-card:first-child .wireframe-card__image:hover {
+  transform: rotate(-3deg) scale(0.82) translateY(-4px);
 }
 
 .wireframe-card__label {
