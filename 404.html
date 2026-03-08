@@ -112,21 +112,22 @@
       animation: fallOff 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
       animation-delay: 1.2s;
       transform-origin: bottom left;
-      /* Override parent's background-clip gradient so the 4 stays visible when rotated */
-      background: none;
-      -webkit-text-fill-color: #e91e8c;
-      color: #e91e8c;
+      /* Own gradient matching the parent so it stays visible when rotated */
+      background: linear-gradient(135deg, rgba(217, 225, 232, 0.6), #e91e8c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     @keyframes fallOff {
       0% { transform: rotate(0deg) translateY(0); }
       20% { transform: rotate(6deg) translateY(0); }
       35% { transform: rotate(-3deg) translateY(0); }
-      50% { transform: rotate(15deg) translateY(2px); }
-      70% { transform: rotate(55deg) translateY(10px); }
-      85% { transform: rotate(85deg) translateY(18px); }
-      92% { transform: rotate(92deg) translateY(20px); }
-      100% { transform: rotate(90deg) translateY(20px); }
+      50% { transform: rotate(15deg) translateY(1px); }
+      70% { transform: rotate(55deg) translateY(3px); }
+      85% { transform: rotate(85deg) translateY(5px); }
+      92% { transform: rotate(92deg) translateY(6px); }
+      100% { transform: rotate(90deg) translateY(6px); }
     }
 
     /* Oops bubble */
