@@ -1425,7 +1425,7 @@ img { max-width: 100%; display: block; }
   margin: 0 auto;
   padding: 40px 40px 60px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 32px;
 }
 
@@ -1447,6 +1447,17 @@ img { max-width: 100%; display: block; }
   font-size: 15px;
   color: var(--cool-gray);
   line-height: 1.6;
+}
+
+.case-study-meta__link {
+  color: var(--magenta);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(233, 30, 121, 0.3);
+  transition: border-color 0.3s ease;
+}
+
+.case-study-meta__link:hover {
+  border-bottom-color: var(--magenta);
 }
 
 /* ── Sections ── */
