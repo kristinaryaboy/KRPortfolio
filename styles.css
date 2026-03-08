@@ -1798,15 +1798,22 @@ img { max-width: 100%; display: block; }
   flex: 1;
   background: #1c1f26;
   border-radius: 16px;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
+  max-height: 420px;
+  scrollbar-width: none;
+}
+
+.lofi-phone__screen::-webkit-scrollbar {
+  display: none;
 }
 
 .lofi-screen {
   display: none;
   flex-direction: column;
   padding: 12px;
-  height: 100%;
+  min-height: 100%;
   animation: lofiSlideIn 0.25s ease;
 }
 
