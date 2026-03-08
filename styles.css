@@ -668,10 +668,39 @@ img { max-width: 100%; display: block; }
 }
 
 .about-photo-card {
+  position: relative;
   border-radius: 10px;
-  overflow: hidden;
   border: 1px solid rgba(217, 225, 232, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-photo-card img {
+  border-radius: 10px;
+}
+
+/* Tape strips on about photos */
+.about-photo-card::before,
+.about-photo-card::after {
+  content: '';
+  position: absolute;
+  width: 52px;
+  height: 20px;
+  background: rgba(217, 225, 232, 0.22);
+  border-radius: 2px;
+  z-index: 3;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.about-photo-card::before {
+  top: -6px;
+  left: -12px;
+  transform: rotate(-28deg);
+}
+
+.about-photo-card::after {
+  top: -6px;
+  right: -12px;
+  transform: rotate(25deg);
 }
 
 .about-photo-card:hover {
