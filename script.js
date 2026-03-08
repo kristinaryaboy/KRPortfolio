@@ -4,6 +4,26 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ── Page transition on link clicks ──
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    // Only intercept links to other pages (not anchors, downloads, or external)
+    if (
+      href &&
+      !href.startsWith('#') &&
+      !href.startsWith('mailto:') &&
+      !href.startsWith('http') &&
+      !link.hasAttribute('download') &&
+      !link.getAttribute('target')
+    ) {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.body.classList.add('page-exit');
+        setTimeout(() => { window.location.href = href; }, 300);
+      });
+    }
+  });
+
   // ── Navigation scroll effect ──
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {

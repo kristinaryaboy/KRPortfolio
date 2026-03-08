@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arcus — Case Study | Kristina Ryaboy</title>
   <meta name="description" content="Arcus case study — Creating a User-Centered Archery Experience. UX Design by Kristina Ryaboy.">
+  <link rel="icon" type="image/png" href="images/Logo.png">
+  <link rel="apple-touch-icon" href="images/Logo.png">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Arcus Case Study | Kristina Ryaboy">
+  <meta property="og:description" content="Creating a User-Centered Archery Experience — UX Design case study by Kristina Ryaboy.">
+  <meta property="og:image" content="https://kristinaryaboy.github.io/KRPortfolio/images/Logo.png">
+  <meta property="og:url" content="https://kristinaryaboy.github.io/KRPortfolio/arcus.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arcus Case Study | Kristina Ryaboy">
+  <meta name="twitter:description" content="Creating a User-Centered Archery Experience — UX Design case study by Kristina Ryaboy.">
+  <meta name="twitter:image" content="https://kristinaryaboy.github.io/KRPortfolio/images/Logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -541,5 +553,18 @@
     <a href="index.html#work" class="case-study-footer__back">Back to Portfolio</a>
   </footer>
 
+  <script>
+    // Page transition for case study
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('http') && !link.hasAttribute('download') && !link.getAttribute('target')) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          document.body.classList.add('page-exit');
+          setTimeout(() => { window.location.href = href; }, 300);
+        });
+      }
+    });
+  </script>
 </body>
 </html>

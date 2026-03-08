@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Kristina Ryaboy</title>
+  <link rel="icon" type="image/png" href="images/Logo.png">
+  <link rel="apple-touch-icon" href="images/Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #1e2a34;
+      color: rgba(217, 225, 232, 0.7);
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+      padding: 32px;
+    }
+
+    .error-logo {
+      width: 80px;
+      height: auto;
+      margin-bottom: 32px;
+      opacity: 0.8;
+    }
+
+    .error-code {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: clamp(4rem, 12vw, 8rem);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      background: linear-gradient(135deg, rgba(217, 225, 232, 0.6), #e91e8c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .error-title {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      font-weight: 400;
+      color: rgba(217, 225, 232, 0.5);
+      margin-bottom: 12px;
+      letter-spacing: 0.04em;
+    }
+
+    .error-message {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      max-width: 400px;
+      margin-bottom: 40px;
+      color: rgba(217, 225, 232, 0.4);
+    }
+
+    .error-link {
+      display: inline-block;
+      padding: 12px 32px;
+      border: 1px solid rgba(233, 30, 121, 0.4);
+      border-radius: 6px;
+      color: #e91e8c;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: all 0.3s ease;
+    }
+
+    .error-link:hover {
+      background: rgba(233, 30, 121, 0.08);
+      border-color: #e91e8c;
+      box-shadow: 0 0 20px rgba(233, 30, 121, 0.1);
+    }
+
+    .error-divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e91e8c, transparent);
+      opacity: 0.4;
+      margin: 0 auto 32px;
+    }
+
+    /* Subtle floating animation */
+    .error-logo {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+  </style>
+</head>
+<body>
+  <img src="images/Logo.png" alt="KR" class="error-logo">
+  <div class="error-code">404</div>
+  <h1 class="error-title">Page Not Found</h1>
+  <div class="error-divider"></div>
+  <p class="error-message">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+  <a href="index.html" class="error-link">Back to Portfolio</a>
+</body>
+</html>
