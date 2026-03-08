@@ -1042,14 +1042,14 @@ img { max-width: 100%; display: block; }
 /* Top-left tape */
 .project-card__hero-photo::before {
   top: -8px;
-  left: -6px;
+  left: -14px;
   transform: rotate(-18deg);
 }
 
 /* Top-right tape */
 .project-card__hero-photo::after {
   top: -8px;
-  right: -6px;
+  right: -14px;
   transform: rotate(15deg);
 }
 
