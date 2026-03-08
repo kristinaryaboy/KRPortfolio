@@ -112,6 +112,10 @@
       animation: fallOff 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
       animation-delay: 1.2s;
       transform-origin: bottom left;
+      /* Override parent's background-clip gradient so the 4 stays visible when rotated */
+      background: none;
+      -webkit-text-fill-color: #e91e8c;
+      color: #e91e8c;
     }
 
     @keyframes fallOff {
