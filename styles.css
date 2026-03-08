@@ -1642,9 +1642,9 @@ img { max-width: 100%; display: block; }
   border-radius: 10px;
 }
 
-/* Tape strips on wireframe cards */
-.wireframe-card::before,
-.wireframe-card::after {
+/* Tape strips on wireframe images */
+.wireframe-card__image::before,
+.wireframe-card__image::after {
   content: '';
   position: absolute;
   width: 52px;
@@ -1655,15 +1655,15 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.wireframe-card::before {
-  top: 22px;
-  left: -2px;
+.wireframe-card__image::before {
+  top: -6px;
+  left: -12px;
   transform: rotate(-28deg);
 }
 
-.wireframe-card::after {
-  top: 22px;
-  right: -2px;
+.wireframe-card__image::after {
+  top: -6px;
+  right: -12px;
   transform: rotate(25deg);
 }
 
