@@ -1602,11 +1602,11 @@ img { max-width: 100%; display: block; }
 
 /* Crazy 8's — shrink and rotate for visual contrast */
 .wireframe-card:first-child .wireframe-card__image {
-  transform: rotate(-3deg) scale(0.82);
+  transform: rotate(-90deg) scale(0.7);
 }
 
 .wireframe-card:first-child .wireframe-card__image:hover {
-  transform: rotate(-3deg) scale(0.82) translateY(-4px);
+  transform: rotate(-90deg) scale(0.7) translateY(-4px);
 }
 
 .wireframe-card__label {
