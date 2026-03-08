@@ -102,8 +102,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.card-canvas').forEach(canvas => {
     const type = canvas.dataset.type;
     if (type === 'landscape') initLandscapeCanvas(canvas);
+    else if (type === 'about-target') initAboutTargetCanvas(canvas);
     else if (type === 'orbits') initOrbitsCanvas(canvas);
     else if (type === 'screens') initScreensCanvas(canvas);
+    else if (type === 'portfolio-orbit') initPortfolioOrbitCanvas(canvas);
   });
 
   // ── About canvas ──
@@ -343,6 +345,189 @@ function initLogoOrbitCanvas() {
    Card Canvas: Archery Target (About card)
    Target with two stuck arrows + one flying in
    ======================================== */
+
+function initAboutTargetCanvas(canvas) {
+  const ctx = canvas.getContext('2d');
+  let w, h;
+
+  function resize() {
+    const r = window.devicePixelRatio || 1;
+    w = canvas.offsetWidth;
+    h = canvas.offsetHeight;
+    canvas.width = w * r;
+    canvas.height = h * r;
+    ctx.setTransform(r, 0, 0, r, 0, 0);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const rings = [
+    { r: 0.38, speed: 0.0015 },
+    { r: 0.28, speed: -0.0012 },
+    { r: 0.18, speed: 0.0018 },
+    { r: 0.10, speed: -0.0022 }
+  ];
+
+  const nodes = rings.map((ring, i) => ({
+    ring: i,
+    angle: Math.random() * Math.PI * 2,
+    speed: ring.speed * (0.8 + Math.random() * 0.4),
+    size: 2 + Math.random() * 2,
+    color: i < 2 ? 'rgba(233, 30, 140, 0.2)' : 'rgba(217, 225, 232, 0.12)'
+  }));
+
+  // 36 tiny background dots
+  const dots = Array.from({ length: 36 }, () => ({
+    angle: Math.random() * Math.PI * 2,
+    r: 0.1 + Math.random() * 0.42,
+    speed: (Math.random() - 0.5) * 0.0008,
+    size: 0.5 + Math.random() * 1,
+    alpha: 0.04 + Math.random() * 0.06
+  }));
+
+  function draw(t) {
+    ctx.clearRect(0, 0, w, h);
+    const cx = w / 2, cy = h / 2;
+
+    // Draw orbit rings
+    rings.forEach(ring => {
+      ctx.beginPath();
+      ctx.arc(cx, cy, ring.r * w, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(233, 30, 140, 0.06)';
+      ctx.lineWidth = 0.5;
+      ctx.stroke();
+    });
+
+    // Draw tiny dots
+    dots.forEach(d => {
+      d.angle += d.speed;
+      const x = cx + Math.cos(d.angle) * d.r * w;
+      const y = cy + Math.sin(d.angle) * d.r * w;
+      ctx.beginPath();
+      ctx.arc(x, y, d.size, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(217, 225, 232, ${d.alpha})`;
+      ctx.fill();
+    });
+
+    // Draw nodes
+    nodes.forEach(n => {
+      n.angle += n.speed;
+      const ring = rings[n.ring];
+      const x = cx + Math.cos(n.angle) * ring.r * w;
+      const y = cy + Math.sin(n.angle) * ring.r * w;
+      ctx.beginPath();
+      ctx.arc(x, y, n.size, 0, Math.PI * 2);
+      ctx.fillStyle = n.color;
+      ctx.fill();
+    });
+
+    // Center magenta glow
+    const grd = ctx.createRadialGradient(cx, cy, 0, cx, cy, w * 0.08);
+    grd.addColorStop(0, 'rgba(233, 30, 140, 0.06)');
+    grd.addColorStop(1, 'transparent');
+    ctx.beginPath();
+    ctx.arc(cx, cy, w * 0.08, 0, Math.PI * 2);
+    ctx.fillStyle = grd;
+    ctx.fill();
+
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+}
+
+/* ========================================
+   Card Canvas: Portfolio Orbit Background
+   Orbit rings + drifting nodes behind workspace SVG
+   ======================================== */
+function initPortfolioOrbitCanvas(canvas) {
+  const ctx = canvas.getContext('2d');
+  let w, h;
+
+  function resize() {
+    const r = window.devicePixelRatio || 1;
+    w = canvas.offsetWidth;
+    h = canvas.offsetHeight;
+    canvas.width = w * r;
+    canvas.height = h * r;
+    ctx.setTransform(r, 0, 0, r, 0, 0);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const rings = [
+    { r: 0.40, speed: 0.0012 },
+    { r: 0.30, speed: -0.0016 },
+    { r: 0.20, speed: 0.0010 },
+    { r: 0.12, speed: -0.0020 }
+  ];
+
+  const nodes = rings.map((ring, i) => ({
+    ring: i,
+    angle: Math.random() * Math.PI * 2,
+    speed: ring.speed * (0.8 + Math.random() * 0.4),
+    size: 2 + Math.random() * 2,
+    color: i < 2 ? 'rgba(233, 30, 140, 0.15)' : 'rgba(217, 225, 232, 0.1)'
+  }));
+
+  const dots = Array.from({ length: 30 }, () => ({
+    angle: Math.random() * Math.PI * 2,
+    r: 0.08 + Math.random() * 0.44,
+    speed: (Math.random() - 0.5) * 0.0006,
+    size: 0.5 + Math.random() * 1,
+    alpha: 0.03 + Math.random() * 0.05
+  }));
+
+  function draw(t) {
+    ctx.clearRect(0, 0, w, h);
+    const cx = w / 2, cy = h / 2;
+
+    // Draw orbit rings
+    rings.forEach((ring, i) => {
+      ctx.beginPath();
+      ctx.arc(cx, cy, ring.r * w, 0, Math.PI * 2);
+      ctx.strokeStyle = i === 1 ? 'rgba(233, 30, 140, 0.05)' : 'rgba(217, 225, 232, 0.03)';
+      ctx.lineWidth = 0.5;
+      ctx.stroke();
+    });
+
+    // Draw tiny drifting dots
+    dots.forEach(d => {
+      d.angle += d.speed;
+      const x = cx + Math.cos(d.angle) * d.r * w;
+      const y = cy + Math.sin(d.angle) * d.r * w;
+      ctx.beginPath();
+      ctx.arc(x, y, d.size, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(217, 225, 232, ${d.alpha})`;
+      ctx.fill();
+    });
+
+    // Draw orbiting nodes
+    nodes.forEach(n => {
+      n.angle += n.speed;
+      const ring = rings[n.ring];
+      const x = cx + Math.cos(n.angle) * ring.r * w;
+      const y = cy + Math.sin(n.angle) * ring.r * w;
+      ctx.beginPath();
+      ctx.arc(x, y, n.size, 0, Math.PI * 2);
+      ctx.fillStyle = n.color;
+      ctx.fill();
+    });
+
+    // Center glow
+    const grd = ctx.createRadialGradient(cx, cy, 0, cx, cy, w * 0.07);
+    grd.addColorStop(0, 'rgba(233, 30, 140, 0.04)');
+    grd.addColorStop(1, 'transparent');
+    ctx.beginPath();
+    ctx.arc(cx, cy, w * 0.07, 0, Math.PI * 2);
+    ctx.fillStyle = grd;
+    ctx.fill();
+
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+}
+
+
 function initLandscapeCanvas(canvas) {
   const ctx = canvas.getContext('2d');
   let w, h;

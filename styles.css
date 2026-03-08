@@ -520,6 +520,15 @@ img { max-width: 100%; display: block; }
   display: block;
 }
 
+.section-card__icon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .section-card__label {
   display: block;
   text-align: center;
@@ -1464,6 +1473,13 @@ img { max-width: 100%; display: block; }
 @media (max-width: 1024px) {
   .case-study-personas-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-study-persona-embed iframe,
+  .case-study-persona-col .case-study-persona-embed iframe {
+    height: 820px;
   }
 }
 

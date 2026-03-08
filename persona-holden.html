@@ -39,7 +39,7 @@
       flex-shrink: 0;
       width: 180px;
       height: 180px;
-      border-radius: 4px;
+      border-radius: 50%;
       background: #1e2a34;
       overflow: hidden;
       display: flex;
@@ -170,6 +170,52 @@
       line-height: 1.65;
       color: rgba(217, 225, 232, 0.65);
     }
+    @media (max-width: 768px) {
+      body {
+        padding: 16px;
+      }
+
+      .persona-card {
+        width: 100%;
+        padding: 24px 20px 20px;
+      }
+
+      .persona-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .persona-photo {
+        width: 120px;
+        height: 120px;
+      }
+
+      .persona-quote {
+        padding-right: 0;
+      }
+
+      .persona-goals-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .persona-bottom {
+        flex-direction: column;
+      }
+
+      .persona-bio-left {
+        width: 100%;
+      }
+
+      .persona-details li {
+        flex-direction: column;
+      }
+
+      .persona-details li strong {
+        width: auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -181,48 +227,7 @@
 
       <!-- Photo -->
       <div class="persona-photo">
-        <!-- Male avatar illustration -->
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <clipPath id="photoClip"><rect width="200" height="200"/></clipPath>
-          </defs>
-          <g clip-path="url(#photoClip)">
-            <!-- Background -->
-            <rect width="200" height="200" fill="#d6dce4"/>
-            <!-- Shoulders / body -->
-            <ellipse cx="100" cy="210" rx="72" ry="50" fill="#4a6a85"/>
-            <!-- Neck -->
-            <rect x="84" y="128" width="32" height="28" rx="4" fill="#c8a98a"/>
-            <!-- Shirt collar -->
-            <path d="M70 150 Q100 165 130 150 L130 155 Q100 172 70 155Z" fill="#3d5a73"/>
-            <!-- Head -->
-            <ellipse cx="100" cy="95" rx="40" ry="48" fill="#d4b08c"/>
-            <!-- Hair -->
-            <path d="M60 85 Q60 48 100 45 Q140 48 140 85 Q138 62 120 55 Q100 50 80 55 Q62 62 60 85Z" fill="#5c3a1e"/>
-            <!-- Hair sides -->
-            <path d="M60 85 Q58 70 62 60" stroke="#5c3a1e" stroke-width="8" fill="none" stroke-linecap="round"/>
-            <path d="M140 85 Q142 70 138 60" stroke="#5c3a1e" stroke-width="8" fill="none" stroke-linecap="round"/>
-            <!-- Eyebrows -->
-            <path d="M78 82 Q85 78 94 81" stroke="#4a2e14" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <path d="M106 81 Q115 78 122 82" stroke="#4a2e14" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <!-- Eyes -->
-            <ellipse cx="86" cy="90" rx="7" ry="5" fill="white"/>
-            <ellipse cx="114" cy="90" rx="7" ry="5" fill="white"/>
-            <circle cx="87" cy="90" r="3.5" fill="#3d6b5e"/>
-            <circle cx="115" cy="90" r="3.5" fill="#3d6b5e"/>
-            <circle cx="88" cy="89" r="1.2" fill="white"/>
-            <circle cx="116" cy="89" r="1.2" fill="white"/>
-            <!-- Nose -->
-            <path d="M97 93 Q100 105 103 93" stroke="#c09a78" stroke-width="1.5" fill="none"/>
-            <!-- Mouth / smile -->
-            <path d="M88 110 Q100 118 112 110" stroke="#b07860" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <!-- Ears -->
-            <ellipse cx="60" cy="92" rx="6" ry="10" fill="#d4b08c"/>
-            <ellipse cx="140" cy="92" rx="6" ry="10" fill="#d4b08c"/>
-            <!-- Beard stubble (subtle) -->
-            <path d="M72 108 Q100 130 128 108" stroke="#8a6b4a" stroke-width="0.5" fill="none" opacity="0.3"/>
-          </g>
-        </svg>
+        <img src="images/Holden.jpg" alt="Holden Recurve">
       </div>
 
       <!-- Right side: Quote + Goals/Frustrations -->

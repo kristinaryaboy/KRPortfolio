@@ -1,0 +1,145 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#253340"/>
+      <stop offset="100%" stop-color="#1a2530"/>
+    </radialGradient>
+
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e91e8c" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#e91e8c" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e91e8c" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+
+    <linearGradient id="arrowShaft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a07840" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#c8a06a" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <linearGradient id="fletchGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e91e8c" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#e91e8c" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <linearGradient id="standGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a4d5e"/>
+      <stop offset="100%" stop-color="#1e2e3a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background (transparent to show orbit canvas behind) -->
+  <rect width="300" height="300" fill="transparent"/>
+
+  <!-- Subtle ambient glow behind target -->
+  <circle cx="150" cy="120" r="70" fill="url(#centerGlow)" filter="url(#softGlow)" opacity="0.4"/>
+
+  <!-- Stand (behind target) -->
+  <!-- Back leg (angled back) -->
+  <line x1="150" y1="192" x2="185" y2="280" stroke="#253545" stroke-width="5" stroke-linecap="round"/>
+  <!-- Front leg left -->
+  <line x1="150" y1="192" x2="105" y2="280" stroke="#2f4354" stroke-width="5" stroke-linecap="round"/>
+  <!-- Front leg right -->
+  <line x1="150" y1="192" x2="195" y2="280" stroke="#2f4354" stroke-width="4" stroke-linecap="round"/>
+  <!-- Center support post -->
+  <line x1="150" y1="192" x2="150" y2="260" stroke="#2a3d4e" stroke-width="5" stroke-linecap="round"/>
+  <!-- Cross brace -->
+  <line x1="118" y1="255" x2="182" y2="255" stroke="#253545" stroke-width="3" stroke-linecap="round"/>
+  <!-- Ground shadow -->
+  <ellipse cx="150" cy="282" rx="50" ry="4" fill="rgba(0,0,0,0.15)"/>
+
+  <!-- Target face (smaller, proportional to stand) -->
+  <g transform="translate(150, 120)">
+    <!-- Outer ring shadow -->
+    <ellipse cx="2" cy="3" rx="74" ry="74" fill="rgba(0,0,0,0.2)"/>
+
+    <!-- Blue pair 1 (rings 1 & 2) - darkest -->
+    <circle cx="0" cy="0" r="72" fill="#1c2b36" stroke="rgba(217,225,232,0.08)" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="64" fill="none" stroke="rgba(217,225,232,0.06)" stroke-width="0.5"/>
+
+    <!-- Blue pair 2 (rings 3 & 4) -->
+    <circle cx="0" cy="0" r="56" fill="#223545" stroke="rgba(217,225,232,0.08)" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="48" fill="none" stroke="rgba(217,225,232,0.06)" stroke-width="0.5"/>
+
+    <!-- Blue pair 3 (rings 5 & 6) -->
+    <circle cx="0" cy="0" r="40" fill="#2a4054" stroke="rgba(217,225,232,0.09)" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="32" fill="none" stroke="rgba(217,225,232,0.07)" stroke-width="0.5"/>
+
+    <!-- Blue pair 4 (rings 7 & 8) - lightest blue -->
+    <circle cx="0" cy="0" r="24" fill="#334c64" stroke="rgba(217,225,232,0.1)" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="18" fill="none" stroke="rgba(217,225,232,0.08)" stroke-width="0.5"/>
+
+    <!-- Pink ring -->
+    <circle cx="0" cy="0" r="12" fill="#c41a78" stroke="rgba(233,30,140,0.2)" stroke-width="0.5"/>
+
+    <!-- X-ring -->
+    <circle cx="0" cy="0" r="6" fill="#e91e8c" opacity="0.9"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ff4da6"/>
+
+    <!-- Bullseye glow -->
+    <circle cx="0" cy="0" r="16" fill="url(#centerGlow)" opacity="0.5"/>
+  </g>
+
+  <!-- Stand top bracket (in front of target bottom) -->
+  <rect x="142" y="188" width="16" height="8" rx="2" fill="#334a5c" stroke="rgba(217,225,232,0.08)" stroke-width="0.5"/>
+
+  <!-- Arrows (full length, stuck in target, angled from right) -->
+  <!-- Arrow 1 - bullseye hit -->
+  <g>
+    <line x1="152" y1="118" x2="278" y2="80" stroke="url(#arrowShaft)" stroke-width="2" stroke-linecap="round"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="-4,270,80;4,270,80;-4,270,80" dur="1.2s" repeatCount="indefinite"/>
+      <path d="M260,80 Q265,72 272,70 Q270,75 268,79" fill="#e91e8c" opacity="0.45"/>
+      <path d="M260,80 Q265,88 272,90 Q270,85 268,81" fill="#e91e8c" opacity="0.35"/>
+      <path d="M268,79 Q273,72 280,71 Q278,76 276,79" fill="#e91e8c" opacity="0.3"/>
+      <path d="M268,81 Q273,88 280,89 Q278,84 276,81" fill="#e91e8c" opacity="0.2"/>
+      <circle cx="280" cy="80" r="1.2" fill="#c8a06a" opacity="0.2"/>
+    </g>
+  </g>
+
+  <!-- Arrow 2 - near center -->
+  <g>
+    <line x1="148" y1="124" x2="273" y2="96" stroke="url(#arrowShaft)" stroke-width="2" stroke-linecap="round"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="3,265,96;-3,265,96;3,265,96" dur="1.5s" repeatCount="indefinite"/>
+      <path d="M255,96 Q260,88 267,86 Q265,91 263,95" fill="#e91e8c" opacity="0.45"/>
+      <path d="M255,96 Q260,104 267,106 Q265,101 263,97" fill="#e91e8c" opacity="0.35"/>
+      <path d="M263,95 Q268,88 275,87 Q273,92 271,95" fill="#e91e8c" opacity="0.3"/>
+      <path d="M263,97 Q268,104 275,105 Q273,100 271,97" fill="#e91e8c" opacity="0.2"/>
+      <circle cx="275" cy="96" r="1.2" fill="#c8a06a" opacity="0.2"/>
+    </g>
+  </g>
+
+  <!-- Arrow 3 - slightly lower -->
+  <g>
+    <line x1="155" y1="122" x2="280" y2="112" stroke="url(#arrowShaft)" stroke-width="2" stroke-linecap="round"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" values="-3.5,272,112;3.5,272,112;-3.5,272,112" dur="1.8s" repeatCount="indefinite"/>
+      <path d="M262,112 Q267,104 274,102 Q272,107 270,111" fill="#e91e8c" opacity="0.45"/>
+      <path d="M262,112 Q267,120 274,122 Q272,117 270,113" fill="#e91e8c" opacity="0.35"/>
+      <path d="M270,111 Q275,104 282,103 Q280,108 278,111" fill="#e91e8c" opacity="0.3"/>
+      <path d="M270,113 Q275,120 282,121 Q280,116 278,113" fill="#e91e8c" opacity="0.2"/>
+      <circle cx="282" cy="112" r="1.2" fill="#c8a06a" opacity="0.2"/>
+    </g>
+  </g>
+
+  <!-- Impact glow at arrow tips -->
+  <circle cx="152" cy="120" r="4" fill="#e91e8c" opacity="0.2" filter="url(#softGlow)"/>
+
+  <!-- Subtle floating particles -->
+  <circle cx="40" cy="60" r="1.5" fill="#e91e8c" opacity="0.15">
+    <animate attributeName="opacity" values="0.1;0.25;0.1" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="260" cy="40" r="1" fill="rgba(217,225,232,0.15)">
+    <animate attributeName="opacity" values="0.1;0.2;0.1" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="30" cy="240" r="1.2" fill="#e91e8c" opacity="0.1">
+    <animate attributeName="opacity" values="0.08;0.2;0.08" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="70" cy="180" r="1" fill="rgba(217,225,232,0.12)">
+    <animate attributeName="opacity" values="0.08;0.18;0.08" dur="5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
