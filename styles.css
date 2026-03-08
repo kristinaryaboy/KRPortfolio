@@ -1667,6 +1667,21 @@ img { max-width: 100%; display: block; }
   transform: rotate(25deg);
 }
 
+/* Counter-rotate tape on crazy 8's so it stays on the visual top */
+.wireframe-card:first-child .wireframe-card__image::before {
+  top: -12px;
+  left: auto;
+  right: -6px;
+  transform: rotate(62deg);
+}
+
+.wireframe-card:first-child .wireframe-card__image::after {
+  top: auto;
+  right: -6px;
+  bottom: -12px;
+  transform: rotate(115deg);
+}
+
 .wireframe-card__image:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
