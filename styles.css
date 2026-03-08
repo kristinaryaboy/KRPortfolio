@@ -1034,6 +1034,10 @@ img { max-width: 100%; display: block; }
   transform: rotate(4deg);
 }
 
+.project-card__hero-photo--tilt-right img {
+  object-position: left center;
+}
+
 @media (max-width: 768px) {
   .project-card__hero-trio {
     gap: 12px;
