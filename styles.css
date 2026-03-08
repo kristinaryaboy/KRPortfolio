@@ -984,6 +984,50 @@ img { max-width: 100%; display: block; }
   z-index: 1;
 }
 
+/* Hero trio: photo – logo – photo */
+.project-card__hero-trio {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+}
+
+.project-card__hero-trio .project-card__logo {
+  flex-shrink: 0;
+  max-width: 200px;
+}
+
+.project-card__hero-photo {
+  flex: 0 1 240px;
+  height: 75%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card__hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .project-card__hero-trio {
+    gap: 12px;
+  }
+  .project-card__hero-trio .project-card__logo {
+    max-width: 120px;
+  }
+  .project-card__hero-photo {
+    flex: 0 1 140px;
+    height: 65%;
+  }
+}
+
 .project-card__flip-back {
   background: linear-gradient(135deg, #1a1f2e, #0f1724);
   transform: rotateY(180deg);
