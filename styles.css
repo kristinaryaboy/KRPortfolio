@@ -848,7 +848,8 @@ img { max-width: 100%; display: block; }
 
 .project-card--featured {
   grid-column: 1 / -1;
-  border: 1px solid rgba(233, 30, 121, 0.25);
+  border: 1px solid transparent;
+  border-image: linear-gradient(135deg, rgba(233, 30, 121, 0.05), rgba(233, 30, 121, 0.35), rgba(233, 30, 121, 0.05)) 1;
 }
 
 .project-card__image {
