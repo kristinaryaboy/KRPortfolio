@@ -1025,9 +1025,13 @@ img { max-width: 100%; display: block; }
   object-fit: cover;
 }
 
-/* Crop Arcus1 from top so subjects are visible */
-.project-card__hero-photo--crop-top img {
-  object-position: center 65%;
+/* Tilted photo angles */
+.project-card__hero-photo--tilt-left {
+  transform: rotate(-4deg);
+}
+
+.project-card__hero-photo--tilt-right {
+  transform: rotate(4deg);
 }
 
 @media (max-width: 768px) {
