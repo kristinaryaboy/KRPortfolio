@@ -1283,7 +1283,7 @@ img { max-width: 100%; display: block; }
 
 /* ── Hero ── */
 .case-study-hero {
-  padding: 140px 40px 80px;
+  padding: 140px 40px 40px;
   max-width: var(--container-max);
   margin: 0 auto;
 }
@@ -1300,7 +1300,7 @@ img { max-width: 100%; display: block; }
   font-size: 56px;
   color: var(--off-white);
   letter-spacing: -0.5px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .case-study-hero__subtitle {
