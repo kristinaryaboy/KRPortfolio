@@ -1700,6 +1700,62 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* ── Visual Design mockups ── */
+.visual-design-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.visual-design-card {
+  text-align: center;
+}
+
+.visual-design-card__image {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(217, 225, 232, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.visual-design-card__image:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(233, 30, 121, 0.08);
+}
+
+.visual-design-card__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.visual-design-card__label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(233, 30, 121, 0.5);
+  margin-top: 14px;
+}
+
+@media (max-width: 960px) {
+  .visual-design-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .visual-design-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
 /* ── Persona embed ── */
 .case-study-persona-embed {
   margin: 40px 0;
