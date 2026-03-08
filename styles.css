@@ -1504,8 +1504,27 @@ img { max-width: 100%; display: block; }
 }
 
 /* ── User Journey Map ── */
-.journey-map {
+.journey-map-wrapper {
+  position: relative;
   margin: 40px 0;
+}
+
+.journey-map-wrapper::after {
+  content: 'Scroll to view full map \2192';
+  display: none;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: rgba(233, 30, 121, 0.5);
+  padding: 10px 0 0;
+}
+
+@media (max-width: 960px) {
+  .journey-map-wrapper::after { display: block; }
+}
+
+.journey-map {
+  margin: 0;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
