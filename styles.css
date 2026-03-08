@@ -1310,8 +1310,6 @@ img { max-width: 100%; display: block; }
   line-height: 1.6;
   color: rgba(217, 225, 232, 0.7);
   max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .case-study-hero__image {
