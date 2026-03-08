@@ -509,17 +509,194 @@
   <section class="case-study-section">
     <span class="case-study-section__label">07</span>
     <h2 class="case-study-section__title">Low&#8209;Fidelity Prototype</h2>
-    <div class="case-study-coming-soon">
-      <div class="case-study-coming-soon__icon">
-        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="14" y="6" width="20" height="36" rx="3" stroke="currentColor" stroke-width="1.5"/>
-          <line x1="14" y1="12" x2="34" y2="12" stroke="currentColor" stroke-width="1.5"/>
-          <line x1="14" y1="36" x2="34" y2="36" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="24" cy="39" r="1.5" fill="currentColor" opacity="0.5"/>
-        </svg>
+    <p class="lofi-hint">Click the navigation tabs or arrows to explore the prototype flow.</p>
+
+    <div class="lofi-prototype">
+      <!-- Navigation arrows -->
+      <button class="lofi-nav-arrow lofi-nav-arrow--left" onclick="lofiNav(-1)" aria-label="Previous screen">&#8249;</button>
+
+      <!-- Phone frame -->
+      <div class="lofi-phone">
+        <div class="lofi-phone__notch"></div>
+        <div class="lofi-phone__screen">
+
+          <!-- Screen 1: Home -->
+          <div class="lofi-screen lofi-screen--active" data-screen="0">
+            <div class="lofi-header">
+              <div>
+                <div class="lofi-text lofi-text--xs" style="width:70px; margin-bottom:3px">Good afternoon</div>
+                <div class="lofi-text lofi-text--md" style="width:110px">Kristina Ryaboy</div>
+              </div>
+              <div class="lofi-icon-circle" style="width:28px; height:28px"></div>
+            </div>
+            <div class="lofi-card" style="padding:12px; display:flex; justify-content:space-between; align-items:center">
+              <div>
+                <div class="lofi-text lofi-text--sm" style="width:90px; margin-bottom:3px">Ready to shoot?</div>
+                <div class="lofi-text lofi-text--xs" style="width:70px">Start a session</div>
+              </div>
+              <div class="lofi-btn lofi-btn--primary" style="width:52px">Start</div>
+            </div>
+            <div class="lofi-card" style="padding:10px; display:flex; justify-content:space-between; align-items:center">
+              <div>
+                <div class="lofi-text lofi-text--sm" style="width:55px; margin-bottom:2px">My Clubs</div>
+                <div class="lofi-text lofi-text--xs" style="width:100px">2 clubs</div>
+              </div>
+              <div class="lofi-icon-circle" style="width:20px; height:20px"></div>
+            </div>
+            <div class="lofi-text lofi-text--sm" style="width:60px; margin:10px 0 6px">Quick Stats</div>
+            <div style="display:flex; gap:6px">
+              <div class="lofi-card lofi-stat-box"><div class="lofi-text lofi-text--lg">13</div><div class="lofi-text lofi-text--xs" style="width:36px">Sessions</div></div>
+              <div class="lofi-card lofi-stat-box"><div class="lofi-text lofi-text--lg">405</div><div class="lofi-text lofi-text--xs" style="width:30px">Arrows</div></div>
+              <div class="lofi-card lofi-stat-box"><div class="lofi-text lofi-text--lg">7.4</div><div class="lofi-text lofi-text--xs" style="width:42px">Avg/Arrow</div></div>
+            </div>
+            <div class="lofi-text lofi-text--sm" style="width:80px; margin:10px 0 6px">Recent Sessions</div>
+            <div class="lofi-card lofi-list-item">
+              <div><div class="lofi-text lofi-text--xs" style="width:80px">league - Practice</div><div class="lofi-text lofi-text--xs" style="width:45px; opacity:0.4">3/2/2026</div></div>
+              <div class="lofi-text lofi-text--sm" style="width:24px">354</div>
+            </div>
+            <div class="lofi-card lofi-list-item">
+              <div><div class="lofi-text lofi-text--xs" style="width:70px">tournament</div><div class="lofi-text lofi-text--xs" style="width:45px; opacity:0.4">2/28/2026</div></div>
+              <div class="lofi-text lofi-text--sm" style="width:24px">236</div>
+            </div>
+          </div>
+
+          <!-- Screen 2: New Session -->
+          <div class="lofi-screen" data-screen="1">
+            <div class="lofi-header">
+              <div class="lofi-text lofi-text--xs" style="width:12px">&#10005;</div>
+              <div class="lofi-text lofi-text--md" style="width:80px; text-align:center">New Session</div>
+              <div style="width:12px"></div>
+            </div>
+            <div class="lofi-btn lofi-btn--outline" style="width:100%; text-align:center; margin-bottom:12px">Quick Start</div>
+            <div class="lofi-divider"></div>
+            <div class="lofi-text lofi-text--xs" style="width:65px; margin:10px 0 6px">Session Type</div>
+            <div style="display:flex; gap:5px; flex-wrap:wrap; margin-bottom:10px">
+              <div class="lofi-btn lofi-btn--primary" style="width:52px">Practice</div>
+              <div class="lofi-btn lofi-btn--outline" style="width:46px">Scoring</div>
+              <div class="lofi-btn lofi-btn--outline" style="width:64px">Tournament</div>
+              <div class="lofi-btn lofi-btn--outline" style="width:40px">League</div>
+            </div>
+            <div class="lofi-text lofi-text--xs" style="width:60px; margin-bottom:6px">Round Type</div>
+            <div class="lofi-btn lofi-btn--outline" style="width:100%; margin-bottom:4px; text-align:left">USA Archery Indoor 18m</div>
+            <div style="display:flex; gap:5px; margin-bottom:4px">
+              <div class="lofi-btn lofi-btn--outline" style="flex:1; text-align:left">USA Archery Outdoor 70m</div>
+              <div class="lofi-btn lofi-btn--outline" style="width:44px">Custom</div>
+            </div>
+            <div class="lofi-btn lofi-btn--outline" style="width:44px; margin-bottom:10px">Other</div>
+            <div class="lofi-text lofi-text--xs" style="width:60px; margin-bottom:6px">Distance (m)</div>
+            <div class="lofi-input" style="margin-bottom:10px">18</div>
+            <div class="lofi-text lofi-text--xs" style="width:60px; margin-bottom:6px">Target Face</div>
+            <div style="display:flex; gap:5px; flex-wrap:wrap">
+              <div class="lofi-btn lofi-btn--outline" style="width:60px">40cm single</div>
+              <div class="lofi-btn lofi-btn--outline" style="width:36px">60cm</div>
+              <div class="lofi-btn lofi-btn--outline" style="width:70px">40cm three spot</div>
+              <div class="lofi-btn lofi-btn--outline" style="width:44px">Custom</div>
+            </div>
+          </div>
+
+          <!-- Screen 3: Session Keypad -->
+          <div class="lofi-screen" data-screen="2">
+            <div class="lofi-header">
+              <div class="lofi-text lofi-text--xs" style="width:10px">&#9776;</div>
+              <div><div class="lofi-text lofi-text--sm" style="width:36px">End 1</div><div class="lofi-text lofi-text--xs" style="width:24px; opacity:0.4">00:22</div></div>
+              <div class="lofi-text lofi-text--xs lofi-accent" style="width:56px">End Session</div>
+            </div>
+            <div class="lofi-card" style="display:flex; padding:8px">
+              <div class="lofi-stat-col"><div class="lofi-text lofi-text--xs" style="width:24px; opacity:0.5">Total</div><div class="lofi-text lofi-text--lg">26</div></div>
+              <div class="lofi-stat-col"><div class="lofi-text lofi-text--xs" style="width:40px; opacity:0.5">Avg/Arrow</div><div class="lofi-text lofi-text--lg">8.7</div></div>
+              <div class="lofi-stat-col"><div class="lofi-text lofi-text--xs" style="width:34px; opacity:0.5">X Count</div><div class="lofi-text lofi-text--lg lofi-accent">1</div></div>
+            </div>
+            <div class="lofi-card" style="padding:8px; margin-bottom:6px">
+              <div style="display:flex; justify-content:space-between; margin-bottom:6px"><div class="lofi-text lofi-text--xs" style="width:55px">Current End</div><div class="lofi-text lofi-text--sm" style="width:14px">26</div></div>
+              <div style="display:flex; gap:6px; justify-content:center">
+                <div class="lofi-score-dot lofi-score-dot--yellow">X</div>
+                <div class="lofi-score-dot lofi-score-dot--red">8</div>
+                <div class="lofi-score-dot lofi-score-dot--red">8</div>
+              </div>
+            </div>
+            <div style="flex:1"></div>
+            <div style="display:flex; gap:2px; margin-bottom:6px">
+              <div class="lofi-btn lofi-btn--primary" style="flex:1; text-align:center">Keypad</div>
+              <div class="lofi-btn lofi-btn--outline" style="flex:1; text-align:center" onclick="lofiGoTo(3)">Target</div>
+            </div>
+            <div class="lofi-keypad">
+              <div class="lofi-key lofi-key--gold">X</div><div class="lofi-key lofi-key--gold">10</div><div class="lofi-key lofi-key--gold">9</div><div class="lofi-key lofi-key--red">8</div>
+              <div class="lofi-key lofi-key--red">7</div><div class="lofi-key lofi-key--blue">6</div><div class="lofi-key lofi-key--blue">5</div><div class="lofi-key lofi-key--gray">4</div>
+              <div class="lofi-key lofi-key--gray">3</div><div class="lofi-key lofi-key--gray">2</div><div class="lofi-key lofi-key--gray">1</div><div class="lofi-key lofi-key--gray">M</div>
+            </div>
+            <div style="display:flex; gap:6px; margin-top:6px">
+              <div class="lofi-btn lofi-btn--outline" style="flex:1; text-align:center">Undo</div>
+              <div class="lofi-btn lofi-btn--primary" style="flex:1; text-align:center">Submit End</div>
+            </div>
+          </div>
+
+          <!-- Screen 4: Session Target -->
+          <div class="lofi-screen" data-screen="3">
+            <div class="lofi-header">
+              <div class="lofi-text lofi-text--xs" style="width:10px">&#9776;</div>
+              <div><div class="lofi-text lofi-text--sm" style="width:36px">End 1</div><div class="lofi-text lofi-text--xs" style="width:24px; opacity:0.4">00:46</div></div>
+              <div class="lofi-text lofi-text--xs lofi-accent" style="width:56px">End Session</div>
+            </div>
+            <div class="lofi-card" style="display:flex; padding:8px">
+              <div class="lofi-stat-col"><div class="lofi-text lofi-text--xs" style="width:24px; opacity:0.5">Total</div><div class="lofi-text lofi-text--lg">24</div></div>
+              <div class="lofi-stat-col"><div class="lofi-text lofi-text--xs" style="width:40px; opacity:0.5">Avg/Arrow</div><div class="lofi-text lofi-text--lg">8.0</div></div>
+              <div class="lofi-stat-col"><div class="lofi-text lofi-text--xs" style="width:34px; opacity:0.5">X Count</div><div class="lofi-text lofi-text--lg lofi-accent">0</div></div>
+            </div>
+            <div class="lofi-card" style="padding:8px; margin-bottom:6px">
+              <div style="display:flex; justify-content:space-between; margin-bottom:6px"><div class="lofi-text lofi-text--xs" style="width:55px">Current End</div><div class="lofi-text lofi-text--sm" style="width:14px">24</div></div>
+              <div style="display:flex; gap:6px; justify-content:center">
+                <div class="lofi-score-dot lofi-score-dot--yellow">9</div>
+                <div class="lofi-score-dot lofi-score-dot--red">7</div>
+                <div class="lofi-score-dot lofi-score-dot--red">8</div>
+              </div>
+            </div>
+            <div style="display:flex; gap:2px; margin-bottom:8px">
+              <div class="lofi-btn lofi-btn--outline" style="flex:1; text-align:center" onclick="lofiGoTo(2)">Keypad</div>
+              <div class="lofi-btn lofi-btn--primary" style="flex:1; text-align:center">Target</div>
+            </div>
+            <!-- Target face -->
+            <div class="lofi-target-wrap">
+              <svg viewBox="0 0 160 160" class="lofi-target-svg">
+                <circle cx="80" cy="80" r="76" fill="#e8e8e8" stroke="#bbb" stroke-width="1"/>
+                <circle cx="80" cy="80" r="64" fill="#333" stroke="#bbb" stroke-width="0.5"/>
+                <circle cx="80" cy="80" r="52" fill="#555" stroke="#bbb" stroke-width="0.5"/>
+                <circle cx="80" cy="80" r="40" fill="#7ab" stroke="#bbb" stroke-width="0.5"/>
+                <circle cx="80" cy="80" r="30" fill="#68a" stroke="#bbb" stroke-width="0.5"/>
+                <circle cx="80" cy="80" r="20" fill="#c66" stroke="#bbb" stroke-width="0.5"/>
+                <circle cx="80" cy="80" r="12" fill="#ca5" stroke="#bbb" stroke-width="0.5"/>
+                <circle cx="80" cy="80" r="5" fill="#ca5" stroke="#bbb" stroke-width="0.5"/>
+                <!-- Arrow hits -->
+                <circle cx="78" cy="76" r="2.5" fill="white" stroke="#999" stroke-width="0.5"/>
+                <circle cx="85" cy="82" r="2.5" fill="white" stroke="#999" stroke-width="0.5"/>
+                <circle cx="72" cy="88" r="2.5" fill="white" stroke="#999" stroke-width="0.5"/>
+              </svg>
+            </div>
+            <div style="display:flex; gap:6px; margin-top:8px">
+              <div class="lofi-btn lofi-btn--outline" style="flex:1; text-align:center">Undo</div>
+              <div class="lofi-btn lofi-btn--primary" style="flex:1; text-align:center">Submit End</div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Bottom nav -->
+        <div class="lofi-phone__nav">
+          <div class="lofi-nav-item lofi-nav-item--active" onclick="lofiGoTo(0)"><div class="lofi-nav-icon">&#8962;</div><span>Home</span></div>
+          <div class="lofi-nav-item" onclick="lofiGoTo(1)"><div class="lofi-nav-icon">&#9678;</div><span>Shoot</span></div>
+          <div class="lofi-nav-item"><div class="lofi-nav-icon">&#9636;</div><span>Stats</span></div>
+          <div class="lofi-nav-item"><div class="lofi-nav-icon">&#9673;</div><span>Profile</span></div>
+        </div>
       </div>
-      <span class="case-study-coming-soon__label">Coming Soon</span>
-      <p class="case-study-coming-soon__note">Low&#8209;fidelity prototype screens and flow are being finalized.</p>
+
+      <button class="lofi-nav-arrow lofi-nav-arrow--right" onclick="lofiNav(1)" aria-label="Next screen">&#8250;</button>
+    </div>
+
+    <!-- Screen label -->
+    <div class="lofi-screen-label" id="lofiLabel">Home</div>
+    <div class="lofi-screen-dots">
+      <span class="lofi-dot lofi-dot--active" onclick="lofiGoTo(0)"></span>
+      <span class="lofi-dot" onclick="lofiGoTo(1)"></span>
+      <span class="lofi-dot" onclick="lofiGoTo(2)"></span>
+      <span class="lofi-dot" onclick="lofiGoTo(3)"></span>
     </div>
   </section>
 
@@ -593,6 +770,38 @@
   </footer>
 
   <script>
+    // Lo-fi prototype interaction
+    const lofiScreenNames = ['Home', 'New Session', 'Session — Keypad', 'Session — Target'];
+    let lofiCurrent = 0;
+
+    function lofiGoTo(index) {
+      const screens = document.querySelectorAll('.lofi-screen');
+      const dots = document.querySelectorAll('.lofi-dot');
+      const navItems = document.querySelectorAll('.lofi-nav-item');
+      const label = document.getElementById('lofiLabel');
+
+      screens.forEach(s => s.classList.remove('lofi-screen--active'));
+      dots.forEach(d => d.classList.remove('lofi-dot--active'));
+      navItems.forEach(n => n.classList.remove('lofi-nav-item--active'));
+
+      lofiCurrent = index;
+      screens[index].classList.add('lofi-screen--active');
+      dots[index].classList.add('lofi-dot--active');
+      label.textContent = lofiScreenNames[index];
+
+      // Highlight matching nav item
+      if (index === 0) navItems[0].classList.add('lofi-nav-item--active');
+      else if (index === 1) navItems[1].classList.add('lofi-nav-item--active');
+      else navItems[1].classList.add('lofi-nav-item--active');
+    }
+
+    function lofiNav(dir) {
+      let next = lofiCurrent + dir;
+      if (next < 0) next = 3;
+      if (next > 3) next = 0;
+      lofiGoTo(next);
+    }
+
     // Page transition for case study
     document.querySelectorAll('a[href]').forEach(link => {
       const href = link.getAttribute('href');
