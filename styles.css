@@ -984,6 +984,16 @@ img { max-width: 100%; display: block; }
   z-index: 1;
 }
 
+/* Static hero image (no flip) */
+.project-card__image--hero {
+  background: linear-gradient(135deg, #2a3a4a, #1f2e3a);
+  padding: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Hero trio: photo – logo – photo */
 .project-card__hero-trio {
   position: relative;
@@ -1013,6 +1023,17 @@ img { max-width: 100%; display: block; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Crop Arcus1 from top so subjects are visible */
+.project-card__hero-photo--crop-top img {
+  object-position: center bottom;
+}
+
+/* Make Arcus2 slightly larger */
+.project-card__hero-photo--larger {
+  flex: 0 1 270px;
+  height: 80%;
 }
 
 @media (max-width: 768px) {
