@@ -1425,7 +1425,7 @@ img { max-width: 100%; display: block; }
 .case-study-meta {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 40px 60px;
+  padding: 40px 40px 60px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
