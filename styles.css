@@ -919,6 +919,38 @@ img { max-width: 100%; display: block; }
   margin-top: 2px;
 }
 
+.skills-resume {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.skills-resume__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border: 1px solid rgba(233, 30, 121, 0.4);
+  border-radius: 6px;
+  color: var(--magenta);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: all 0.3s ease;
+}
+
+.skills-resume__btn:hover {
+  background: rgba(233, 30, 121, 0.08);
+  border-color: var(--magenta);
+  box-shadow: 0 0 20px rgba(233, 30, 121, 0.1);
+}
+
+.skills-resume__btn svg {
+  width: 18px;
+  height: 18px;
+}
+
 .work {
   background: var(--charcoal-navy);
 }
