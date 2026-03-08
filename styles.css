@@ -1344,6 +1344,83 @@ img { max-width: 100%; display: block; }
   color: rgba(217, 225, 232, 0.2);
 }
 
+/* ── Section Navigation ── */
+.case-study {
+  scroll-padding-top: 56px;
+}
+
+.section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(30, 42, 52, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(217, 225, 232, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
+.section-nav--scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.section-nav__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.section-nav__inner::-webkit-scrollbar {
+  display: none;
+}
+
+.section-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 12px;
+  text-decoration: none;
+  color: rgba(217, 225, 232, 0.4);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  border-bottom: 2px solid transparent;
+  position: relative;
+}
+
+.section-nav__link:hover {
+  color: rgba(217, 225, 232, 0.7);
+}
+
+.section-nav__link--active {
+  color: var(--magenta);
+  border-bottom-color: var(--magenta);
+}
+
+.section-nav__number {
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0.5;
+  font-variant-numeric: tabular-nums;
+}
+
+.section-nav__link--active .section-nav__number {
+  opacity: 0.8;
+}
+
+.section-nav__text {
+  font-size: 12px;
+}
+
 /* ── Project Meta ── */
 .case-study-meta {
   max-width: var(--container-max);
@@ -2599,6 +2676,24 @@ img { max-width: 100%; display: block; }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+  .section-nav__inner {
+    justify-content: flex-start;
+    padding: 0 12px;
+  }
+
+  .section-nav__link {
+    padding: 12px 8px;
+    gap: 4px;
+  }
+
+  .section-nav__number {
+    display: none;
+  }
+
+  .section-nav__text {
+    font-size: 11px;
+  }
+
   .case-study-hero {
     padding: 120px 24px 60px;
   }

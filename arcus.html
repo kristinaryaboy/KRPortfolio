@@ -190,6 +190,52 @@
     </div>
   </header>
 
+  <!-- Section Navigation -->
+  <nav class="section-nav" id="sectionNav">
+    <div class="section-nav__inner">
+      <a href="#overview" class="section-nav__link section-nav__link--active" data-section="overview">
+        <span class="section-nav__number">01</span>
+        <span class="section-nav__text">Overview</span>
+      </a>
+      <a href="#problem" class="section-nav__link" data-section="problem">
+        <span class="section-nav__number">02</span>
+        <span class="section-nav__text">Problem</span>
+      </a>
+      <a href="#research" class="section-nav__link" data-section="research">
+        <span class="section-nav__number">03</span>
+        <span class="section-nav__text">Research</span>
+      </a>
+      <a href="#personas" class="section-nav__link" data-section="personas">
+        <span class="section-nav__number">04</span>
+        <span class="section-nav__text">Personas</span>
+      </a>
+      <a href="#journey-map" class="section-nav__link" data-section="journey-map">
+        <span class="section-nav__number">05</span>
+        <span class="section-nav__text">Journey</span>
+      </a>
+      <a href="#wireframes" class="section-nav__link" data-section="wireframes">
+        <span class="section-nav__number">06</span>
+        <span class="section-nav__text">Wireframes</span>
+      </a>
+      <a href="#lofi-prototype" class="section-nav__link" data-section="lofi-prototype">
+        <span class="section-nav__number">07</span>
+        <span class="section-nav__text">Lo‑Fi</span>
+      </a>
+      <a href="#usability" class="section-nav__link" data-section="usability">
+        <span class="section-nav__number">08</span>
+        <span class="section-nav__text">Usability</span>
+      </a>
+      <a href="#visual-design" class="section-nav__link" data-section="visual-design">
+        <span class="section-nav__number">09</span>
+        <span class="section-nav__text">Visual</span>
+      </a>
+      <a href="#results" class="section-nav__link" data-section="results">
+        <span class="section-nav__number">10</span>
+        <span class="section-nav__text">Results</span>
+      </a>
+    </div>
+  </nav>
+
   <!-- Project Meta -->
   <div class="case-study-meta">
     <div class="case-study-meta__item">
@@ -211,7 +257,7 @@
   </div>
 
   <!-- 01 · Overview -->
-  <section class="case-study-section">
+  <section class="case-study-section" id="overview">
     <span class="case-study-section__label">01</span>
     <h2 class="case-study-section__title">Overview</h2>
     <div class="case-study-section__body">
@@ -220,7 +266,7 @@
   </section>
 
   <!-- 02 · Problem Statement -->
-  <section class="case-study-section">
+  <section class="case-study-section" id="problem">
     <span class="case-study-section__label">02</span>
     <h2 class="case-study-section__title">Problem Statement</h2>
     <div class="case-study-section__body">
@@ -230,7 +276,7 @@
   </section>
 
   <!-- 03 · Research -->
-  <section class="case-study-section">
+  <section class="case-study-section" id="research">
     <span class="case-study-section__label">03</span>
     <h2 class="case-study-section__title">Research</h2>
     <div class="case-study-section__body">
@@ -272,7 +318,7 @@
   </section>
 
   <!-- 04 · Personas -->
-  <section class="case-study-section">
+  <section class="case-study-section" id="personas">
     <span class="case-study-section__label">04</span>
     <h2 class="case-study-section__title">Personas</h2>
     <div class="case-study-personas-grid">
@@ -298,7 +344,7 @@
   </section>
 
   <!-- 05 · User Journey Map -->
-  <section class="case-study-section">
+  <section class="case-study-section" id="journey-map">
     <span class="case-study-section__label">05</span>
     <h2 class="case-study-section__title">User Journey Map</h2>
     <div class="case-study-section__body">
@@ -466,7 +512,7 @@
   </section>
 
   <!-- 06 · Wireframes -->
-  <section class="case-study-section">
+  <section class="case-study-section" id="wireframes">
     <span class="case-study-section__label">06</span>
     <h2 class="case-study-section__title">Wireframes</h2>
 
@@ -499,7 +545,7 @@
   </section>
 
   <!-- 07 · Low-Fidelity Prototype -->
-  <section class="case-study-section">
+  <section class="case-study-section" id="lofi-prototype">
     <span class="case-study-section__label">07</span>
     <h2 class="case-study-section__title">Low&#8209;Fidelity Prototype</h2>
     <p class="lofi-hint">Click the navigation tabs or arrows to explore the prototype flow.</p>
@@ -694,7 +740,7 @@
   </section>
 
   <!-- 08 · Usability Studies -->
-  <section class="case-study-section">
+  <section class="case-study-section" id="usability">
     <span class="case-study-section__label">08</span>
     <h2 class="case-study-section__title">Usability Studies</h2>
     <div class="case-study-section__body">
@@ -871,7 +917,7 @@
   </section>
 
   <!-- 09 · Visual Design -->
-  <section class="case-study-section">
+  <section class="case-study-section" id="visual-design">
     <span class="case-study-section__label">09</span>
     <h2 class="case-study-section__title">Visual Design</h2>
     <div class="visual-design-grid">
@@ -903,7 +949,7 @@
   </section>
 
   <!-- 10 · Results & Takeaways -->
-  <section class="case-study-section">
+  <section class="case-study-section" id="results">
     <span class="case-study-section__label">10</span>
     <h2 class="case-study-section__title">Results &amp; Takeaways</h2>
 
@@ -961,6 +1007,78 @@
       if (next > 3) next = 0;
       lofiGoTo(next);
     }
+
+    // Section navigation — smooth scroll & active tracking
+    (function() {
+      const sectionNav = document.getElementById('sectionNav');
+      const navLinks = document.querySelectorAll('.section-nav__link');
+      const sectionIds = ['overview','problem','research','personas','journey-map','wireframes','lofi-prototype','usability','visual-design','results'];
+
+      // Smooth scroll on click
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('data-section');
+          const target = document.getElementById(targetId);
+          if (target) {
+            const navHeight = sectionNav.offsetHeight;
+            const targetTop = target.getBoundingClientRect().top + window.scrollY - navHeight - 8;
+            window.scrollTo({ top: targetTop, behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Active state on scroll + shadow when scrolled
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const scrollY = window.scrollY;
+            const navHeight = sectionNav.offsetHeight;
+
+            // Add shadow when scrolled past hero
+            if (scrollY > 200) {
+              sectionNav.classList.add('section-nav--scrolled');
+            } else {
+              sectionNav.classList.remove('section-nav--scrolled');
+            }
+
+            // Find which section is in view
+            let currentSection = sectionIds[0];
+            for (const id of sectionIds) {
+              const el = document.getElementById(id);
+              if (el) {
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= navHeight + 80) {
+                  currentSection = id;
+                }
+              }
+            }
+
+            // Update active link
+            navLinks.forEach(link => {
+              link.classList.toggle('section-nav__link--active', link.getAttribute('data-section') === currentSection);
+            });
+
+            // Scroll active link into view in the nav
+            const activeLink = sectionNav.querySelector('.section-nav__link--active');
+            if (activeLink) {
+              const navInner = sectionNav.querySelector('.section-nav__inner');
+              const linkLeft = activeLink.offsetLeft;
+              const linkWidth = activeLink.offsetWidth;
+              const navScrollLeft = navInner.scrollLeft;
+              const navWidth = navInner.offsetWidth;
+              if (linkLeft < navScrollLeft || linkLeft + linkWidth > navScrollLeft + navWidth) {
+                navInner.scrollTo({ left: linkLeft - navWidth / 2 + linkWidth / 2, behavior: 'smooth' });
+              }
+            }
+
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    })();
 
     // Page transition for case study
     document.querySelectorAll('a[href]').forEach(link => {
