@@ -1458,6 +1458,11 @@ img { max-width: 100%; display: block; }
   height: 160px;
   opacity: 0.85;
   border-radius: 16px;
+  border: 1px solid transparent;
+  background-image: linear-gradient(var(--deep-slate), var(--deep-slate)),
+                    linear-gradient(135deg, rgba(233, 30, 121, 0.05), rgba(233, 30, 121, 0.3), rgba(233, 30, 121, 0.05));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 .case-study-hero__subtitle {
@@ -1602,8 +1607,12 @@ img { max-width: 100%; display: block; }
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 0;
-  border: 1px solid rgba(233, 30, 121, 0.15);
+  border: 1px solid transparent;
   border-radius: 10px;
+  background-image: linear-gradient(var(--deep-slate), var(--deep-slate)),
+                    linear-gradient(135deg, rgba(233, 30, 121, 0.05), rgba(233, 30, 121, 0.3), rgba(233, 30, 121, 0.05));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 .case-study-meta__item {
