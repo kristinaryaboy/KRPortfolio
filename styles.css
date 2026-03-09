@@ -1607,6 +1607,14 @@ img { max-width: 100%; display: block; }
   border-bottom: none;
 }
 
+.case-study-meta__item:last-child {
+  grid-column: 1 / -1;
+  justify-content: center;
+  border-right: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .case-study-meta__item h4 {
   font-family: var(--font-heading);
   font-size: 10px;
