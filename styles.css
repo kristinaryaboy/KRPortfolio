@@ -1949,6 +1949,7 @@ img { max-width: 100%; display: block; }
 /* Full-width wireframe card for iteration */
 .wireframe-card--full {
   max-width: 480px;
+  margin: 0 auto;
 }
 
 .wireframe-card__image--wide img {
