@@ -417,7 +417,7 @@
   <section class="case-study-section" id="lofi-prototype">
     <span class="case-study-section__label">07</span>
     <h2 class="case-study-section__title">Low&#8209;Fidelity Prototype</h2>
-    <p class="lofi-hint">Click the navigation tabs or arrows to explore the prototype flow.</p>
+    <p class="lofi-hint">Tap, swipe, or use the arrows to explore the prototype flow.</p>
 
     <div class="lofi-prototype">
       <!-- Navigation arrows -->
@@ -879,6 +879,42 @@
       if (next > 3) next = 0;
       lofiGoTo(next);
     }
+
+    // Touch swipe support for lo-fi prototype
+    (function() {
+      const phone = document.querySelector('.lofi-phone__screen');
+      if (!phone) return;
+      let startX = 0;
+      let startY = 0;
+      let tracking = false;
+
+      phone.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        tracking = true;
+      }, { passive: true });
+
+      phone.addEventListener('touchmove', (e) => {
+        if (!tracking) return;
+        const dx = e.touches[0].clientX - startX;
+        const dy = e.touches[0].clientY - startY;
+        // Only handle horizontal swipes
+        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 30) {
+          e.preventDefault();
+        }
+      }, { passive: false });
+
+      phone.addEventListener('touchend', (e) => {
+        if (!tracking) return;
+        tracking = false;
+        const endX = e.changedTouches[0].clientX;
+        const dx = endX - startX;
+        if (Math.abs(dx) > 40) {
+          if (dx < 0) lofiNav(1);   // swipe left = next
+          else lofiNav(-1);          // swipe right = prev
+        }
+      }, { passive: true });
+    })();
 
     // Section navigation — smooth scroll & active tracking
     (function() {
