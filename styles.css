@@ -1948,11 +1948,7 @@ img { max-width: 100%; display: block; }
 
 /* Full-width wireframe card for iteration */
 .wireframe-card--full {
-  max-width: 100%;
-}
-
-.wireframe-card__image--wide {
-  max-width: 100%;
+  max-width: 480px;
 }
 
 .wireframe-card__image--wide img {
@@ -1962,7 +1958,7 @@ img { max-width: 100%; display: block; }
 }
 
 .wireframe-card__image--wide:hover {
-  transform: scale(1.3);
+  transform: scale(1.8);
 }
 
 /* Tape strips on wireframe images */
