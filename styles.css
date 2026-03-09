@@ -1454,8 +1454,8 @@ img { max-width: 100%; display: block; }
 }
 
 .case-study-hero__logo {
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   opacity: 0.85;
 }
 
