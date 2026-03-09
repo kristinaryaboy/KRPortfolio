@@ -1581,24 +1581,30 @@ img { max-width: 100%; display: block; }
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 32px 40px 40px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0;
 }
 
 .case-study-meta__item {
   display: flex;
   align-items: baseline;
-  gap: 8px;
-  padding: 10px 20px 10px 0;
-  border-right: 1px solid rgba(217, 225, 232, 0.08);
-  margin-right: 20px;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(217, 225, 232, 0.06);
 }
 
-.case-study-meta__item:last-child {
-  border-right: none;
-  margin-right: 0;
-  padding-right: 0;
+.case-study-meta__item:nth-child(odd) {
+  padding-right: 24px;
+  border-right: 1px solid rgba(217, 225, 232, 0.06);
+}
+
+.case-study-meta__item:nth-child(even) {
+  padding-left: 24px;
+}
+
+.case-study-meta__item:nth-last-child(-n+2) {
+  border-bottom: none;
 }
 
 .case-study-meta__item h4 {
@@ -2890,16 +2896,21 @@ img { max-width: 100%; display: block; }
   }
 
   .case-study-meta {
+    grid-template-columns: 1fr;
     padding: 20px 24px 32px;
-    flex-direction: column;
-    gap: 0;
   }
 
   .case-study-meta__item {
-    border-right: none;
-    margin-right: 0;
     padding: 8px 0;
-    border-bottom: 1px solid rgba(217, 225, 232, 0.06);
+  }
+
+  .case-study-meta__item:nth-child(odd) {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .case-study-meta__item:nth-child(even) {
+    padding-left: 0;
   }
 
   .case-study-meta__item:last-child {
