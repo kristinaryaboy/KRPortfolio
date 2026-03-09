@@ -1602,6 +1602,9 @@ img { max-width: 100%; display: block; }
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 0;
+  border: 1px solid rgba(233, 30, 121, 0.15);
+  border-radius: 10px;
+  padding: 24px 32px;
 }
 
 .case-study-meta__item {
@@ -1609,20 +1612,14 @@ img { max-width: 100%; display: block; }
   align-items: baseline;
   gap: 10px;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(217, 225, 232, 0.06);
 }
 
 .case-study-meta__item:nth-child(odd) {
   padding-right: 24px;
-  border-right: 1px solid rgba(217, 225, 232, 0.06);
 }
 
 .case-study-meta__item:nth-child(even) {
   padding-left: 24px;
-}
-
-.case-study-meta__item:nth-last-child(-n+2) {
-  border-bottom: none;
 }
 
 .case-study-meta__item h4 {
