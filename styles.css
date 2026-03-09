@@ -1469,6 +1469,24 @@ img { max-width: 100%; display: block; }
   max-width: 640px;
 }
 
+.case-study-hero__partner {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: rgba(217, 225, 232, 0.4);
+  margin-top: 12px;
+}
+
+.case-study-hero__partner a {
+  color: var(--magenta);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(233, 30, 121, 0.3);
+  transition: border-color 0.3s ease;
+}
+
+.case-study-hero__partner a:hover {
+  border-bottom-color: var(--magenta);
+}
+
 .case-study-hero__image {
   margin-top: 40px;
   width: 60%;
@@ -1605,14 +1623,6 @@ img { max-width: 100%; display: block; }
 
 .case-study-meta__item:nth-last-child(-n+2) {
   border-bottom: none;
-}
-
-.case-study-meta__item:last-child {
-  grid-column: 1 / -1;
-  justify-content: center;
-  border-right: none;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .case-study-meta__item h4 {
