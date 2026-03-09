@@ -1544,8 +1544,8 @@ img { max-width: 100%; display: block; }
 
 .section-nav {
   position: sticky;
-  top: 0;
-  z-index: 100;
+  top: var(--nav-height);
+  z-index: 90;
   background: rgba(30, 42, 52, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);

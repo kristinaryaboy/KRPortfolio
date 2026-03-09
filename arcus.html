@@ -24,17 +24,33 @@
 </head>
 <body class="case-study">
 
-  <!-- Navigation -->
-  <nav class="case-study-nav">
-    <div class="case-study-nav__inner">
-      <a href="index.html#work" class="case-study-nav__back">
-        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Back to Portfolio
+  <!-- Main Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <img src="images/Logo.png" alt="KR" class="nav-logo__img">
       </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#skills" class="nav-link">Skills</a>
+        <a href="index.html#work" class="nav-link">Projects</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="index.html#about" class="mobile-menu__link">About</a>
+    <a href="index.html#skills" class="mobile-menu__link">Skills</a>
+    <a href="index.html#work" class="mobile-menu__link">Projects</a>
+    <a href="index.html#contact" class="mobile-menu__link">Contact</a>
+  </div>
 
   <!-- Hero -->
   <header class="case-study-hero">
@@ -936,7 +952,8 @@
           const targetId = link.getAttribute('data-section');
           const target = document.getElementById(targetId);
           if (target) {
-            const navHeight = sectionNav.offsetHeight;
+            const mainNavHeight = document.getElementById('nav') ? document.getElementById('nav').offsetHeight : 0;
+            const navHeight = sectionNav.offsetHeight + mainNavHeight;
             const targetTop = target.getBoundingClientRect().top + window.scrollY - navHeight - 8;
             window.scrollTo({ top: targetTop, behavior: 'smooth' });
           }
@@ -949,7 +966,8 @@
         if (!ticking) {
           window.requestAnimationFrame(() => {
             const scrollY = window.scrollY;
-            const navHeight = sectionNav.offsetHeight;
+            const mainNavHeight = document.getElementById('nav') ? document.getElementById('nav').offsetHeight : 0;
+            const navHeight = sectionNav.offsetHeight + mainNavHeight;
 
             // Add shadow when scrolled past hero
             if (scrollY > 200) {
@@ -992,6 +1010,23 @@
           });
           ticking = true;
         }
+      });
+    })();
+
+    // Mobile menu toggle
+    (function() {
+      const toggle = document.getElementById('navToggle');
+      const menu = document.getElementById('mobileMenu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        menu.classList.toggle('active');
+      });
+      menu.querySelectorAll('.mobile-menu__link').forEach(link => {
+        link.addEventListener('click', () => {
+          toggle.classList.remove('active');
+          menu.classList.remove('active');
+        });
       });
     })();
 
