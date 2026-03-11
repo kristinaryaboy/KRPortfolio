@@ -55,7 +55,7 @@
   <text x="24" y="540" fill="#E8711A" font-size="15" font-weight="600">Sign Out</text>
 
   <!-- App Version -->
-  <text x="187" y="584" text-anchor="middle" class="label-sm">Discover Movement Connect v0.0.1</text>
+  <text x="187" y="584" text-anchor="middle" class="label-sm">DMC App v0.0.1</text>
 
   <!-- Bottom Nav Bar -->
   <rect x="0" y="748" width="375" height="64" fill="#111122"/>
