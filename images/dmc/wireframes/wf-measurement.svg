@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <defs>
+    <style>
+      text { font-family: 'Segoe UI', system-ui, sans-serif; }
+      .label { fill: #c8c8c8; font-size: 13px; }
+      .label-sm { fill: #999; font-size: 11px; }
+      .heading { fill: #e8e8e8; font-size: 16px; font-weight: 600; }
+      .heading-lg { fill: #fff; font-size: 20px; font-weight: 700; }
+      .field-label { fill: #e8e8e8; font-size: 13px; font-weight: 600; }
+      .placeholder { fill: #666; font-size: 13px; }
+      .nav-text { fill: #888; font-size: 10px; }
+      .nav-active { fill: #E8711A; font-size: 10px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="375" height="812" rx="40" fill="#1A1A2E"/>
+
+  <!-- Back Arrow + Title -->
+  <text x="24" y="76" fill="#e8e8e8" font-size="20">←</text>
+  <text x="56" y="76" class="heading-lg">Log Measurement</text>
+
+  <!-- Body Composition Section -->
+  <rect x="24" y="108" width="3" height="18" rx="1.5" fill="#E8711A"/>
+  <text x="36" y="123" class="heading">Body Composition</text>
+
+  <!-- Weight -->
+  <text x="24" y="158" class="field-label">Weight</text>
+  <rect x="24" y="166" width="155" height="44" rx="10" fill="#2A2A3E"/>
+  <text x="101" y="194" text-anchor="middle" class="placeholder">—</text>
+
+  <!-- Body Fat -->
+  <text x="195" y="158" class="field-label">Body Fat</text>
+  <rect x="195" y="166" width="155" height="44" rx="10" fill="#2A2A3E"/>
+  <text x="272" y="194" text-anchor="middle" class="placeholder">—</text>
+
+  <!-- Circumferences Section -->
+  <rect x="24" y="240" width="3" height="18" rx="1.5" fill="#E8711A"/>
+  <text x="36" y="255" class="heading">Circumferences</text>
+
+  <!-- Chest -->
+  <text x="24" y="290" class="field-label">Chest</text>
+  <rect x="24" y="298" width="100" height="44" rx="10" fill="#2A2A3E"/>
+  <text x="74" y="326" text-anchor="middle" class="placeholder">—</text>
+
+  <!-- Waist -->
+  <text x="138" y="290" class="field-label">Waist</text>
+  <rect x="138" y="298" width="100" height="44" rx="10" fill="#2A2A3E"/>
+  <text x="188" y="326" text-anchor="middle" class="placeholder">—</text>
+
+  <!-- Hips -->
+  <text x="252" y="290" class="field-label">Hips</text>
+  <rect x="252" y="298" width="100" height="44" rx="10" fill="#2A2A3E"/>
+  <text x="302" y="326" text-anchor="middle" class="placeholder">—</text>
+
+  <!-- Notes Section -->
+  <rect x="24" y="376" width="3" height="18" rx="1.5" fill="#E8711A"/>
+  <text x="36" y="391" class="heading">Notes</text>
+  <text x="36" y="409" class="label-sm">Optional</text>
+
+  <!-- Notes textarea -->
+  <rect x="24" y="424" width="327" height="100" rx="12" fill="#2A2A3E"/>
+  <text x="40" y="450" class="placeholder">How are you feeling today?</text>
+
+  <!-- Save Measurement CTA -->
+  <rect x="24" y="556" width="327" height="48" rx="24" fill="#E8711A"/>
+  <text x="187" y="586" text-anchor="middle" fill="#1A1A2E" font-size="15" font-weight="600">✓ Save Measurement</text>
+
+  <!-- No bottom nav - this is a sub-page with back button -->
+</svg>

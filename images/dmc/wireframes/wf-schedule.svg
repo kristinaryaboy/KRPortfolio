@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <defs>
+    <style>
+      text { font-family: 'Segoe UI', system-ui, sans-serif; }
+      .label { fill: #c8c8c8; font-size: 13px; }
+      .label-sm { fill: #999; font-size: 11px; }
+      .heading { fill: #e8e8e8; font-size: 16px; font-weight: 600; }
+      .heading-lg { fill: #fff; font-size: 20px; font-weight: 700; }
+      .nav-text { fill: #888; font-size: 10px; }
+      .nav-active { fill: #E8711A; font-size: 10px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="375" height="812" rx="40" fill="#1A1A2E"/>
+
+  <!-- Page Title -->
+  <text x="24" y="76" class="heading-lg">Schedule</text>
+
+  <!-- Schedule section heading -->
+  <rect x="24" y="100" width="3" height="18" rx="1.5" fill="#E8711A"/>
+  <text x="36" y="115" class="heading">Schedule</text>
+
+  <!-- Book Session CTA -->
+  <rect x="24" y="132" width="327" height="48" rx="24" fill="#E8711A"/>
+  <text x="187" y="162" text-anchor="middle" fill="#1A1A2E" font-size="15" font-weight="600">⊕ Book Session</text>
+
+  <!-- My Sessions -->
+  <rect x="24" y="208" width="3" height="18" rx="1.5" fill="#E8711A"/>
+  <text x="36" y="223" class="heading">My Sessions</text>
+
+  <!-- Calendar icon empty state -->
+  <circle cx="187" cy="330" r="40" fill="#2A2A3E"/>
+  <rect x="168" y="312" width="38" height="36" rx="6" fill="none" stroke="#E8711A" stroke-width="1.5" opacity="0.5"/>
+  <!-- Calendar dots -->
+  <circle cx="178" cy="332" r="2" fill="#E8711A" opacity="0.4"/>
+  <circle cx="187" cy="332" r="2" fill="#E8711A" opacity="0.4"/>
+  <circle cx="196" cy="332" r="2" fill="#E8711A" opacity="0.4"/>
+  <circle cx="178" cy="340" r="2" fill="#E8711A" opacity="0.4"/>
+  <circle cx="187" cy="340" r="2" fill="#E8711A" opacity="0.4"/>
+  <circle cx="196" cy="340" r="2" fill="#E8711A" opacity="0.4"/>
+
+  <text x="187" y="400" text-anchor="middle" class="heading" font-size="15">No Sessions Scheduled</text>
+  <text x="187" y="422" text-anchor="middle" class="label-sm">Your scheduled sessions will appear here.</text>
+
+  <!-- Book a Session CTA -->
+  <rect x="24" y="452" width="327" height="48" rx="24" fill="#E8711A"/>
+  <text x="187" y="482" text-anchor="middle" fill="#1A1A2E" font-size="15" font-weight="600">Book a Session</text>
+
+  <!-- Bottom Nav Bar -->
+  <rect x="0" y="748" width="375" height="64" fill="#111122"/>
+  <line x1="0" y1="748" x2="375" y2="748" stroke="#2A2A3E" stroke-width="1"/>
+
+  <!-- Home -->
+  <rect x="24" y="758" width="30" height="20" rx="4" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="39" y="792" text-anchor="middle" class="nav-text">Home</text>
+
+  <!-- Workouts -->
+  <rect x="96" y="758" width="30" height="20" rx="4" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="111" y="792" text-anchor="middle" class="nav-text">Workouts</text>
+
+  <!-- Schedule (active) -->
+  <rect x="171" y="758" width="30" height="20" rx="4" fill="none" stroke="#E8711A" stroke-width="1.5"/>
+  <text x="186" y="792" text-anchor="middle" class="nav-active">Schedule</text>
+
+  <!-- Progress -->
+  <rect x="246" y="758" width="30" height="20" rx="4" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="261" y="792" text-anchor="middle" class="nav-text">Progress</text>
+
+  <!-- Profile -->
+  <circle cx="333" cy="768" r="10" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="333" y="792" text-anchor="middle" class="nav-text">Profile</text>
+</svg>

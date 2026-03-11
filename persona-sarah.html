@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Persona - Sarah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #1e2a34;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .persona-card {
+      width: 100%;
+      background: #253340;
+      border-radius: 12px;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(217, 225, 232, 0.06);
+      padding: 32px 28px 28px;
+      position: relative;
+    }
+
+    /* ── Top Section ── */
+    .persona-top {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 28px;
+    }
+
+    .persona-photo {
+      flex-shrink: 0;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: #1e2a34;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .persona-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .persona-right-top {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .persona-quote {
+      font-family: 'Lato', sans-serif;
+      font-style: italic;
+      font-size: 15.5px;
+      line-height: 1.55;
+      color: rgba(217, 225, 232, 0.8);
+      margin-bottom: 20px;
+      padding-right: 10px;
+    }
+
+    .persona-quote::before { content: '\201C'; }
+    .persona-quote::after { content: '\201D'; }
+
+    /* ── Goals & Frustrations Row ── */
+    .persona-goals-row {
+      display: flex;
+      gap: 28px;
+      flex: 1;
+    }
+
+    .persona-goals-col {
+      flex: 1;
+    }
+
+    .persona-goals-col h3 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    .persona-goals-col h3.goals-title { color: #34a853; }
+    .persona-goals-col h3.frust-title { color: #ea4335; }
+
+    .persona-goals-col ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .persona-goals-col li {
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: rgba(217, 225, 232, 0.6);
+      margin-bottom: 4px;
+    }
+
+    /* ── Divider ── */
+    .persona-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(217, 225, 232, 0.08);
+      margin: 24px 0;
+    }
+
+    /* ── Bottom Section ── */
+    .persona-bottom {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .persona-bio-left {
+      flex-shrink: 0;
+      width: 150px;
+    }
+
+    .persona-name {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: #e91e8c;
+      margin-bottom: 14px;
+    }
+
+    .persona-details {
+      list-style: none;
+    }
+
+    .persona-details li {
+      font-size: 13px;
+      line-height: 1.7;
+      color: rgba(217, 225, 232, 0.65);
+      display: flex;
+    }
+
+    .persona-details li strong {
+      font-weight: 700;
+      color: rgba(217, 225, 232, 0.9);
+      flex-shrink: 0;
+      width: 88px;
+    }
+
+    /* ── Scenario Box ── */
+    .persona-scenario {
+      flex: 1;
+      border: 2px solid rgba(245, 197, 66, 0.3);
+      border-radius: 8px;
+      padding: 18px 22px;
+      background: rgba(245, 197, 66, 0.04);
+    }
+
+    .persona-scenario p {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: rgba(217, 225, 232, 0.65);
+    }
+
+    @media (max-width: 580px) {
+      body {
+        padding: 16px;
+      }
+
+      .persona-card {
+        width: 100%;
+        padding: 24px 20px 20px;
+      }
+
+      .persona-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .persona-photo {
+        width: 120px;
+        height: 120px;
+      }
+
+      .persona-quote {
+        padding-right: 0;
+      }
+
+      .persona-goals-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .persona-bottom {
+        flex-direction: column;
+      }
+
+      .persona-bio-left {
+        width: 100%;
+      }
+
+      .persona-details li {
+        flex-direction: column;
+      }
+
+      .persona-details li strong {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="persona-card">
+
+    <!-- Top Section -->
+    <div class="persona-top">
+
+      <!-- Photo -->
+      <div class="persona-photo">
+        <img src="images/dmc/ClientImage.jpg" alt="Sarah, Busy Professional and Mobility Client">
+      </div>
+
+      <!-- Right side: Quote + Goals/Frustrations -->
+      <div class="persona-right-top">
+        <p class="persona-quote">Consistency is the hardest part. The easier my coach makes it to follow through, the better I feel.</p>
+
+        <div class="persona-goals-row">
+          <div class="persona-goals-col">
+            <h3 class="goals-title">Goals</h3>
+            <ul>
+              <li>Access her personalized program anytime without digging through texts or emails</li>
+              <li>Book classes and sessions quickly without back-and-forth</li>
+              <li>Stay consistent with training despite a packed schedule</li>
+            </ul>
+          </div>
+          <div class="persona-goals-col">
+            <h3 class="frust-title">Frustrations</h3>
+            <ul>
+              <li>Workout instructions scattered across texts, PDFs, and verbal cues</li>
+              <li>Booking feels clunky and disconnected from her training plan</li>
+              <li>Hard to track her own progress or know if she's improving</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="persona-divider"></div>
+
+    <!-- Bottom Section -->
+    <div class="persona-bottom">
+
+      <!-- Name + Details -->
+      <div class="persona-bio-left">
+        <h2 class="persona-name">Sarah</h2>
+        <ul class="persona-details">
+          <li><strong>Age:</strong> 41</li>
+          <li><strong>Hometown:</strong> Rhode Island</li>
+          <li><strong>Occupation:</strong> Working Professional</li>
+          <li><strong>Focus:</strong> Mobility &amp; Strength</li>
+        </ul>
+      </div>
+
+      <!-- Scenario -->
+      <div class="persona-scenario">
+        <p>Sarah is a working professional balancing a demanding schedule with her commitment to improving her mobility and overall fitness. She trains at Discover Movement to manage chronic tightness and build functional strength, but keeping up with her program between sessions can be a challenge. She values clear direction from her coach and needs a simple, accessible way to stay on track without adding more complexity to her day.</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

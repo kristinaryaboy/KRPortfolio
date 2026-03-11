@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 812" width="375" height="812">
+  <defs>
+    <style>
+      text { font-family: 'Segoe UI', system-ui, sans-serif; }
+      .label { fill: #c8c8c8; font-size: 13px; }
+      .label-sm { fill: #999; font-size: 11px; }
+      .heading { fill: #e8e8e8; font-size: 16px; font-weight: 600; }
+      .heading-lg { fill: #fff; font-size: 20px; font-weight: 700; }
+      .accent { fill: #E8711A; }
+      .accent-text { fill: #E8711A; font-size: 12px; font-weight: 600; }
+      .nav-text { fill: #888; font-size: 10px; }
+      .nav-active { fill: #E8711A; font-size: 10px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="375" height="812" rx="40" fill="#1A1A2E"/>
+
+  <!-- Page Title -->
+  <text x="24" y="76" class="heading-lg">Workouts</text>
+
+  <!-- Start Workout CTA -->
+  <rect x="24" y="96" width="327" height="48" rx="24" fill="#E8711A"/>
+  <text x="187" y="126" text-anchor="middle" fill="#1A1A2E" font-size="15" font-weight="600">⚡ Start Workout</text>
+
+  <!-- Tabs: Exercises / History -->
+  <rect x="24" y="164" width="90" height="32" rx="8" fill="#2A2A3E"/>
+  <text x="69" y="184" text-anchor="middle" class="label-sm">Exercises</text>
+  <rect x="120" y="164" width="76" height="32" rx="8" fill="#2A2A3E"/>
+  <text x="158" y="184" text-anchor="middle" class="label-sm">History</text>
+
+  <!-- Recent Workouts -->
+  <rect x="24" y="220" width="3" height="18" rx="1.5" fill="#E8711A"/>
+  <text x="36" y="235" class="heading">Recent Workouts</text>
+  <text x="351" y="235" text-anchor="end" fill="#E8711A" font-size="13">See All</text>
+
+  <!-- Workout item -->
+  <rect x="24" y="252" width="327" height="56" rx="12" fill="#2A2A3E"/>
+  <circle cx="56" cy="280" r="14" fill="#2E7D32"/>
+  <text x="56" y="284" text-anchor="middle" fill="#fff" font-size="10">✓</text>
+  <text x="82" y="274" class="heading" font-size="14">Free Workout</text>
+  <text x="82" y="292" class="label-sm">3/9/2026 · 1 min</text>
+
+  <!-- Workout Templates -->
+  <rect x="24" y="340" width="3" height="18" rx="1.5" fill="#E8711A"/>
+  <text x="36" y="355" class="heading">Workout Templates</text>
+
+  <!-- Empty state icon -->
+  <circle cx="187" cy="430" r="32" fill="#2A2A3E"/>
+  <rect x="170" y="420" width="34" height="20" rx="4" fill="none" stroke="#E8711A" stroke-width="1.5" opacity="0.5"/>
+
+  <text x="187" y="490" text-anchor="middle" class="heading" font-size="15">No Templates Yet</text>
+  <text x="187" y="512" text-anchor="middle" class="label-sm">Start a free workout or ask your coach</text>
+  <text x="187" y="528" text-anchor="middle" class="label-sm">for templates</text>
+
+  <!-- Bottom Nav Bar -->
+  <rect x="0" y="748" width="375" height="64" fill="#111122"/>
+  <line x1="0" y1="748" x2="375" y2="748" stroke="#2A2A3E" stroke-width="1"/>
+
+  <!-- Home -->
+  <rect x="24" y="758" width="30" height="20" rx="4" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="39" y="792" text-anchor="middle" class="nav-text">Home</text>
+
+  <!-- Workouts (active) -->
+  <rect x="96" y="758" width="30" height="20" rx="4" fill="none" stroke="#E8711A" stroke-width="1.5"/>
+  <text x="111" y="792" text-anchor="middle" class="nav-active">Workouts</text>
+
+  <!-- Schedule -->
+  <rect x="171" y="758" width="30" height="20" rx="4" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="186" y="792" text-anchor="middle" class="nav-text">Schedule</text>
+
+  <!-- Progress -->
+  <rect x="246" y="758" width="30" height="20" rx="4" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="261" y="792" text-anchor="middle" class="nav-text">Progress</text>
+
+  <!-- Profile -->
+  <circle cx="333" cy="768" r="10" fill="none" stroke="#555" stroke-width="1"/>
+  <text x="333" y="792" text-anchor="middle" class="nav-text">Profile</text>
+</svg>
