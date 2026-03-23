@@ -1561,6 +1561,38 @@ img { max-width: 100%; display: block; }
   border-bottom-color: var(--magenta);
 }
 
+.case-study-hero__status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.status-badge--live {
+  background: rgba(233, 30, 121, 0.15);
+  color: var(--magenta);
+  border: 1px solid rgba(233, 30, 121, 0.3);
+}
+
+.status-badge--coming {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(217, 225, 232, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 .case-study-hero__image {
   margin-top: 40px;
   width: 60%;
