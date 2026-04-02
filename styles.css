@@ -296,36 +296,31 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
   width: clamp(180px, 22vw, 320px);
   height: clamp(180px, 22vw, 320px);
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle, rgba(31, 46, 58, 0.6) 0%, rgba(22, 34, 43, 0.8) 40%, rgba(22, 34, 43, 0.95) 65%, transparent 100%);
-  border: 1px solid rgba(217, 225, 232, 0.06);
-  box-shadow:
-    0 0 60px rgba(22, 34, 43, 0.8),
-    0 0 80px rgba(22, 34, 43, 0.4),
-    inset 0 0 40px rgba(22, 34, 43, 0.3);
   position: relative;
+  z-index: 0;
 }
 
 .hero-logo::before {
   content: '';
   position: absolute;
-  inset: -1px;
-  border-radius: 50%;
-  background: conic-gradient(from 180deg, transparent 0%, rgba(233, 30, 121, 0.12) 25%, transparent 50%, rgba(217, 225, 232, 0.06) 75%, transparent 100%);
-  mask: radial-gradient(circle, transparent 48%, black 49%, black 50%, transparent 51%);
-  -webkit-mask: radial-gradient(circle, transparent 48%, black 49%, black 50%, transparent 51%);
+  width: 130%;
+  height: 130%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url('images/BehindKRLogo.png') center/contain no-repeat;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: -1;
+  mask: radial-gradient(circle, black 49%, transparent 50%);
+  -webkit-mask: radial-gradient(circle, black 49%, transparent 50%);
 }
 
 .hero-logo__orbit {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  pointer-events: none;
+  display: none;
 }
 
 .hero-logo__img {
