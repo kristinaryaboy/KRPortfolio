@@ -500,77 +500,60 @@ img { max-width: 100%; display: block; }
    Section Cards (About / Process / Work)
    ======================================== */
 
-.cards-section {
-  padding: 0 0 100px;
-  background: var(--deep-slate);
-}
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-}
-
-.section-card {
-  display: block;
+/* ── Nav Banner (Background Image Section) ── */
+.nav-banner {
   position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(217, 225, 232, 0.08);
-  background: var(--charcoal-navy);
-  transition: transform 0.5s var(--ease-out), border-color 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-}
-
-.section-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(233, 30, 121, 0.3);
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35), 0 0 40px rgba(233, 30, 121, 0.08);
-}
-
-.section-card__visual {
-  position: relative;
-  aspect-ratio: 1;
-  overflow: hidden;
-}
-
-.section-card__visual canvas {
   width: 100%;
-  height: 100%;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.nav-banner__bg {
+  width: 100%;
+}
+
+.nav-banner__bg img {
+  width: 100%;
+  height: auto;
   display: block;
 }
 
-.section-card__icon {
+.nav-banner__overlay {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+  display: flex;
+}
+
+.nav-banner__zone {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+.nav-banner__zone:hover {
+  background: rgba(233, 30, 140, 0.06);
+}
+
+.nav-banner__label {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: rgba(217, 225, 232, 0.85);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease, letter-spacing 0.4s var(--ease-out), text-shadow 0.3s ease;
   pointer-events: none;
 }
 
-.section-card__label {
-  display: block;
-  text-align: center;
-  font-family: var(--font-heading);
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  color: var(--off-white);
-  padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
-  transition: color 0.3s ease, letter-spacing 0.4s var(--ease-out);
-}
-
-.section-card:hover .section-card__label {
-  color: var(--magenta);
-  letter-spacing: 10px;
+.nav-banner__zone:hover .nav-banner__label {
+  color: #ffffff;
+  letter-spacing: 12px;
+  text-shadow: 0 0 30px rgba(233, 30, 140, 0.4), 0 2px 20px rgba(0, 0, 0, 0.8);
 }
 
 /* ========================================
@@ -3562,7 +3545,7 @@ img { max-width: 100%; display: block; }
    ======================================== */
 
 @media (max-width: 1024px) {
-  .cards-grid { gap: 24px; }
+  .nav-banner__label { font-size: 18px; letter-spacing: 6px; }
 
   .work-grid { grid-template-columns: 1fr; }
   .project-card--featured { grid-column: 1; }
@@ -3594,12 +3577,7 @@ img { max-width: 100%; display: block; }
   .hero-logo__img { width: 60%; }
   .hero-rule { margin: 0 auto 16px; }
 
-  .cards-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    max-width: 400px;
-    margin: 0 auto;
-  }
+  .nav-banner__label { font-size: 14px; letter-spacing: 4px; }
 
   .process-timeline { grid-template-columns: 1fr; gap: 40px; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
