@@ -134,6 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Arcus orbit canvas ──
   initArcusOrbitCanvas();
 
+  // ── DMC orbit canvas ──
+  initDmcOrbitCanvas();
+
   // ── Featured gallery canvas ──
   initFeaturedGalleryCanvas();
 });
@@ -1815,6 +1818,93 @@ function initArcusOrbitCanvas() {
       ctx.moveTo(cx + Math.cos(a1) * nodes[i].r, cy + Math.sin(a1) * nodes[i].r * 0.85);
       ctx.lineTo(cx + Math.cos(a2) * nodes[i + 1].r, cy + Math.sin(a2) * nodes[i + 1].r * 0.85);
       ctx.strokeStyle = 'rgba(233, 30, 121, 0.03)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+}
+
+
+/* ========================================
+   DMC Orbit Canvas (Portfolio card background)
+   Subtle rotating orbits behind DMC phone trio
+   ======================================== */
+function initDmcOrbitCanvas() {
+  const canvas = document.getElementById('dmcOrbitCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let w, h;
+
+  function draw(time) {
+    w = canvas.width = canvas.offsetWidth * 2;
+    h = canvas.height = canvas.offsetHeight * 2;
+    const cx = w * 0.5, cy = h * 0.5;
+
+    ctx.clearRect(0, 0, w, h);
+
+    const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, w * 0.38);
+    glow.addColorStop(0, 'rgba(232, 113, 26, 0.06)');
+    glow.addColorStop(1, 'transparent');
+    ctx.fillStyle = glow;
+    ctx.fillRect(0, 0, w, h);
+
+    const radii = [w * 0.1, w * 0.19, w * 0.29, w * 0.4];
+    radii.forEach((r, i) => {
+      ctx.beginPath();
+      ctx.ellipse(cx, cy, r, r * 0.85, 0, 0, Math.PI * 2);
+      ctx.strokeStyle = i === 1 || i === 3
+        ? 'rgba(232, 113, 26, 0.07)'
+        : 'rgba(217, 225, 232, 0.03)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    });
+
+    const dotCount = 48;
+    const dotR = w * 0.24;
+    for (let d = 0; d < dotCount; d++) {
+      const angle = (d / dotCount) * Math.PI * 2;
+      const dx = cx + Math.cos(angle) * dotR;
+      const dy = cy + Math.sin(angle) * dotR * 0.85;
+      ctx.beginPath();
+      ctx.arc(dx, dy, 1, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(232, 113, 26, 0.05)';
+      ctx.fill();
+    }
+
+    const nodes = [
+      { r: radii[0], speed:  0.0004, size: 3,   color: 'rgba(217, 225, 232, 0.2)' },
+      { r: radii[1], speed: -0.00025, size: 3.5, color: 'rgba(232, 113, 26, 0.25)' },
+      { r: radii[2], speed:  0.00015, size: 2.5, color: 'rgba(217, 225, 232, 0.15)' },
+      { r: radii[3], speed: -0.0001, size: 2,   color: 'rgba(108, 92, 231, 0.18)' },
+    ];
+
+    nodes.forEach(n => {
+      const angle = time * n.speed;
+      const nx = cx + Math.cos(angle) * n.r;
+      const ny = cy + Math.sin(angle) * n.r * 0.85;
+      ctx.beginPath();
+      ctx.arc(nx, ny, n.size, 0, Math.PI * 2);
+      ctx.fillStyle = n.color;
+      ctx.fill();
+      const ng = ctx.createRadialGradient(nx, ny, 0, nx, ny, n.size * 3);
+      ng.addColorStop(0, n.color.replace(/[\d.]+\)/, '0.06)'));
+      ng.addColorStop(1, 'transparent');
+      ctx.beginPath();
+      ctx.arc(nx, ny, n.size * 3, 0, Math.PI * 2);
+      ctx.fillStyle = ng;
+      ctx.fill();
+    });
+
+    for (let i = 0; i < nodes.length - 1; i++) {
+      const a1 = time * nodes[i].speed;
+      const a2 = time * nodes[i + 1].speed;
+      ctx.beginPath();
+      ctx.moveTo(cx + Math.cos(a1) * nodes[i].r, cy + Math.sin(a1) * nodes[i].r * 0.85);
+      ctx.lineTo(cx + Math.cos(a2) * nodes[i + 1].r, cy + Math.sin(a2) * nodes[i + 1].r * 0.85);
+      ctx.strokeStyle = 'rgba(232, 113, 26, 0.03)';
       ctx.lineWidth = 1;
       ctx.stroke();
     }
