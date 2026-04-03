@@ -729,6 +729,12 @@ img { max-width: 100%; display: block; }
   margin-left: auto;
 }
 
+.section-banner--mid {
+  margin-left: 0;
+  max-width: 30%;
+  flex-shrink: 0;
+}
+
 .about-banner {
   max-height: 200px;
   width: auto;
@@ -1090,12 +1096,15 @@ img { max-width: 100%; display: block; }
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
   border-color: rgba(233, 30, 121, 0.25);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(233, 30, 121, 0.08);
 }
 
 .project-card--featured {
+  grid-column: 1 / -1;
+}
+
+.project-card-link--featured {
   grid-column: 1 / -1;
 }
 
@@ -1123,24 +1132,39 @@ img { max-width: 100%; display: block; }
 .project-card--featured .project-card__image { aspect-ratio: 21 / 9; }
 
 /* Portfolio website card — shorter image, no phone frames */
-.project-card__image--web {
-  aspect-ratio: 21 / 5 !important;
-  background: linear-gradient(135deg, #080808 0%, #0a0a0a 40%, rgba(108, 92, 231, 0.08) 70%, rgba(233, 30, 121, 0.06) 100%);
+.project-card--horizontal {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
 }
 
-.project-card__web-decor {
-  width: 60%;
-  max-width: 500px;
-  height: auto;
-  opacity: 0.12;
-  transition: opacity 0.4s ease;
+.project-card--horizontal .project-card__info {
+  flex: 1;
+  padding: 32px 40px;
 }
 
-.project-card:hover .project-card__web-decor {
-  opacity: 0.22;
+.project-card--horizontal .project-card__image--web {
+  flex: 0 0 40%;
+  max-width: 40%;
+  aspect-ratio: auto !important;
+  overflow: hidden;
+  border-radius: 0 12px 12px 0;
+  height: 100%;
+}
+
+.project-card__web-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0.85;
+}
+
+.project-card:hover .project-card__web-img {
+  transform: scale(1.03);
+  opacity: 1;
 }
 
 .project-card__overlay {
@@ -1398,7 +1422,8 @@ img { max-width: 100%; display: block; }
 }
 
 .project-card:hover .project-card__phone-frame--center {
-  transform: scale(1.05);
+  transform: scale(1.12);
+  box-shadow: 0 8px 32px rgba(233, 30, 121, 0.2);
 }
 
 .project-card__phone-frame img {
@@ -1934,6 +1959,10 @@ img { max-width: 100%; display: block; }
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
+}
+
+.case-study-section__body--centered {
   text-align: center;
 }
 
@@ -3720,6 +3749,7 @@ img { max-width: 100%; display: block; }
 
   .work-grid { grid-template-columns: repeat(2, 1fr); }
   .project-card--featured { grid-column: 1; }
+  .project-card-link--featured { grid-column: 1; }
 
   .process-timeline {
     grid-template-columns: repeat(2, 1fr);
@@ -3787,8 +3817,18 @@ img { max-width: 100%; display: block; }
   .project-card__title {
     font-size: 24px;
   }
-  .project-card__image--web {
-    aspect-ratio: 16 / 5 !important;
+  .project-card--horizontal {
+    flex-direction: column;
+  }
+  .project-card--horizontal .project-card__image--web {
+    flex: none;
+    max-width: 100%;
+    aspect-ratio: 16 / 7 !important;
+    border-radius: 12px 12px 0 0;
+    order: -1;
+  }
+  .project-card--horizontal .project-card__info {
+    padding: 24px;
   }
 
   .process-timeline { grid-template-columns: 1fr; gap: 40px; }
