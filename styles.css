@@ -1365,14 +1365,14 @@ img { max-width: 100%; display: block; }
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
-  border: 2px solid rgba(232, 113, 26, 0.15);
+  border: 2px solid rgba(233, 30, 121, 0.15);
   transition: transform 0.4s var(--ease-out);
 }
 
 .project-card__phone-frame--center {
   flex: 0 0 96px;
   height: 210px;
-  border-color: rgba(232, 113, 26, 0.35);
+  border-color: rgba(233, 30, 121, 0.35);
   z-index: 2;
 }
 
@@ -1385,6 +1385,32 @@ img { max-width: 100%; display: block; }
   height: 100%;
   object-fit: cover;
   object-position: top center;
+}
+
+/* Arcus card — magenta borders to match portfolio theme */
+.project-card__phone-frame--arcus {
+  border-color: rgba(233, 30, 121, 0.2);
+}
+
+.project-card__phone-frame--arcus.project-card__phone-frame--center {
+  border-color: rgba(233, 30, 121, 0.4);
+  position: relative;
+}
+
+/* Blur email on profile card */
+.project-card__phone-frame--arcus.project-card__phone-frame--center::after {
+  content: '';
+  position: absolute;
+  top: 21%;
+  left: 15%;
+  right: 15%;
+  height: 4%;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 2px;
+  z-index: 2;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
