@@ -1953,6 +1953,12 @@ img { max-width: 100%; display: block; }
   color: var(--off-white);
   margin-bottom: 24px;
   letter-spacing: -0.3px;
+  background: linear-gradient(90deg, var(--off-white) 0%, var(--magenta) 40%, var(--purple) 60%, var(--off-white) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 4s ease-in-out infinite;
 }
 
 .case-study-section__body {
@@ -3913,7 +3919,8 @@ body.reduce-motion canvas {
 body.reduce-motion .hero-name__first,
 body.reduce-motion .hero-name__last,
 body.reduce-motion .project-card__title,
-body.reduce-motion .section-heading__title {
+body.reduce-motion .section-heading__title,
+body.reduce-motion .case-study-section__title {
   background: none !important;
   -webkit-background-clip: unset !important;
   background-clip: unset !important;
@@ -3967,7 +3974,8 @@ body.reduce-motion .reveal {
   .hero-name__first,
   .hero-name__last,
   .project-card__title,
-  .section-heading__title {
+  .section-heading__title,
+  .case-study-section__title {
     background: none !important;
     -webkit-background-clip: unset !important;
     background-clip: unset !important;
