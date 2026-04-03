@@ -436,9 +436,35 @@ img { max-width: 100%; display: block; }
   color: var(--off-white);
   letter-spacing: 1px;
   margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.welcome-letter {
+  display: inline-block;
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.8s var(--ease-out) 0.1s forwards;
+  transform: translateY(-40px);
+  transition: none;
+}
+
+.welcome-heading--animate .welcome-letter {
+  animation: letterDrop 0.5s var(--ease-out) forwards;
+}
+
+@keyframes letterDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .welcome-divider {

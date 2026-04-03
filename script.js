@@ -148,6 +148,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
+  // ── Welcome heading letter drop ──
+  const welcomeHeading = document.getElementById('welcomeHeading');
+  if (welcomeHeading && isMotionAllowed()) {
+    const text = welcomeHeading.textContent;
+    welcomeHeading.innerHTML = '';
+    text.split('').forEach((char, i) => {
+      const span = document.createElement('span');
+      span.textContent = char === ' ' ? '\u00A0' : char;
+      span.className = 'welcome-letter';
+      span.style.animationDelay = (i * 0.04) + 's';
+      welcomeHeading.appendChild(span);
+    });
+
+    const welcomeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          welcomeHeading.classList.add('welcome-heading--animate');
+          welcomeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    welcomeObserver.observe(welcomeHeading);
+  }
+
   // ── Contact form (mailto) ──
   const contactForm = document.getElementById('contactForm');
   contactForm.addEventListener('submit', (e) => {
