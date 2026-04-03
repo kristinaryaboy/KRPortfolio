@@ -1959,7 +1959,7 @@ img { max-width: 100%; display: block; }
   color: var(--off-white);
   margin-bottom: 24px;
   letter-spacing: -0.3px;
-  background: linear-gradient(90deg, var(--off-white) 0%, var(--magenta) 50%, var(--purple) 100%);
+  background: linear-gradient(90deg, var(--purple) 0%, var(--off-white) 50%, var(--magenta) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
