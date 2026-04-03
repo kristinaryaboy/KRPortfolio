@@ -3533,7 +3533,7 @@ img { max-width: 100%; display: block; }
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
 }
 
 .reveal--visible {
@@ -3551,7 +3551,8 @@ img { max-width: 100%; display: block; }
 }
 
 .reveal--drop {
-  transform: translateY(-20px) scale(0.97);
+  transform: translateY(15px) scale(0.98);
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
 }
 .reveal--drop.reveal--visible {
   transform: translateY(0) scale(1);
@@ -3559,6 +3560,7 @@ img { max-width: 100%; display: block; }
 
 .reveal--slide-left {
   transform: translateX(-40px);
+  transition: opacity 1.2s var(--ease-out), transform 1.2s var(--ease-out);
 }
 .reveal--slide-left.reveal--visible {
   transform: translateX(0);
@@ -3566,6 +3568,7 @@ img { max-width: 100%; display: block; }
 
 .reveal--slide-right {
   transform: translateX(40px);
+  transition: opacity 1.2s var(--ease-out), transform 1.2s var(--ease-out);
 }
 .reveal--slide-right.reveal--visible {
   transform: translateX(0);
