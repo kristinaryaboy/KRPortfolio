@@ -2,7 +2,48 @@
    Kristina Ryaboy Portfolio - Scripts
    ======================================== */
 
+// ── Global motion state ──
+let motionEnabled = true;
+const canvasAnimationIds = {};  // track rAF IDs by canvas id
+
+function isMotionAllowed() {
+  return motionEnabled && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  // ── Motion toggle ──
+  const motionToggle = document.getElementById('motionToggle');
+  if (motionToggle) {
+    // Restore saved preference
+    const saved = localStorage.getItem('reduceMotion');
+    if (saved === 'true') {
+      motionEnabled = false;
+      document.body.classList.add('reduce-motion');
+    }
+
+    // Also respect system setting on load
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches && saved === null) {
+      motionEnabled = false;
+      document.body.classList.add('reduce-motion');
+    }
+
+    motionToggle.addEventListener('click', () => {
+      motionEnabled = !motionEnabled;
+      document.body.classList.toggle('reduce-motion', !motionEnabled);
+      localStorage.setItem('reduceMotion', !motionEnabled);
+
+      // Cancel all canvas animations when motion is disabled
+      if (!motionEnabled) {
+        Object.keys(canvasAnimationIds).forEach(key => {
+          cancelAnimationFrame(canvasAnimationIds[key]);
+        });
+      } else {
+        // Re-initialize canvases when motion is re-enabled
+        window.location.reload();
+      }
+    });
+  }
 
   // ── Page transition on link clicks ──
   document.querySelectorAll('a[href]').forEach(link => {
@@ -114,21 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
   });
 
-  // ── Hero name glow on scroll ──
-  const heroName = document.querySelector('.hero-name');
-  if (heroName) {
-    const glowObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          heroName.classList.add('hero-name--glow');
-        } else {
-          heroName.classList.remove('hero-name--glow');
-        }
-      });
-    }, { threshold: 0.5 });
-    glowObserver.observe(heroName);
-  }
-
   // ── Hero canvas ──
   initHeroCanvas();
   initLogoOrbitCanvas();
@@ -162,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
    ======================================== */
 function initHeroCanvas() {
   const canvas = document.getElementById('heroCanvas');
-  if (!canvas) return;
+  if (!canvas || !isMotionAllowed()) return;
   const ctx = canvas.getContext('2d');
   let w, h, dpr;
 
@@ -304,7 +330,7 @@ function initHeroCanvas() {
    ======================================== */
 function initLogoOrbitCanvas() {
   const canvas = document.getElementById('logoOrbitCanvas');
-  if (!canvas) return;
+  if (!canvas || !isMotionAllowed()) return;
   const ctx = canvas.getContext('2d');
 
   function draw(time) {
@@ -385,6 +411,7 @@ function initLogoOrbitCanvas() {
    ======================================== */
 
 function initAboutTargetCanvas(canvas) {
+  if (!isMotionAllowed()) return;
   const ctx = canvas.getContext('2d');
   let w, h;
 
@@ -478,6 +505,7 @@ function initAboutTargetCanvas(canvas) {
    Orbit rings + drifting nodes behind workspace SVG
    ======================================== */
 function initPortfolioOrbitCanvas(canvas) {
+  if (!isMotionAllowed()) return;
   const ctx = canvas.getContext('2d');
   let w, h;
 
@@ -567,6 +595,7 @@ function initPortfolioOrbitCanvas(canvas) {
 
 
 function initLandscapeCanvas(canvas) {
+  if (!isMotionAllowed()) return;
   const ctx = canvas.getContext('2d');
   let w, h;
 
@@ -855,6 +884,7 @@ function initLandscapeCanvas(canvas) {
    Interlocking rotating gears
    ======================================== */
 function initOrbitsCanvas(canvas) {
+  if (!isMotionAllowed()) return;
   const ctx = canvas.getContext('2d');
   let w, h;
 
@@ -1098,6 +1128,7 @@ function initOrbitsCanvas(canvas) {
    Abstract art gallery with easel and frames
    ======================================== */
 function initScreensCanvas(canvas) {
+  if (!isMotionAllowed()) return;
   const ctx = canvas.getContext('2d');
   let w, h;
 
@@ -1525,7 +1556,7 @@ function initScreensCanvas(canvas) {
    ======================================== */
 function initAboutCanvas() {
   const canvas = document.getElementById('aboutCanvas');
-  if (!canvas) return;
+  if (!canvas || !isMotionAllowed()) return;
   const ctx = canvas.getContext('2d');
   const parent = canvas.closest('.about-visual__landscape') || canvas.parentElement;
 
@@ -1756,7 +1787,7 @@ function initAboutCanvas() {
    ======================================== */
 function initArcusOrbitCanvas() {
   const canvas = document.getElementById('arcusOrbitCanvas');
-  if (!canvas) return;
+  if (!canvas || !isMotionAllowed()) return;
   const ctx = canvas.getContext('2d');
   let w, h;
 
@@ -1849,7 +1880,7 @@ function initArcusOrbitCanvas() {
    ======================================== */
 function initDmcOrbitCanvas() {
   const canvas = document.getElementById('dmcOrbitCanvas');
-  if (!canvas) return;
+  if (!canvas || !isMotionAllowed()) return;
   const ctx = canvas.getContext('2d');
   let w, h;
 
@@ -1936,7 +1967,7 @@ function initDmcOrbitCanvas() {
    ======================================== */
 function initFeaturedGalleryCanvas() {
   const canvas = document.getElementById('featuredGalleryCanvas');
-  if (!canvas) return;
+  if (!canvas || !isMotionAllowed()) return;
   const ctx = canvas.getContext('2d');
 
   const stars = [];

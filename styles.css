@@ -361,23 +361,23 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-name__first {
-  color: var(--off-white);
   margin-right: 0.3em;
-  transition: text-shadow 0.8s ease;
+  background: linear-gradient(90deg, var(--off-white) 0%, var(--magenta) 40%, var(--purple) 60%, var(--off-white) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 4s ease-in-out infinite;
 }
 
 .hero-name__last {
-  color: var(--magenta);
   font-weight: 600;
-  transition: text-shadow 0.8s ease;
-}
-
-.hero-name--glow .hero-name__first {
-  text-shadow: 0 0 20px rgba(108, 92, 231, 0.6), 0 0 40px rgba(108, 92, 231, 0.3), 0 0 80px rgba(108, 92, 231, 0.15);
-}
-
-.hero-name--glow .hero-name__last {
-  text-shadow: 0 0 20px rgba(233, 30, 121, 0.6), 0 0 40px rgba(233, 30, 121, 0.3), 0 0 80px rgba(233, 30, 121, 0.15);
+  background: linear-gradient(90deg, var(--magenta) 0%, var(--purple) 40%, var(--magenta) 60%, var(--off-white) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 4s ease-in-out infinite;
 }
 }
 
@@ -627,9 +627,14 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-heading);
   font-size: clamp(36px, 5vw, 56px);
   font-weight: 700;
-  color: var(--off-white);
   letter-spacing: 2px;
   text-transform: uppercase;
+  background: linear-gradient(90deg, var(--off-white) 0%, var(--magenta) 40%, var(--purple) 60%, var(--off-white) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 4s ease-in-out infinite;
 }
 
 /* ========================================
@@ -1173,10 +1178,20 @@ img { max-width: 100%; display: block; }
 
 .project-card__title {
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 600;
-  color: var(--off-white);
   margin-bottom: 10px;
+  background: linear-gradient(90deg, var(--off-white) 0%, var(--magenta) 40%, var(--purple) 60%, var(--off-white) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 4s ease-in-out infinite;
+}
+
+@keyframes shimmerText {
+  0%, 100% { background-position: 100% 0; }
+  50% { background-position: 0% 0; }
 }
 
 .project-card__desc {
@@ -3688,6 +3703,44 @@ img { max-width: 100%; display: block; }
 
   .nav-banner__label { font-size: 14px; letter-spacing: 4px; }
 
+  /* Nav banner — center text within circles on mobile */
+  .nav-banner__overlay {
+    bottom: 20%;
+  }
+  .nav-banner__label {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+  .nav-banner {
+    padding-bottom: 40px;
+  }
+
+  /* Section heading rows — hide banner images & wavy line on mobile */
+  .section-heading-row {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 48px;
+  }
+  .section-heading-wave,
+  .section-banner {
+    display: none;
+  }
+
+  /* Portfolio — stack cards to single column, full width */
+  .work-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: 0 24px;
+  }
+  .work-banner {
+    max-width: 100%;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .project-card__title {
+    font-size: 24px;
+  }
+
   .process-timeline { grid-template-columns: 1fr; gap: 40px; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .about-photos-row { grid-template-columns: repeat(2, 1fr); }
@@ -3708,4 +3761,144 @@ img { max-width: 100%; display: block; }
   .about-skills { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
   .project-card__info { padding: 20px 24px 24px; }
+}
+
+/* ========================================
+   Motion Toggle Button
+   ======================================== */
+
+.motion-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid rgba(217, 225, 232, 0.15);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  color: var(--cool-gray);
+  opacity: 0.5;
+  transition: opacity 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.motion-toggle:hover {
+  opacity: 1;
+  border-color: var(--magenta);
+  color: var(--magenta);
+}
+
+.motion-toggle__icon--off { display: none; }
+
+/* When motion is reduced, swap icons */
+body.reduce-motion .motion-toggle__icon--on { display: none; }
+body.reduce-motion .motion-toggle__icon--off { display: block; }
+
+/* ========================================
+   Reduced Motion — disable animations
+   ======================================== */
+
+body.reduce-motion *,
+body.reduce-motion *::before,
+body.reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  animation-delay: 0ms !important;
+  transition-duration: 0.001ms !important;
+}
+
+/* Keep page visible (override pageFadeIn) */
+body.reduce-motion {
+  opacity: 1 !important;
+}
+
+/* Hide all canvas elements */
+body.reduce-motion canvas {
+  opacity: 0 !important;
+}
+
+/* Restore text colors that depend on background-clip: text + animation */
+body.reduce-motion .hero-name__first,
+body.reduce-motion .hero-name__last,
+body.reduce-motion .project-card__title,
+body.reduce-motion .section-heading__title {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: var(--off-white) !important;
+}
+
+body.reduce-motion .hero-name__first {
+  -webkit-text-fill-color: var(--off-white) !important;
+}
+
+body.reduce-motion .hero-name__last {
+  -webkit-text-fill-color: var(--magenta) !important;
+}
+
+/* Stop wavy line animation */
+body.reduce-motion .section-heading-wave__path {
+  stroke-dasharray: none !important;
+}
+
+/* Gallery scroll freeze */
+body.reduce-motion .featured-gallery__track {
+  animation: none !important;
+  transform: none !important;
+}
+
+/* Scroll reveal — show everything immediately */
+body.reduce-motion .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* System-level prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  body {
+    opacity: 1 !important;
+  }
+
+  canvas {
+    opacity: 0 !important;
+  }
+
+  .hero-name__first,
+  .hero-name__last,
+  .project-card__title,
+  .section-heading__title {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: var(--off-white) !important;
+  }
+
+  .hero-name__last {
+    -webkit-text-fill-color: var(--magenta) !important;
+  }
+
+  .section-heading-wave__path {
+    stroke-dasharray: none !important;
+  }
+
+  .featured-gallery__track {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
