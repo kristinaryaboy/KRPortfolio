@@ -202,31 +202,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
   });
 
-  // ── Hero canvas ──
+  // ── Hero canvas (starts immediately) ──
   initHeroCanvas();
-  initLogoOrbitCanvas();
 
-  // ── Card canvases ──
-  document.querySelectorAll('.card-canvas').forEach(canvas => {
-    const type = canvas.dataset.type;
-    if (type === 'landscape') initLandscapeCanvas(canvas);
-    else if (type === 'about-target') initAboutTargetCanvas(canvas);
-    else if (type === 'orbits') initOrbitsCanvas(canvas);
-    else if (type === 'screens') initScreensCanvas(canvas);
-    else if (type === 'portfolio-orbit') initPortfolioOrbitCanvas(canvas);
-  });
+  // ── Ambient animations (delayed until page load animations settle) ──
+  setTimeout(() => {
+    document.body.classList.add('ambient-ready');
+    initLogoOrbitCanvas();
 
-  // ── About canvas ──
-  initAboutCanvas();
+    document.querySelectorAll('.card-canvas').forEach(canvas => {
+      const type = canvas.dataset.type;
+      if (type === 'landscape') initLandscapeCanvas(canvas);
+      else if (type === 'about-target') initAboutTargetCanvas(canvas);
+      else if (type === 'orbits') initOrbitsCanvas(canvas);
+      else if (type === 'screens') initScreensCanvas(canvas);
+      else if (type === 'portfolio-orbit') initPortfolioOrbitCanvas(canvas);
+    });
 
-  // ── Arcus orbit canvas ──
-  initArcusOrbitCanvas();
-
-  // ── DMC orbit canvas ──
-  initDmcOrbitCanvas();
-
-  // ── Featured gallery canvas ──
-  initFeaturedGalleryCanvas();
+    initAboutCanvas();
+    initArcusOrbitCanvas();
+    initDmcOrbitCanvas();
+    initFeaturedGalleryCanvas();
+  }, 2000);
 });
 
 
