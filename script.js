@@ -114,6 +114,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
   });
 
+  // ── Hero name glow on scroll ──
+  const heroName = document.querySelector('.hero-name');
+  if (heroName) {
+    const glowObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          heroName.classList.add('hero-name--glow');
+        } else {
+          heroName.classList.remove('hero-name--glow');
+        }
+      });
+    }, { threshold: 0.5 });
+    glowObserver.observe(heroName);
+  }
+
   // ── Hero canvas ──
   initHeroCanvas();
   initLogoOrbitCanvas();
@@ -193,7 +208,7 @@ function initHeroCanvas() {
         if (x === xStart) ctx.moveTo(x, y);
         else ctx.lineTo(x, y);
       }
-      const alpha = (0.06 + i * 0.03) * 0.8;
+      const alpha = (0.06 + i * 0.03) * 2;
       ctx.strokeStyle = i < 2
         ? `rgba(217, 225, 232, ${alpha * 0.5})`
         : `rgba(233, 30, 121, ${alpha})`;
@@ -209,7 +224,7 @@ function initHeroCanvas() {
         const dist = Math.sqrt((gx - w * 0.8) ** 2 + (gy - h * 0.3) ** 2);
         const maxDist = w * 0.4;
         if (dist < maxDist) {
-          const a = (1 - dist / maxDist) * 0.12;
+          const a = (1 - dist / maxDist) * 0.25;
           ctx.beginPath();
           ctx.arc(gx, gy, 1, 0, Math.PI * 2);
           ctx.fillStyle = `rgba(233, 30, 121, ${a})`;
@@ -219,7 +234,7 @@ function initHeroCanvas() {
     }
 
     // Geometric accent lines (subtle)
-    ctx.strokeStyle = 'rgba(233, 30, 121, 0.06)';
+    ctx.strokeStyle = 'rgba(233, 30, 121, 0.12)';
     ctx.lineWidth = 0.5;
     // Diagonal line top-right
     ctx.beginPath();
@@ -244,8 +259,8 @@ function initHeroCanvas() {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
       ctx.fillStyle = p.mag
-        ? 'rgba(233, 30, 121, 0.4)'
-        : 'rgba(217, 225, 232, 0.15)';
+        ? 'rgba(233, 30, 121, 0.6)'
+        : 'rgba(217, 225, 232, 0.3)';
       ctx.fill();
     });
 
@@ -255,8 +270,8 @@ function initHeroCanvas() {
         const dx = particles[i].x - particles[j].x;
         const dy = particles[i].y - particles[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 100) {
-          const a = (1 - dist / 100) * 0.06;
+        if (dist < 120) {
+          const a = (1 - dist / 120) * 0.15;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);

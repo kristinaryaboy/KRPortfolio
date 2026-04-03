@@ -363,11 +363,22 @@ img { max-width: 100%; display: block; }
 .hero-name__first {
   color: var(--off-white);
   margin-right: 0.3em;
+  transition: text-shadow 0.8s ease;
 }
 
 .hero-name__last {
   color: var(--magenta);
   font-weight: 600;
+  transition: text-shadow 0.8s ease;
+}
+
+.hero-name--glow .hero-name__first {
+  text-shadow: 0 0 20px rgba(108, 92, 231, 0.6), 0 0 40px rgba(108, 92, 231, 0.3), 0 0 80px rgba(108, 92, 231, 0.15);
+}
+
+.hero-name--glow .hero-name__last {
+  text-shadow: 0 0 20px rgba(233, 30, 121, 0.6), 0 0 40px rgba(233, 30, 121, 0.3), 0 0 80px rgba(233, 30, 121, 0.15);
+}
 }
 
 .hero-rule {
