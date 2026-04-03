@@ -115,9 +115,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Scroll reveal ──
   const revealElements = document.querySelectorAll(
-    '.section-heading, .project-card, .process-step, .about-visual, .about-content, .contact-text, .contact-form, .section-card'
+    '.section-heading, .project-card, .process-step, .about-visual, .about-content, .contact-text, .contact-form, .section-card, .section-heading-row, .skills-category, .nav-banner, .work-banner'
   );
-  revealElements.forEach(el => el.classList.add('reveal'));
+  revealElements.forEach(el => {
+    el.classList.add('reveal');
+    // Assign variants based on element type
+    if (el.classList.contains('section-heading') || el.classList.contains('section-heading-row')) {
+      el.classList.add('reveal--drop');
+    } else if (el.classList.contains('project-card')) {
+      el.classList.add('reveal--flip');
+    } else if (el.classList.contains('process-step')) {
+      el.classList.add('reveal--flip');
+    } else if (el.classList.contains('about-visual')) {
+      el.classList.add('reveal--slide-left');
+    } else if (el.classList.contains('about-content')) {
+      el.classList.add('reveal--slide-right');
+    } else if (el.classList.contains('skills-category')) {
+      el.classList.add('reveal--flip');
+    } else if (el.classList.contains('nav-banner') || el.classList.contains('work-banner')) {
+      el.classList.add('reveal--drop');
+    }
+  });
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
