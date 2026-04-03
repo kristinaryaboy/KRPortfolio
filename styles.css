@@ -1055,7 +1055,7 @@ img { max-width: 100%; display: block; }
 }
 
 .work-banner {
-  margin-bottom: 32px;
+  margin-bottom: 56px;
   border-radius: 12px;
   overflow: hidden;
   max-height: 240px;
@@ -1121,6 +1121,27 @@ img { max-width: 100%; display: block; }
 }
 
 .project-card--featured .project-card__image { aspect-ratio: 21 / 9; }
+
+/* Portfolio website card — shorter image, no phone frames */
+.project-card__image--web {
+  aspect-ratio: 21 / 5 !important;
+  background: linear-gradient(135deg, #080808 0%, #0a0a0a 40%, rgba(108, 92, 231, 0.08) 70%, rgba(233, 30, 121, 0.06) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card__web-decor {
+  width: 60%;
+  max-width: 500px;
+  height: auto;
+  opacity: 0.12;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-card__web-decor {
+  opacity: 0.22;
+}
 
 .project-card__overlay {
   position: absolute;
@@ -3765,6 +3786,9 @@ img { max-width: 100%; display: block; }
   }
   .project-card__title {
     font-size: 24px;
+  }
+  .project-card__image--web {
+    aspect-ratio: 16 / 5 !important;
   }
 
   .process-timeline { grid-template-columns: 1fr; gap: 40px; }

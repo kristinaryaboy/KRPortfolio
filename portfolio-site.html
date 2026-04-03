@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website — Case Study | Kristina Ryaboy</title>
+  <meta name="description" content="Portfolio Website case study — Designing a personal portfolio with intentional motion, accessibility, and creative expression. By Kristina Ryaboy.">
+  <link rel="icon" type="image/png" href="images/KRONLY.png">
+  <link rel="apple-touch-icon" href="images/KRONLY.png">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio Website Case Study | Kristina Ryaboy">
+  <meta property="og:description" content="Designing a personal portfolio with intentional motion, accessibility, and creative expression.">
+  <meta property="og:image" content="https://kristinaryaboy.github.io/KRPortfolio/images/KRONLY.png">
+  <meta property="og:url" content="https://kristinaryaboy.github.io/KRPortfolio/portfolio-site.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portfolio Website Case Study | Kristina Ryaboy">
+  <meta name="twitter:description" content="Designing a personal portfolio with intentional motion, accessibility, and creative expression.">
+  <meta name="twitter:image" content="https://kristinaryaboy.github.io/KRPortfolio/images/KRONLY.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="case-study">
+
+  <!-- Main Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <img src="images/KRONLY.png" alt="KR" class="nav-logo__img">
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#skills" class="nav-link">Skills</a>
+        <a href="index.html#work" class="nav-link">Projects</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="motion-toggle" id="motionToggle" aria-label="Toggle motion effects" title="Toggle motion effects">
+        <svg class="motion-toggle__icon motion-toggle__icon--on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="1"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="9"/>
+        </svg>
+        <svg class="motion-toggle__icon motion-toggle__icon--off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="1"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="9"/>
+          <line x1="4" y1="4" x2="20" y2="20" stroke-width="2.5"/>
+        </svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="index.html#about" class="mobile-menu__link">About</a>
+    <a href="index.html#skills" class="mobile-menu__link">Skills</a>
+    <a href="index.html#work" class="mobile-menu__link">Projects</a>
+    <a href="index.html#contact" class="mobile-menu__link">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <header class="case-study-hero">
+    <div class="case-study-hero__tags">
+      <span class="tag">Web Design</span>
+      <span class="tag">Development</span>
+      <span class="tag">Accessibility</span>
+    </div>
+    <div class="case-study-hero__title-row">
+      <h1 class="case-study-hero__title">Portfolio Website</h1>
+    </div>
+    <p class="case-study-hero__subtitle">Designing a personal portfolio that embodies creativity, accessibility, and intentional motion</p>
+    <p class="case-study-hero__partner">A self&#8209;directed project built with HTML, CSS &amp; JavaScript</p>
+  </header>
+
+  <!-- Project Meta -->
+  <div class="case-study-meta">
+    <div class="case-study-meta__item">
+      <h4>Role</h4>
+      <p>Designer &amp; Developer</p>
+    </div>
+    <div class="case-study-meta__item">
+      <h4>Duration</h4>
+      <p>Ongoing</p>
+    </div>
+    <div class="case-study-meta__item">
+      <h4>Responsibilities</h4>
+      <p>Visual design, front&#8209;end development, interaction design, accessibility</p>
+    </div>
+    <div class="case-study-meta__item">
+      <h4>Tools</h4>
+      <p>HTML, CSS, JavaScript, GitHub Pages</p>
+    </div>
+  </div>
+
+  <!-- Section Navigation -->
+  <nav class="section-nav" id="sectionNav">
+    <div class="section-nav__inner">
+      <a href="#overview" class="section-nav__link section-nav__link--active" data-section="overview">
+        <span class="section-nav__number">01</span>
+        <span class="section-nav__text">Overview</span>
+      </a>
+      <a href="#goals" class="section-nav__link" data-section="goals">
+        <span class="section-nav__number">02</span>
+        <span class="section-nav__text">Goals</span>
+      </a>
+      <a href="#design" class="section-nav__link" data-section="design">
+        <span class="section-nav__number">03</span>
+        <span class="section-nav__text">Design</span>
+      </a>
+      <a href="#interactions" class="section-nav__link" data-section="interactions">
+        <span class="section-nav__number">04</span>
+        <span class="section-nav__text">Interactions</span>
+      </a>
+      <a href="#accessibility" class="section-nav__link" data-section="accessibility">
+        <span class="section-nav__number">05</span>
+        <span class="section-nav__text">Accessibility</span>
+      </a>
+      <a href="#responsive" class="section-nav__link" data-section="responsive">
+        <span class="section-nav__number">06</span>
+        <span class="section-nav__text">Responsive</span>
+      </a>
+      <a href="#reflection" class="section-nav__link" data-section="reflection">
+        <span class="section-nav__number">07</span>
+        <span class="section-nav__text">Reflection</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- 01 · Overview -->
+  <section class="case-study-section" id="overview">
+    <span class="case-study-section__label">01</span>
+    <h2 class="case-study-section__title">Overview</h2>
+    <div class="case-study-section__body">
+      <p>This portfolio was built from scratch as a career transition piece, designed to showcase UX projects while expressing a personal creative identity. Rather than using a template or site builder, the decision to hand&#8209;code the entire site became an opportunity to demonstrate both design thinking and technical execution.</p>
+      <p>The site itself serves as a living artifact of the design philosophy it presents: that creativity grows through exploration, iteration, and giving yourself permission to experiment. Every element &#8212; from the dark theme to the particle animations to the way sections reveal on scroll &#8212; was designed with the same user&#8209;centered mindset applied to the projects it showcases.</p>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <!-- 02 · Goals & Strategy -->
+  <section class="case-study-section" id="goals">
+    <span class="case-study-section__label">02</span>
+    <h2 class="case-study-section__title">Goals &amp; Strategy</h2>
+    <div class="case-study-section__body">
+      <p>The portfolio needed to accomplish several things at once:</p>
+      <ul>
+        <li>Present case study work in a compelling, professional format that lets the work speak for itself</li>
+        <li>Communicate personality and design sensibility beyond what a resume can convey</li>
+        <li>Establish credibility for a career transition from IT into UX design</li>
+        <li>Create an experience that would be memorable without being distracting</li>
+      </ul>
+      <p>Every decision, from the color scheme to the interactive particle effects, was evaluated against these goals. If something looked impressive but didn't serve the visitor's experience, it was refined or removed. The site had to feel intentional &#8212; not decorated.</p>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <!-- 03 · Design Process -->
+  <section class="case-study-section" id="design">
+    <span class="case-study-section__label">03</span>
+    <h2 class="case-study-section__title">Design Process</h2>
+    <div class="case-study-section__body">
+      <p>The visual language evolved through multiple iterations. Early explorations used a blue&#8209;and&#8209;slate palette that felt too corporate and generic. The breakthrough came with shifting to a near&#8209;black base paired with magenta and purple accents &#8212; a combination that feels bold but sophisticated.</p>
+      <p>Typography pairing was equally deliberate: Josefin Sans for headings brings geometric elegance and personality, while Inter for body text ensures comfortable reading at any size. The contrast between the decorative heading typeface and the clean body font creates visual rhythm without competing for attention.</p>
+      <p>The overall aesthetic aims to feel like a curated space rather than a standard portfolio template. Colors were tested for legibility and emotional resonance. Borders, shadows, and spacing were refined iteratively to achieve a sense of depth without visual clutter. The dark theme isn't just a stylistic choice &#8212; it lets the work and the accent colors take center stage.</p>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <!-- 04 · Interactive Elements -->
+  <section class="case-study-section" id="interactions">
+    <span class="case-study-section__label">04</span>
+    <h2 class="case-study-section__title">Interactive Elements</h2>
+    <div class="case-study-section__body">
+      <p>Motion and interaction are used throughout the site to create a sense of craft and personality without overwhelming the content:</p>
+      <ul>
+        <li><strong>Canvas particle animation</strong> &#8212; The hero section features a particle system with connecting lines that responds subtly to the environment, creating an ambient sense of motion</li>
+        <li><strong>Shimmer gradient text</strong> &#8212; Project card titles and section headings use an animated gradient that catches the eye without demanding attention</li>
+        <li><strong>Orbit animations</strong> &#8212; Subtle orbital motion effects around the logo and project cards add depth and visual interest</li>
+        <li><strong>Animated wavy SVG dividers</strong> &#8212; Dashed wavy lines between section headings and images use stroke animation to create flowing movement</li>
+        <li><strong>Scroll&#8209;triggered reveals</strong> &#8212; Content fades and slides into view as visitors scroll, creating a sense of progression through the page</li>
+      </ul>
+      <p>Each of these details was calibrated to enhance the experience rather than overwhelm it. The goal was always to reward attention, not demand it.</p>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <!-- 05 · Accessibility -->
+  <section class="case-study-section" id="accessibility">
+    <span class="case-study-section__label">05</span>
+    <h2 class="case-study-section__title">Accessibility</h2>
+    <div class="case-study-section__body">
+      <p>Accessibility was treated as a core design requirement, not an afterthought. A site built to showcase user&#8209;centered design had to practice what it preaches:</p>
+      <ul>
+        <li><strong>prefers&#8209;reduced&#8209;motion</strong> &#8212; The site respects the operating system&#8209;level setting to automatically disable all animations for users who need it</li>
+        <li><strong>Manual motion toggle</strong> &#8212; A dedicated button in the navigation gives every visitor direct control over animations, regardless of their system settings. The preference persists across pages and sessions via localStorage</li>
+        <li><strong>Semantic HTML</strong> &#8212; Content is structured with proper heading hierarchy, landmark elements, and meaningful alt text for screen readers</li>
+        <li><strong>Color contrast</strong> &#8212; Text and interactive elements meet WCAG guidelines across the dark theme, ensuring readability at all sizes</li>
+        <li><strong>Keyboard navigation</strong> &#8212; Interactive elements maintain visible focus states for keyboard users</li>
+      </ul>
+      <p>The motion toggle was a particularly meaningful addition. It acknowledges that what feels immersive to one person can feel disorienting to another &#8212; and giving users control is always the right design decision.</p>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <!-- 06 · Responsive Design -->
+  <section class="case-study-section" id="responsive">
+    <span class="case-study-section__label">06</span>
+    <h2 class="case-study-section__title">Responsive Design</h2>
+    <div class="case-study-section__body">
+      <p>The layout adapts across viewport sizes to ensure the experience feels intentional at any width:</p>
+      <ul>
+        <li>The two&#8209;column project grid stacks to a single column on tablets and phones</li>
+        <li>Typography scales fluidly across breakpoints</li>
+        <li>The hero section adapts its spacing and element sizing for smaller screens</li>
+        <li>Navigation collapses to a hamburger menu on mobile</li>
+        <li>The process timeline shifts from a four&#8209;column grid to two columns and then to single column</li>
+        <li>Section heading decorative images and wavy line accents are gracefully hidden on mobile to prevent overflow</li>
+      </ul>
+      <p>Each component was tested across viewport sizes &#8212; from 375px mobile to 1440px desktop &#8212; to verify that nothing breaks and the hierarchy remains clear regardless of how the visitor arrives.</p>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <!-- 07 · Reflection -->
+  <section class="case-study-section" id="reflection">
+    <span class="case-study-section__label">07</span>
+    <h2 class="case-study-section__title">Reflection</h2>
+    <div class="case-study-section__body">
+      <p>Building this portfolio reinforced a core belief: that the process of making something is where the real learning happens. Every iteration &#8212; whether it was reworking the color palette, fine&#8209;tuning an animation curve, or restructuring a layout for accessibility &#8212; deepened both design skills and technical understanding.</p>
+      <p>The project also reinforced the importance of collaboration. Working with AI as a development partner introduced a new kind of design workflow &#8212; one where rapid prototyping and iteration happened in conversation rather than in isolation. This approach made it possible to explore ideas faster, test more variations, and arrive at solutions that felt right rather than just settling for what was quickest.</p>
+      <p>This site will continue to evolve as new projects are added and as the designer's perspective grows. It stands as both a showcase and a statement: that thoughtful, accessible, human&#8209;centered design is worth the effort it takes to get right.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="case-study-footer">
+    <a href="index.html#work" class="case-study-footer__back">Back to Portfolio</a>
+  </footer>
+
+  <script>
+    // Section navigation — smooth scroll & active tracking
+    (function() {
+      const sectionNav = document.getElementById('sectionNav');
+      const navLinks = document.querySelectorAll('.section-nav__link');
+      const sectionIds = ['overview','goals','design','interactions','accessibility','responsive','reflection'];
+
+      // Smooth scroll on click
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('data-section');
+          const target = document.getElementById(targetId);
+          if (target) {
+            const mainNavHeight = document.getElementById('nav') ? document.getElementById('nav').offsetHeight : 0;
+            const navHeight = sectionNav.offsetHeight + mainNavHeight;
+            const targetTop = target.getBoundingClientRect().top + window.scrollY - navHeight - 8;
+            window.scrollTo({ top: targetTop, behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Active state on scroll + shadow when scrolled
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const scrollY = window.scrollY;
+            const mainNavHeight = document.getElementById('nav') ? document.getElementById('nav').offsetHeight : 0;
+            const navHeight = sectionNav.offsetHeight + mainNavHeight;
+
+            if (scrollY > 200) {
+              sectionNav.classList.add('section-nav--scrolled');
+            } else {
+              sectionNav.classList.remove('section-nav--scrolled');
+            }
+
+            let currentSection = sectionIds[0];
+            for (const id of sectionIds) {
+              const el = document.getElementById(id);
+              if (el) {
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= navHeight + 80) {
+                  currentSection = id;
+                }
+              }
+            }
+
+            navLinks.forEach(link => {
+              link.classList.toggle('section-nav__link--active', link.getAttribute('data-section') === currentSection);
+            });
+
+            const activeLink = sectionNav.querySelector('.section-nav__link--active');
+            if (activeLink) {
+              const navInner = sectionNav.querySelector('.section-nav__inner');
+              const linkLeft = activeLink.offsetLeft;
+              const linkWidth = activeLink.offsetWidth;
+              const navScrollLeft = navInner.scrollLeft;
+              const navWidth = navInner.offsetWidth;
+              if (linkLeft < navScrollLeft || linkLeft + linkWidth > navScrollLeft + navWidth) {
+                navInner.scrollTo({ left: linkLeft - navWidth / 2 + linkWidth / 2, behavior: 'smooth' });
+              }
+            }
+
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    })();
+
+    // Motion toggle
+    (function() {
+      const motionToggle = document.getElementById('motionToggle');
+      if (!motionToggle) return;
+      const saved = localStorage.getItem('reduceMotion');
+      if (saved === 'true') {
+        document.body.classList.add('reduce-motion');
+      }
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches && saved === null) {
+        document.body.classList.add('reduce-motion');
+      }
+      motionToggle.addEventListener('click', () => {
+        const isReduced = document.body.classList.toggle('reduce-motion');
+        localStorage.setItem('reduceMotion', isReduced);
+      });
+    })();
+
+    // Mobile menu toggle
+    (function() {
+      const toggle = document.getElementById('navToggle');
+      const menu = document.getElementById('mobileMenu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        menu.classList.toggle('active');
+      });
+      menu.querySelectorAll('.mobile-menu__link').forEach(link => {
+        link.addEventListener('click', () => {
+          toggle.classList.remove('active');
+          menu.classList.remove('active');
+        });
+      });
+    })();
+
+    // Page transition for case study
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('http') && !link.hasAttribute('download') && !link.getAttribute('target')) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          document.body.classList.add('page-exit');
+          setTimeout(() => { window.location.href = href; }, 300);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
