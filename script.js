@@ -157,7 +157,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const span = document.createElement('span');
       span.textContent = char === ' ' ? '\u00A0' : char;
       span.className = 'welcome-letter';
-      span.style.animationDelay = (i * 0.04) + 's';
+      if (char === '!') {
+        span.classList.add('welcome-letter--late');
+        span.style.animationDelay = (i * 0.04 + 0.8) + 's';
+      } else {
+        span.style.animationDelay = (i * 0.04) + 's';
+      }
       welcomeHeading.appendChild(span);
     });
 
