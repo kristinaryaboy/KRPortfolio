@@ -1042,18 +1042,26 @@ img { max-width: 100%; display: block; }
   margin-bottom: 32px;
   border-radius: 12px;
   overflow: hidden;
+  max-height: 240px;
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .work-banner img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
   display: block;
 }
 
 .work-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  gap: 24px;
+  max-width: 85%;
+  margin: 0 auto;
 }
 
 .project-card {
@@ -1091,7 +1099,7 @@ img { max-width: 100%; display: block; }
 
 .project-card__image {
   position: relative;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 7;
   overflow: hidden;
   background: var(--deep-slate);
 }
