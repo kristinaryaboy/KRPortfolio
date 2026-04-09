@@ -1130,6 +1130,33 @@ body.ambient-ready .section-heading-wave__path {
   margin-right: auto;
 }
 
+.work-banner--split {
+  display: flex;
+  gap: 16px;
+  max-height: none;
+  height: 240px;
+}
+
+.work-banner__image {
+  flex: 2;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.work-banner__video {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.work-banner__image img,
+.work-banner__video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .work-banner img {
   width: 100%;
   height: 100%;
@@ -3930,6 +3957,14 @@ body.ambient-ready .project-card__orbit-canvas {
     margin-left: 24px;
     margin-right: 24px;
   }
+  .work-banner--split {
+    flex-direction: column;
+    height: auto;
+  }
+  .work-banner__image,
+  .work-banner__video {
+    max-height: 180px;
+  }
   .project-card__title {
     font-size: 24px;
   }
@@ -4020,9 +4055,12 @@ body.reduce-motion {
   opacity: 1 !important;
 }
 
-/* Hide all canvas elements */
+/* Hide all canvas elements and pause video */
 body.reduce-motion canvas {
   opacity: 0 !important;
+}
+body.reduce-motion video {
+  display: none;
 }
 
 /* Restore text colors that depend on background-clip: text + animation */
