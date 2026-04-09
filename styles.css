@@ -333,7 +333,20 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-logo__orbit {
-  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  height: 140%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+body.ambient-ready .hero-logo__orbit {
+  opacity: 1;
 }
 
 .hero-logo__img {
