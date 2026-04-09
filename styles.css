@@ -756,6 +756,7 @@ img { max-width: 100%; display: block; }
 .section-heading-row .section-heading {
   margin-bottom: 0;
   flex-shrink: 0;
+  min-width: 200px;
 }
 
 .section-heading-wave {
@@ -805,6 +806,24 @@ body.ambient-ready .section-heading-wave__path {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+.work-banner {
+  margin-bottom: 56px;
+  border-radius: 12px;
+  overflow: hidden;
+  max-height: 240px;
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.work-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
   display: block;
 }
 
