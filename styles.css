@@ -802,6 +802,11 @@ body.ambient-ready .section-heading-wave__path {
   border-radius: 10px;
 }
 
+/* Shorten waves in work section so video aligns with Process/Tools images */
+.work .section-heading-wave {
+  flex: 0.5;
+}
+
 .section-banner--video video {
   width: 100%;
   height: 100%;
