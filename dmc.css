@@ -143,35 +143,51 @@
   letter-spacing: 0.5px;
 }
 
-/* Digital Wireframe Grid */
+/* Lo-Fi Prototype Row — all 6 in one row */
 .dmc-wireframe-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  display: flex;
+  gap: 16px;
   margin-top: 20px;
+  justify-content: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+  scrollbar-color: rgba(217, 225, 232, 0.2) transparent;
+}
+
+.dmc-wireframe-grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.dmc-wireframe-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dmc-wireframe-grid::-webkit-scrollbar-thumb {
+  background: rgba(217, 225, 232, 0.2);
+  border-radius: 3px;
 }
 
 .dmc-wireframe-phone {
   text-align: center;
+  flex: 0 0 auto;
+  width: 120px;
 }
 
 .dmc-wireframe-phone img {
   width: 100%;
-  max-width: 150px;
-  border-radius: 20px;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 16px;
   border: 2px solid rgba(217, 225, 232, 0.08);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
-  transition: transform 0.35s var(--ease-out);
-}
-
-.dmc-wireframe-phone img:hover {
-  transform: scale(1.05);
 }
 
 .dmc-wireframe-phone__label {
   display: block;
-  margin-top: 10px;
-  font-size: 12px;
+  margin-top: 8px;
+  font-size: 11px;
   color: rgba(217, 225, 232, 0.5);
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -282,6 +298,6 @@
 @media (max-width: 768px) {
   .dmc-pain-points { grid-template-columns: 1fr; }
   .dmc-wireframe-paper { flex-direction: column; }
-  .dmc-wireframe-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .dmc-wireframe-grid { justify-content: flex-start; }
   .dmc-lofi-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
 }
