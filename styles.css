@@ -3778,6 +3778,8 @@ body.ambient-ready .project-card__orbit-canvas {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  width: 130%;
+  transform: translateX(-11.5%);
 }
 
 .dmc-wireframe-paper__img {
