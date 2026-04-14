@@ -3768,37 +3768,7 @@ body.ambient-ready .project-card__orbit-canvas {
   color: rgba(217, 225, 232, 0.5);
 }
 
-/* Paper Wireframes */
-.dmc-wireframe-paper {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  justify-content: center;
-}
-
-.dmc-wireframe-paper__img {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 0 1 45%;
-}
-
-.dmc-wireframe-paper__img img {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid rgba(217, 225, 232, 0.08);
-}
-
-.dmc-wireframe-paper__label {
-  display: block;
-  margin-top: 10px;
-  font-size: 12px;
-  color: rgba(217, 225, 232, 0.45);
-  letter-spacing: 0.5px;
-}
+/* Paper Wireframes — styles in dmc.css */
 
 /* Digital Wireframe Grid */
 .dmc-wireframe-grid {
@@ -3884,7 +3854,6 @@ body.ambient-ready .project-card__orbit-canvas {
   .dmc-pain-points { grid-template-columns: 1fr; }
   .dmc-persona-embed { grid-template-columns: 1fr; }
   .dmc-persona-card { flex-direction: column; align-items: center; text-align: center; }
-  .dmc-wireframe-paper { flex-direction: column; }
   .dmc-wireframe-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .dmc-lofi-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
 }
