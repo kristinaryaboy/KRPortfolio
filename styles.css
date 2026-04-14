@@ -1877,6 +1877,7 @@ body.ambient-ready .project-card__orbit-canvas {
   align-items: center;
   gap: 24px;
   flex-wrap: wrap;
+  margin-bottom: 8px;
 }
 
 .project-card__title-row .project-card__title {
