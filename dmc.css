@@ -186,6 +186,20 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   padding-bottom: 8px;
+  scrollbar-color: rgba(217, 225, 232, 0.2) transparent;
+}
+
+.dmc-digital-wf-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.dmc-digital-wf-row::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dmc-digital-wf-row::-webkit-scrollbar-thumb {
+  background: rgba(217, 225, 232, 0.2);
+  border-radius: 3px;
 }
 
 .dmc-digital-wf {
