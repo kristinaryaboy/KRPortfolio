@@ -1859,6 +1859,18 @@ body.ambient-ready .project-card__orbit-canvas {
   border: 1px solid rgba(233, 30, 121, 0.3);
 }
 
+a.status-badge--link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.status-badge--link:hover {
+  background: rgba(233, 30, 121, 0.25);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(233, 30, 121, 0.2);
+}
+
 .status-badge--coming {
   background: rgba(255, 255, 255, 0.05);
   color: rgba(217, 225, 232, 0.5);
