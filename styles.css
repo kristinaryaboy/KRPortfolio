@@ -1247,6 +1247,48 @@ body.ambient-ready .section-heading-wave__path {
   height: 100%;
 }
 
+/* Sneak Peek card: rolling magenta gradient border */
+.project-card--sneak-peek .project-card__image--web {
+  padding: 3px;
+  border-radius: 12px;
+  overflow: visible;
+  background-image: linear-gradient(
+    90deg,
+    #e91e8c 0%,
+    rgba(233, 30, 121, 0.35) 15%,
+    rgba(217, 225, 232, 0.55) 30%,
+    rgba(233, 30, 121, 0.45) 45%,
+    #e91e8c 60%,
+    rgba(233, 30, 121, 0.35) 75%,
+    rgba(217, 225, 232, 0.55) 90%,
+    #e91e8c 100%
+  );
+  background-size: 300% 100%;
+  background-position: 0% 0%;
+  animation: sneak-shimmer 5s linear infinite;
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+
+.project-card--sneak-peek .project-card__image--web .project-card__web-img {
+  border-radius: 9px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes sneak-shimmer {
+  from { background-position: 0% 0%; }
+  to { background-position: 300% 0%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card--sneak-peek .project-card__image--web {
+    animation: none;
+  }
+}
+
 .project-card__web-img {
   width: 100%;
   height: 100%;
