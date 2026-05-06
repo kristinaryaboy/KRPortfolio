@@ -1283,6 +1283,10 @@ body.ambient-ready .section-heading-wave__path {
   to { background-position: 300% 0%; }
 }
 
+body.reduce-motion .project-card--sneak-peek .project-card__image--web {
+  animation: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .project-card--sneak-peek .project-card__image--web {
     animation: none;
