@@ -25,6 +25,9 @@
 </head>
 <body>
 
+  <!-- Skip link for keyboard users -->
+  <a href="#hero" class="skip-link">Skip to main content</a>
+
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
@@ -93,7 +96,7 @@
   <!-- Welcome Section -->
   <section class="welcome">
     <div class="container">
-      <h1 class="welcome-heading" id="welcomeHeading">Welcome, Friends!</h1>
+      <h2 class="welcome-heading" id="welcomeHeading">Welcome, Friends!</h2>
       <div class="welcome-philosophy">
         <p class="welcome-text">I design with empathy, research, and intention creating accessible, usable experiences that genuinely support people.</p>
         <p class="welcome-quote">While creativity and perfection can complement each other beautifully, they are not codependent. Creativity, to me, is permission. It is permission to wander, to iterate, and to discover the possibilities that only reveal themselves when you let curiosity lead instead of perfection.</p>
@@ -387,7 +390,7 @@
           <path class="section-heading-wave__path" d="M0,10 Q25,0 50,10 T100,10 T150,10 T200,10" fill="none" stroke="url(#waveGrad)" stroke-width="1"/>
         </svg>
         <div class="section-banner section-banner--mid section-banner--video">
-          <video autoplay muted loop playsinline>
+          <video autoplay muted loop playsinline aria-hidden="true">
             <source src="Video/CoffeVid.mov" type="video/mp4">
           </video>
         </div>
