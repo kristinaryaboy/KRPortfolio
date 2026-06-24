@@ -1968,7 +1968,7 @@ function initDmcOrbitCanvas() {
       { r: radii[0], speed:  0.0004, size: 3,   color: 'rgba(217, 225, 232, 0.2)' },
       { r: radii[1], speed: -0.00025, size: 3.5, color: 'rgba(232, 113, 26, 0.25)' },
       { r: radii[2], speed:  0.00015, size: 2.5, color: 'rgba(217, 225, 232, 0.15)' },
-      { r: radii[3], speed: -0.0001, size: 2,   color: 'rgba(108, 92, 231, 0.18)' },
+      { r: radii[3], speed: -0.0001, size: 2,   color: 'rgba(10, 201, 247, 0.18)' },
     ];
 
     nodes.forEach(n => {
