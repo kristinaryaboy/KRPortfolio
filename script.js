@@ -258,7 +258,7 @@ function initHeroCanvas() {
       vx: (Math.random() - 0.5) * 0.3,
       vy: (Math.random() - 0.5) * 0.2,
       r: Math.random() * 1.5 + 0.5,
-      mag: Math.random() < 0.25
+      mag: Math.random() < 0.15
     });
   }
 
@@ -281,7 +281,7 @@ function initHeroCanvas() {
       const alpha = (0.06 + i * 0.03) * 2;
       ctx.strokeStyle = i < 2
         ? `rgba(217, 225, 232, ${alpha * 0.5})`
-        : `rgba(233, 30, 121, ${alpha})`;
+        : `rgba(233, 30, 121, ${alpha * 0.6})`;
       ctx.lineWidth = 1;
       ctx.stroke();
     }
@@ -294,7 +294,7 @@ function initHeroCanvas() {
         const dist = Math.sqrt((gx - w * 0.8) ** 2 + (gy - h * 0.3) ** 2);
         const maxDist = w * 0.4;
         if (dist < maxDist) {
-          const a = (1 - dist / maxDist) * 0.25;
+          const a = (1 - dist / maxDist) * 0.15;
           ctx.beginPath();
           ctx.arc(gx, gy, 1, 0, Math.PI * 2);
           ctx.fillStyle = `rgba(233, 30, 121, ${a})`;
@@ -304,7 +304,7 @@ function initHeroCanvas() {
     }
 
     // Geometric accent lines (subtle)
-    ctx.strokeStyle = 'rgba(233, 30, 121, 0.12)';
+    ctx.strokeStyle = 'rgba(233, 30, 121, 0.07)';
     ctx.lineWidth = 0.5;
     // Diagonal line top-right
     ctx.beginPath();
@@ -329,7 +329,7 @@ function initHeroCanvas() {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
       ctx.fillStyle = p.mag
-        ? 'rgba(233, 30, 121, 0.6)'
+        ? 'rgba(233, 30, 121, 0.4)'
         : 'rgba(217, 225, 232, 0.3)';
       ctx.fill();
     });
@@ -356,7 +356,7 @@ function initHeroCanvas() {
 
     // Magenta glow, top-right corner
     const grad = ctx.createRadialGradient(w * 0.92, h * 0.1, 0, w * 0.92, h * 0.1, w * 0.35);
-    grad.addColorStop(0, 'rgba(233, 30, 121, 0.07)');
+    grad.addColorStop(0, 'rgba(233, 30, 121, 0.04)');
     grad.addColorStop(1, 'transparent');
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, w, h);
