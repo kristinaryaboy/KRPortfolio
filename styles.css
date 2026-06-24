@@ -400,7 +400,7 @@ body.ambient-ready .hero-logo__orbit {
 
 .hero-name__first {
   margin-right: 0.3em;
-  background: linear-gradient(90deg, var(--off-white) 0%, var(--off-white) 18%, var(--magenta) 33%, var(--off-white) 50%, var(--purple) 67%, var(--off-white) 82%, var(--off-white) 100%);
+  background: linear-gradient(90deg, var(--magenta) 0%, var(--purple) 50%, var(--magenta) 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -410,7 +410,7 @@ body.ambient-ready .hero-logo__orbit {
 
 .hero-name__last {
   font-weight: 600;
-  background: linear-gradient(90deg, var(--off-white) 0%, var(--off-white) 18%, var(--magenta) 33%, var(--off-white) 50%, var(--purple) 67%, var(--off-white) 82%, var(--off-white) 100%);
+  background: linear-gradient(90deg, var(--magenta) 0%, var(--purple) 50%, var(--magenta) 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -786,7 +786,7 @@ body.ambient-ready .hero-logo__orbit {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  background: linear-gradient(90deg, var(--off-white) 0%, var(--off-white) 18%, var(--magenta) 33%, var(--off-white) 50%, var(--purple) 67%, var(--off-white) 82%, var(--off-white) 100%);
+  background: linear-gradient(90deg, var(--magenta) 0%, var(--purple) 50%, var(--magenta) 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1457,7 +1457,7 @@ body.reduce-motion .project-card--sneak-peek .project-card__image--web {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 10px;
-  background: linear-gradient(90deg, var(--off-white) 0%, var(--off-white) 18%, var(--magenta) 33%, var(--off-white) 50%, var(--purple) 67%, var(--off-white) 82%, var(--off-white) 100%);
+  background: linear-gradient(90deg, var(--magenta) 0%, var(--purple) 50%, var(--magenta) 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1910,7 +1910,7 @@ body.ambient-ready .project-card__orbit-canvas {
   font-size: 56px;
   color: var(--off-white);
   letter-spacing: -0.5px;
-  background: linear-gradient(90deg, var(--off-white) 0%, var(--off-white) 18%, var(--magenta) 33%, var(--off-white) 50%, var(--purple) 67%, var(--off-white) 82%, var(--off-white) 100%);
+  background: linear-gradient(90deg, var(--magenta) 0%, var(--purple) 50%, var(--magenta) 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
