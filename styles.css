@@ -483,55 +483,26 @@ body.ambient-ready .hero-logo__orbit {
 .welcome-letter {
   display: inline-block;
   opacity: 0;
-  transform: translateY(30px) scale(0.3) rotate(8deg);
+  transform: translateY(-52px);
   transition: none;
 }
 
 .welcome-heading--animate .welcome-letter {
-  animation: letterPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: letterDrop 0.55s cubic-bezier(0.22, 1.4, 0.36, 1) forwards;
 }
 
-.welcome-letter--late {
-  transform: translateY(-50px) scale(0.5) rotate(-12deg);
-}
-
-.welcome-heading--animate .welcome-letter--late {
-  animation: letterLateDrop 0.5s cubic-bezier(0.22, 1.5, 0.36, 1) forwards;
-}
-
-@keyframes letterLateDrop {
+@keyframes letterDrop {
   0% {
     opacity: 0;
-    transform: translateY(-50px) scale(0.5) rotate(-12deg);
+    transform: translateY(-52px);
   }
-  60% {
+  65% {
     opacity: 1;
-    transform: translateY(6px) scale(1.15) rotate(3deg);
-  }
-  80% {
-    transform: translateY(-2px) scale(0.97) rotate(-1deg);
+    transform: translateY(7px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0) scale(1) rotate(0deg);
-  }
-}
-
-@keyframes letterPop {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.3) rotate(8deg);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-6px) scale(1.08) rotate(-2deg);
-  }
-  75% {
-    transform: translateY(2px) scale(0.98) rotate(0.5deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1) rotate(0deg);
+    transform: translateY(0);
   }
 }
 
@@ -562,16 +533,16 @@ body.ambient-ready .hero-logo__orbit {
 }
 
 .welcome-grid .welcome-content {
-  text-align: left;
+  text-align: center;
 }
 
 .welcome-grid .welcome-heading {
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .welcome-grid .welcome-philosophy {
   max-width: 620px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .welcome-portrait {
@@ -700,12 +671,12 @@ body.ambient-ready .hero-logo__orbit {
   aspect-ratio: 1;
   border-radius: 50%;
   padding: 5px;
-  background: linear-gradient(145deg, #ff5fa8 0%, var(--magenta) 38%, var(--purple) 100%);
+  background: linear-gradient(145deg, rgba(90, 98, 112, 0.4) 0%, rgba(10, 201, 247, 0.62) 46%, var(--purple) 80%);
   box-shadow:
+    0 0 0 1.5px rgba(233, 30, 121, 0.55),
     0 12px 26px rgba(0, 0, 0, 0.55),
-    0 0 38px rgba(233, 30, 121, 0.18),
-    0 0 28px rgba(10, 201, 247, 0.14),
-    inset 0 2px 3px rgba(255, 255, 255, 0.45),
+    0 0 30px rgba(10, 201, 247, 0.12),
+    inset 0 2px 3px rgba(255, 255, 255, 0.34),
     inset 0 -3px 6px rgba(0, 0, 0, 0.45);
   text-decoration: none;
   cursor: pointer;
@@ -715,10 +686,10 @@ body.ambient-ready .hero-logo__orbit {
 .nav-banner__zone:hover {
   transform: translateY(-6px);
   box-shadow:
+    0 0 0 1.5px rgba(233, 30, 121, 0.7),
     0 18px 34px rgba(0, 0, 0, 0.6),
-    0 0 54px rgba(233, 30, 121, 0.32),
-    0 0 40px rgba(10, 201, 247, 0.26),
-    inset 0 2px 3px rgba(255, 255, 255, 0.55),
+    0 0 44px rgba(10, 201, 247, 0.28),
+    inset 0 2px 3px rgba(255, 255, 255, 0.46),
     inset 0 -3px 6px rgba(0, 0, 0, 0.45);
 }
 

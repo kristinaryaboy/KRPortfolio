@@ -157,12 +157,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const span = document.createElement('span');
       span.textContent = char === ' ' ? '\u00A0' : char;
       span.className = 'welcome-letter';
-      if (char === '!') {
-        span.classList.add('welcome-letter--late');
-        span.style.animationDelay = (i * 0.04 + 0.8) + 's';
-      } else {
-        span.style.animationDelay = (i * 0.04) + 's';
-      }
+      span.setAttribute('aria-hidden', 'true');
+      span.style.animationDelay = (i * 0.07) + 's';
       welcomeHeading.appendChild(span);
     });
 
